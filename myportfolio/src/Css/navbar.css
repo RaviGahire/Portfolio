@@ -1,9 +1,17 @@
-
-:root{
-  --main-bg:linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(40, 39, 39, 0.4) 0%, rgba(0,0,0,0.40) 120%) #989898;
-  background-blend-mode: multiply,multiply;
+:root {
+  --main-bg: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.15) 0%,
+      rgba(0, 0, 0, 0.15) 100%
+    ),
+    radial-gradient(
+        at top center,
+        rgba(40, 39, 39, 0.4) 0%,
+        rgba(0, 0, 0, 0.4) 120%
+      )
+      #989898;
+  background-blend-mode: multiply, multiply;
 }
-
 
 html,
 body {
@@ -21,7 +29,6 @@ body {
   padding: 2rem 5rem;
   color: #fff;
   background: var(--main-bg);
-
 }
 .nav i {
   font-size: 2rem;
@@ -39,19 +46,18 @@ body {
 }
 .side-menu li {
   font-size: 3rem;
-  margin: 2rem auto ;
- list-style-type: none;
-  
+  margin: 2rem auto;
+  list-style-type: none;
 }
 
-.side-menu .nav-links{
+.side-menu .nav-links {
   text-decoration: none;
-  color:#fff;
+  color: #fff;
   transition: all 200ms ease-in;
 }
-.side-menu .nav-links:hover{
+.side-menu .nav-links:hover {
   text-decoration: none;
-  color:#1110106d;
+  color: #1110106d;
 }
 
 .side-menu i {

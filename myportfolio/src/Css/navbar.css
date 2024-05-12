@@ -1,0 +1,66 @@
+
+:root{
+  --main-bg:linear-gradient(to bottom, rgba(255,255,255,0.15) 0%, rgba(0,0,0,0.15) 100%), radial-gradient(at top center, rgba(40, 39, 39, 0.4) 0%, rgba(0,0,0,0.40) 120%) #989898;
+  background-blend-mode: multiply,multiply;
+}
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  overflow-x: hidden;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 5rem;
+  color: #fff;
+  background: var(--main-bg);
+
+}
+.nav i {
+  font-size: 2rem;
+  cursor: pointer;
+}
+.side-menu {
+  height: 50vw;
+  width: 25%;
+  position: absolute;
+  top: 0;
+  right: -25%;
+  background-color: #616161b7;
+  backdrop-filter: blur(10px);
+  padding: 10rem 3rem;
+}
+.side-menu li {
+  font-size: 3rem;
+  margin: 2rem auto ;
+ list-style-type: none;
+  
+}
+
+.side-menu .nav-links{
+  text-decoration: none;
+  color:#fff;
+  transition: all 200ms ease-in;
+}
+.side-menu .nav-links:hover{
+  text-decoration: none;
+  color:#1110106d;
+}
+
+.side-menu i {
+  position: absolute;
+  top: 2rem;
+  right: 5rem;
+  font-size: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+}

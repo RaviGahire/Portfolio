@@ -2,17 +2,32 @@ import React, { useRef } from 'react'
 import '../Css/home.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import TextPlugin from 'gsap/TextPlugin'
+gsap.registerPlugin(useGSAP,TextPlugin)
 
 const Home = () => {
-const tl = useRef()
+
+const cardTl= useRef()
+
+
 useGSAP(()=>{
-    tl.current = gsap.timeline()
-    
-    .from(".card",{y:800,duration:1,opacity:0})
-   
+   const tl = gsap.timeline()
+   tl.to(".main-Heading span",{repeat:-1,duration:5,repeatDelay:2,yoyo:true,
+    text:"Crafting Something Amazing Together"
+   }) 
 });
 
+useGSAP(()=>{
+    cardTl.current= gsap.timeline()
+    .from(".card",{y:400,duration:2,opacity:0,})
+    .from(".card-1",{y:400,duration:2,opacity:0})
+    .from(".card-1 p",{y:-400,duration:2,opacity:0,stagger:0.5})
+    .from(".card-1 i",{scale:0,duration:0.5})
+    .from(".card-avatar",{rotate:360})
+    .from(".card-title",{scale:0,duration:0.2})
 
+
+})
 
 
     return (
@@ -20,12 +35,12 @@ useGSAP(()=>{
             <div className="home-container">
 
                 <div className="main-Heading">
-                    <h1>This is My portfolio App</h1>
+                    <h1>Let's start <span></span></h1>
                 </div>
                 <div className="cards">
 
                     <div class="card">
-                        <div class="card-info" ref={tl}>
+                        <div class="card-info">
                             <div class="card-avatar"></div>
                             <div class="card-title"><h1>Hi I am Ravi Gahire</h1></div>
                             <div class="card-subtitle">Front End Developer</div>
@@ -48,13 +63,16 @@ useGSAP(()=>{
                     </div>
 
                     <div className="card-1">
+                        <p>Work Holic</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tempora.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tempora.</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tempora.</p>
                         <i class="ri-arrow-right-line"></i>
                     </div>
 
                 </div>
 
-                <div className="para-1">
+                <div className="intro-para">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nulla non accusantium maiores saepe omnis minima! Quod ex, architecto ipsum similique alias quaerat debitis ea sit et iusto sint fuga.</p>
                 </div>
             </div>

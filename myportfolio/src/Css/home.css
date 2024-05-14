@@ -27,8 +27,10 @@
   --font-main: Heading-Font;
   --font-regular-poppins: Poppins-Regular;
   --font-light-poppins: Poppins-Light;
-  --color-yellow: #fcc419;
-  --color-light: #fbfbfb;
+  --bs-white: #fff;
+  --bs-light: #f8f9fa;
+  --bs-warning: #ffc107;
+  --bs-secondary: #6c757d;
 }
 
 .home-container {
@@ -39,16 +41,17 @@
 .main-Heading {
   width: 100%;
   height: 5rem;
-  border: 1px solid #ffff;
-  padding: 2rem;
-  color: #ffff;
+  padding: 1rem 19rem;
+  color: var(--bs-white);
 }
 .main-Heading h1 {
   font-size: 2vw;
   font-weight: 400;
-  text-align: center;
+  text-align: start;
   font-family: var(--font-main);
-  color: var(--color-light);
+}
+.main-Heading h1 span {
+  color: var(--bs-warning);
 }
 
 .cards {
@@ -109,29 +112,29 @@
   display: block;
   height: 18px;
   width: 18px;
-  fill: #f9fafa;
+  fill: var(--bs-white);
   cursor: pointer;
   transition: fill 0.2s ease, transform 0.2s ease;
 }
 
 /*Text*/
 .card-title h1 {
-  color: #ffff;
-  font-size: 1.5em;
+  color: var(--bs-white);
+  font-size: 1.2em;
   font-weight: 400;
   line-height: 2rem;
   font-family: var(--font-regular-poppins);
 }
 
 .card-subtitle {
-  color: #ffff;
-  font-size: 0.8em;
+  color: var(--bs-white);
+  font-size: 0.9em;
   font-family: var(--font-light-poppins);
 }
 
 /*Hover*/
 .card:hover {
-  box-shadow: 0 8px 50px #23232333;
+  box-shadow: 0 5px 5px var(--bs-light);
 }
 
 .card:hover .card-info {
@@ -144,12 +147,12 @@
 }
 
 .card-social__item svg:hover {
-  fill: #232323;
+  fill: var(--bs-warning);
   transform: scale(1.1);
 }
 
 .card-avatar:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
 }
 
 .card-1 {
@@ -158,39 +161,124 @@
   border-radius: 1rem;
   background: var(--main-bg);
   padding: 1rem;
+  display: grid;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.1em;
   position: relative;
+}
+.card-1 .para1 {
+  height: 3em;
+  width: 100%;
+  border-radius: 0.5em;
+  text-align: center;
+  padding: 0.5em;
+  background: var(--bs-white);
+}
+.para1 p {
+  font-size: 1.1em;
+  font-family: var(--font-regular-poppins);
+  font-weight: 800;
+  color: var(--bs-secondary);
 }
 .card-1 i {
   position: absolute;
   bottom: 1rem;
   right: 1rem;
   font-size: 2rem;
-  color:var(--color-light);
+  color: var(--bs-light);
   transition: all 200ms, opacity 0.2, ease-in;
 }
 .card-1 i:hover {
-  color: #111;
-  background:var(--color-light);
+  color: var(--bs-secondary);
+  background: var(--bs-white);
   border-radius: 50%;
   cursor: pointer;
 }
-.card-1 p {
-  font-size: 1rem;
 
-  color: var(--color-light);
-  text-align: center;
-  line-height: 1.5rem;
-  font-family: var(--font-light-poppins);
-  font-weight: 400;
-  margin-top: 1.5rem;
-  border-radius: 0.5em ;
-  background: var(--main-bg);
+.bottom-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+  gap: 1rem;
 }
 
-.intro-para {
+.bottom-container .bottom-dev-1 {
+  height: 20em;
   width: 100%;
-  height: 22rem;
-  padding: 2rem;
-  border: 1px solid rebeccapurple;
+  border: 1px solid var(--bs-warning);
+  background: var(--main-bg);
+  border-radius: 1em;
+  display: flex;
+  align-items: end;
+  justify-content: space-evenly;
+  
+}
+.bottom-container .bottom-dev-1 h1{
+  position: absolute;
+  top: 3rem;
+  margin-top: 1rem;
+}
 
+.bottom-dev-1 .info-card-1{
+  width: 14rem;
+  height: 15rem;
+  background:var(--bs-white);
+  border-radius: 0.5em;
+}
+.bottom-dev-1 .info-card-2{
+  width: 10rem;
+  height: 10rem;
+  background: #000;
+}
+.bottom-dev-1 .info-card-3{
+  width: 10rem;
+  height: 10rem;
+  background: #000;
+}
+.bottom-dev-1 .info-card-4{
+  width: 10rem;
+  height: 10rem;
+  background: #000;
+}
+
+
+
+
+
+.bottom-container .bottom-dev-2 {
+  height: 20em;
+  width: 100%;
+  border: 1px solid var(--bs-warning);
+  background: var(--main-bg);
+  border-radius: 1em;
+  display: flex;
+  align-items: start;
+  justify-content: space-evenly;
+}
+.bottom-container .bottom-dev-2 h1{
+  position: absolute;
+  bottom: 3rem;
+
+}
+.bottom-dev-2 .skill-card-1{
+  width: 10rem;
+  height: 10rem;
+  background: #000;
+}
+.bottom-dev-2 .skill-card-2{
+  width: 10rem;
+  height: 10rem;
+  background: #000;
+}
+.bottom-dev-2 .skill-card-3{
+  width: 10rem;
+  height: 10rem;
+  background: #000;
+}
+.bottom-dev-2 .skill-card-4{
+  width: 14rem;
+  height: 15rem;
+  background: #000;
 }

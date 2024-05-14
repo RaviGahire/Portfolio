@@ -3,31 +3,36 @@ import '../Css/home.css'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import TextPlugin from 'gsap/TextPlugin'
-gsap.registerPlugin(useGSAP,TextPlugin)
+gsap.registerPlugin(useGSAP, TextPlugin)
 
 const Home = () => {
 
-const cardTl= useRef()
+    const cardTl = useRef();
+    // const bottomCrad= useRef();
 
 
-useGSAP(()=>{
-   const tl = gsap.timeline()
-   tl.to(".main-Heading span",{repeat:-1,duration:5,repeatDelay:2,yoyo:true,
-    text:"Crafting Something Amazing Together"
-   }) 
-});
+    useGSAP(() => {
+        const tl = gsap.timeline()
+        tl.to(".main-Heading span", {
+            repeat: -1, duration: 5, repeatDelay: 2, yoyo: true,
+            text: "Crafting Something Amazing Together"
+        })
+    });
 
-useGSAP(()=>{
-    cardTl.current= gsap.timeline()
-    .from(".card",{y:400,duration:2,opacity:0,})
-    .from(".card-1",{y:400,duration:2,opacity:0})
-    .from(".card-1 p",{y:-400,duration:2,opacity:0,stagger:0.5})
-    .from(".card-1 i",{scale:0,duration:0.5})
-    .from(".card-avatar",{rotate:360})
-    .from(".card-title",{scale:0,duration:0.2})
+    useGSAP(() => {
+        cardTl.current = gsap.timeline()
+            .from(".card", { y: 400, duration: 2, opacity: 0, })
+            .from(".card-1", { y: 400, duration: 2, opacity: 0 })
+            .from(".card-1 .para1", { y: -400, duration: 0.9, opacity: 0, stagger: 0.5 })
+            .from(".card-1 i", { scale: 0, duration: 0.5 })
+            
+            .from(".card-title", { scale: 0, duration: 0.2 })
+            .from(".bottom-container .bottom-dev-1", { y: 400, duration: 2.5, opacity: 0 })
+            .from(".bottom-dev-1 div", { y: 400, duration: 2.5, opacity: 0, stagger: 0.1 })
+            .from(" .bottom-dev-2", { y: 400, duration: 2.5, opacity: 0 })
+            .from(".bottom-dev-2 div", { y: -400, duration: 2.5, opacity: 0, stagger: 0.1 })
 
-
-})
+    })
 
 
     return (
@@ -63,18 +68,34 @@ useGSAP(()=>{
                     </div>
 
                     <div className="card-1">
-                        <p>Work Holic</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tempora.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tempora.</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, tempora.</p>
+                        <div className="para1"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p> </div>
+                        <div className="para1"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> </div>
+                        <div className="para1"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> </div>
+                        <div className="para1"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> </div>
                         <i class="ri-arrow-right-line"></i>
                     </div>
 
                 </div>
+                <div className="bottom-container">
+                    <div className="bottom-dev-1">
+                        <h1>Education</h1>
+                        <div className="info-card-1"></div>
+                        <div className="info-card-2"></div>
+                        <div className="info-card-3"></div>
+                        <div className="info-card-4"></div>
 
-                <div className="intro-para">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis nulla non accusantium maiores saepe omnis minima! Quod ex, architecto ipsum similique alias quaerat debitis ea sit et iusto sint fuga.</p>
+
+                    </div>
+                    <div className="bottom-dev-2">
+                    <h1>My-Skilss</h1>
+                        <div className="skill-card-1"></div>
+                        <div className="skill-card-2"></div>
+                        <div className="skill-card-3"></div>
+                        <div className="skill-card-4"></div>
+                    </div>
+
                 </div>
+
             </div>
 
 

@@ -7,32 +7,32 @@ gsap.registerPlugin(useGSAP, TextPlugin)
 
 const Home = () => {
 
-    const cardTl = useRef();
-    // const bottomCrad= useRef();
+    // const cardTl = useRef();
+    // // const bottomCrad= useRef();
 
 
-    useGSAP(() => {
-        const tl = gsap.timeline()
-        tl.to(".main-Heading span", {
-            repeat: -1, duration: 5, repeatDelay: 2, yoyo: true,
-            text: "Crafting Something Amazing Together"
-        })
-    });
+    // useGSAP(() => {
+    //     const tl = gsap.timeline()
+    //     tl.to(".main-Heading span", {
+    //         repeat: -1, duration: 5, repeatDelay: 2, yoyo: true,
+    //         text: "Crafting Something Amazing Together"
+    //     })
+    // });
 
-    useGSAP(() => {
-        cardTl.current = gsap.timeline()
-            .from(".card", { y: 400, duration: 2, opacity: 0, })
-            .from(".card-1", { y: 400, duration: 2, opacity: 0 })
-            .from(".card-1 .para1", { y: -400, duration: 0.9, opacity: 0, stagger: 0.5 })
-            .from(".card-1 i", { scale: 0, duration: 0.5 })
-            
-            .from(".card-title", { scale: 0, duration: 0.2 })
-            .from(".bottom-container .bottom-dev-1", { y: 400, duration: 2.5, opacity: 0 })
-            .from(".bottom-dev-1 div", { y: 400, duration: 2.5, opacity: 0, stagger: 0.1 })
-            .from(" .bottom-dev-2", { y: 400, duration: 2.5, opacity: 0 })
-            .from(".bottom-dev-2 div", { y: -400, duration: 2.5, opacity: 0, stagger: 0.1 })
+    // useGSAP(() => {
+    //     cardTl.current = gsap.timeline()
+    //         .from(".card", { y: 400, duration: 2, opacity: 0, })
+    //         .from(".card-1", { y: 400, duration: 2, opacity: 0 })
+    //         .from(".card-1 .para1", { x: 400, duration: 0.9, opacity: 0, stagger: 0.5 })
+    //         .from(".card-1 i", { scale: 0, duration: 0.5 })
 
-    })
+    //         .from(".card-title", { scale: 0, duration: 0.2 })
+    //         .from(".bottom-container .bottom-dev-1", { x: 100, duration: 2.5, opacity: 0 })
+    //         .from(".bottom-dev-1 div", { x: -100, duration: 2.5, opacity: 0, stagger: 0.1 })
+    //         .from(" .bottom-dev-2", { x: 100, duration: 2.5, opacity: 0 })
+    //         .from(".bottom-dev-2 div", { x: -100, duration: 2.5, opacity: 0, stagger: 0.1, display: "none" })
+
+    // })
 
 
     return (
@@ -79,19 +79,22 @@ const Home = () => {
                 <div className="bottom-container">
                     <div className="bottom-dev-1">
                         <h1>Education</h1>
-                        <div className="info-card-1"></div>
-                        <div className="info-card-2"></div>
-                        <div className="info-card-3"></div>
-                        <div className="info-card-4"></div>
+
 
 
                     </div>
                     <div className="bottom-dev-2">
-                    <h1>My-Skilss</h1>
-                        <div className="skill-card-1"></div>
-                        <div className="skill-card-2"></div>
-                        <div className="skill-card-3"></div>
-                        <div className="skill-card-4"></div>
+                        <h1>My-Skilss</h1>
+                        <div className="skill-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, minima.</p>
+                        </div>
+                        <div className="skill-set">
+                            <div className="skill-card-1"></div>
+                            <div className="skill-card-2"></div>
+                            <div className="skill-card-3"></div>
+                            <div className="skill-card-4"></div>
+                            <div className="skill-card-5"></div>
+                        </div>
                     </div>
 
                 </div>

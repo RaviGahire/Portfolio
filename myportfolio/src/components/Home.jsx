@@ -94,6 +94,7 @@ const Home = () => {
                             <div className="skill-card-3"></div>
                             <div className="skill-card-4"></div>
                             <div className="skill-card-5"></div>
+                            <div className="skill-card-6"></div>
                         </div>
                     </div>
 

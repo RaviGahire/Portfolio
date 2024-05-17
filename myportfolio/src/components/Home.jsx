@@ -38,7 +38,6 @@ const Home = () => {
     return (
         <>
             <div className="home-container">
-
                 <div className="main-Heading">
                     <h1>Let's start <span></span></h1>
                 </div>
@@ -74,16 +73,33 @@ const Home = () => {
                         <div className="para1"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p> </div>
                         <i class="ri-arrow-right-line"></i>
                     </div>
-
                 </div>
-                <div className="bottom-container">
-                    <div className="bottom-dev-1">
-                        <h1>Education</h1>
 
+                {/* Introduction section */}
+                <div className="self-intro-container">
+                    <div className="my-info">
+                        <div className="intro-heading"> <h1>Profile</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus reiciendis necessitatibus eveniet minima iusto labore quibusdam odit, reprehenderit nesciunt dolor.</p></div>
+                       
+                       
+                        <div className="info">
+                            <div className="basic-info"><p>FullName</p>    <div className="basic-info-text"></div>  </div>
+                            <div className="basic-info"><p>Birth Date</p>    <div className="basic-info-text"></div>  </div>
+                            <div className="basic-info"><p>Job </p>         <div className="basic-info-text"></div>   </div>
+                            <div className="basic-info"><p>Website</p>      <div className="basic-info-text"></div>   </div>
+                            <div className="basic-info"><p>Email</p>    <div className="basic-info-text"></div>      </div>
+                         
 
+                        </div>
 
                     </div>
-                    <div className="bottom-dev-2">
+                </div>
+
+
+
+                {/* my skill */}
+                <div className="bottom-container">
+                    <div className="bottom-div">
                         <h1>My-Skilss</h1>
                         <div className="skill-info">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, minima.</p>
@@ -97,7 +113,6 @@ const Home = () => {
                             <div className="skill-card-6"></div>
                         </div>
                     </div>
-
                 </div>
 
             </div>

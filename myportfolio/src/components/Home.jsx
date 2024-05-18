@@ -79,19 +79,14 @@ const Home = () => {
                 <div className="self-intro-container">
                     <div className="my-info">
                         <div className="intro-heading"> <h1>Profile</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus reiciendis necessitatibus eveniet minima iusto labore quibusdam odit, reprehenderit nesciunt dolor.</p></div>
-                       
-                       
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus reiciendis necessitatibus eveniet minima iusto labore quibusdam odit, reprehenderit nesciunt dolor.</p></div>
                         <div className="info">
-                            <div className="basic-info"><p>FullName</p>    <div className="basic-info-text"></div>  </div>
-                            <div className="basic-info"><p>Birth Date</p>    <div className="basic-info-text"></div>  </div>
-                            <div className="basic-info"><p>Job </p>         <div className="basic-info-text"></div>   </div>
-                            <div className="basic-info"><p>Website</p>      <div className="basic-info-text"></div>   </div>
-                            <div className="basic-info"><p>Email</p>    <div className="basic-info-text"></div>      </div>
-                         
-
+                            <div className="basic-info"><i class="ri-user-line"></i><p>FullName</p><div className="basic-info-text"><p>Ravi Gahire</p></div></div>
+                            <div className="basic-info"><i class="ri-calendar-event-line"></i><p>Birth Date</p><div className="basic-info-text"><p>7-Oct-1994</p></div></div>
+                            <div className="basic-info"><i class="ri-window-line"></i><p>Job </p><div className="basic-info-text"> <p>Front End Developer</p></div></div>
+                            <div className="basic-info"><i class="ri-global-line"></i><p>Website</p><div className="basic-info-text"> <p>example.com</p></div></div>
+                            <div className="basic-info"><i class="ri-mail-line"></i><p>Email</p><div className="basic-info-text"><p>ravi.gahire@gmail.com </p></div></div>
                         </div>
-
                     </div>
                 </div>
 
@@ -105,12 +100,12 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, minima.</p>
                         </div>
                         <div className="skill-set">
-                            <div className="skill-card-1"></div>
-                            <div className="skill-card-2"></div>
-                            <div className="skill-card-3"></div>
-                            <div className="skill-card-4"></div>
-                            <div className="skill-card-5"></div>
-                            <div className="skill-card-6"></div>
+                            <div title='java-Script' className="skill-card-1"></div>
+                            <div title='React-Js' className="skill-card-2"></div>
+                            <div title='HTML-5' className="skill-card-3"></div>
+                            <div title='CSS' className="skill-card-4"></div>
+                            <div title='Bootstrap' className="skill-card-5"></div>
+                            <div title='Node Js' className="skill-card-6"></div>
                         </div>
                     </div>
                 </div>

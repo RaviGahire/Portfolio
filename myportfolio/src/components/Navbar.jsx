@@ -11,7 +11,7 @@ gsap.registerPlugin(useGSAP)
 
 const Navbar = () => {
     const tl = useRef()
-    const rotate = useRef()
+
 
     const openMenu = () => {
         tl.current.play();
@@ -58,10 +58,10 @@ const Navbar = () => {
 
                     <div className="down-buttons">
                         <Link to="/about">
-                        <button class="button-89" role="button">Hire Me</button>
+                        <button className="button-89" role="button">Hire Me</button>
                         </Link>
                         <Link to="/about">
-                        <button class="button-89" role="button">Contact</button>
+                        <button className="button-89" role="button">Contact</button>
                         </Link>
                     </div>
                 </div>

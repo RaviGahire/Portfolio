@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Home';
+import Work from './Work';
 
 
 
@@ -13,7 +14,7 @@ const Routers = () => {
                 <Routes>
                 <Route path='/' element={<Home/>}></Route>
                 
-                    <Route path='/work' element={<h1>Work component</h1>}></Route>
+                    <Route path='/work' element={<Work/>}></Route>
 
                     <Route path='/about' element={<h1>About component</h1>}></Route>
 

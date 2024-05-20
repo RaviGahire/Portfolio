@@ -12,7 +12,7 @@ const Work = () => {
   return (
     <>
       <section>
-        <h1 className='my-work-text'>My-Work</h1>
+         <h1 className='my-work-text'>My-Work</h1>
         <h2 className='project-text'>Project</h2>
         <div className="work-container">
           <div className="work-card ">
@@ -146,21 +146,21 @@ const Work = () => {
            
             </Swiper>
           </div>
-        </div>
-        <section class="reviews">
-        <div class="reviews-title">
-            <p>Reviews</p>
+        </div> 
+        <section className="reviews">
+        <div className="reviews-title">
+            <h1>Reviews</h1>
         </div>
         <div>
-            <div class="reviews-row row-first">
-                <div class="reviews-card">
-                    <img class="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review1.png" alt=""/>
+            <div className="reviews-row row-first">
+                <div className="reviews-card">
+                    <img className="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review1.png" alt=""/>
 
-                    <div class="card-text">
-                        <div class="card-title">
+                    <div className="card-text">
+                        <div className="card-title">
                             <p>“Excellent Team with Creative Mindset”</p>
                         </div>
-                        <div class="card-para">
+                        <div className="card-para">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
                                 pulvinar nunc fringilla lectus.
                             </p>
@@ -169,7 +169,7 @@ const Work = () => {
                                 sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
                         </div>
 
-                        <div class="card-author">
+                        <div className="card-author">
                             <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
                             </svg>
@@ -178,14 +178,14 @@ const Work = () => {
                     </div>
                 </div>
 
-                <div class="reviews-card">
-                    <img class="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review2.png" alt=""/>
+                <div className="reviews-card">
+                    <img className="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review2.png" alt=""/>
 
-                    <div class="card-text">
-                        <div class="card-title">
+                    <div className="card-text">
+                        <div className="card-title">
                             <p>“Excellent Team with Creative Mindset”</p>
                         </div>
-                        <div class="card-para">
+                        <div className="card-para">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
                                 pulvinar nunc fringilla lectus.
                             </p>
@@ -194,7 +194,7 @@ const Work = () => {
                                 sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
                         </div>
 
-                        <div class="card-author">
+                        <div className="card-author">
                             <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
                             </svg>
@@ -203,14 +203,14 @@ const Work = () => {
                     </div>
                 </div>
 
-                <div class="reviews-card">
-                    <img class="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review3.png" alt=""/>
+                <div className="reviews-card">
+                    <img className="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review3.png" alt=""/>
 
-                    <div class="card-text">
-                        <div class="card-title">
+                    <div className="card-text">
+                        <div className="card-title">
                             <p>“Excellent Team with Creative Mindset”</p>
                         </div>
-                        <div class="card-para">
+                        <div className="card-para">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
                                 pulvinar nunc fringilla lectus.
                             </p>
@@ -219,7 +219,7 @@ const Work = () => {
                                 sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
                         </div>
 
-                        <div class="card-author">
+                        <div className="card-author">
                             <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
                             </svg>
@@ -229,16 +229,16 @@ const Work = () => {
                 </div>
 
             </div>
-            <div class="reviews-row row-second">
-                <div class="reviews-card">
-                    <div class="card-img">
+            <div className="reviews-row row-second">
+                <div className="reviews-card">
+                    <div className="card-img">
                         <img src="https://temalcode-agency-portfolio.netlify.app/images/review1.png" alt=""/>
                     </div>
-                    <div class="card-text">
-                        <div class="card-title">
+                    <div className="card-text">
+                        <div className="card-title">
                             <p>“Excellent Team with Creative Mindset”</p>
                         </div>
-                        <div class="card-para">
+                        <div className="card-para">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
                                 pulvinar nunc fringilla lectus.
                             </p>
@@ -246,22 +246,22 @@ const Work = () => {
                                 Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
                                 sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
                         </div>
-                        <p class="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
+                        <p className="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
                             </svg>
                             CEO of SomeCompany</p>
                     </div>
                 </div>
-                <div class="reviews-card">
-                    <div class="card-img">
+                <div className="reviews-card">
+                    <div className="card-img">
                         <img src="https://temalcode-agency-portfolio.netlify.app/images/review4.png" alt=""/>
                     </div>
-                    <div class="card-text">
-                        <div class="card-title">
+                    <div className="card-text">
+                        <div className="card-title">
                             <p>“Excellent Team with Creative Mindset”</p>
                         </div>
-                        <div class="card-para">
+                        <div className="card-para">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
                                 pulvinar nunc fringilla lectus.
                             </p>
@@ -269,22 +269,22 @@ const Work = () => {
                                 Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
                                 sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
                         </div>
-                        <p class="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
+                        <p className="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
                             </svg>
                             CEO of SomeCompany</p>
                     </div>
                 </div>
-                <div class="reviews-card">
-                    <div class="card-img">
+                <div className="reviews-card">
+                    <div className="card-img">
                         <img src="https://temalcode-agency-portfolio.netlify.app/images/review5.png" alt=""/>
                     </div>
-                    <div class="card-text">
-                        <div class="card-title">
+                    <div className="card-text">
+                        <div className="card-title">
                             <p>“Excellent Team with Creative Mindset”</p>
                         </div>
-                        <div class="card-para">
+                        <div className="card-para">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
                                 pulvinar nunc fringilla lectus.
                             </p>
@@ -292,7 +292,7 @@ const Work = () => {
                                 Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
                                 sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
                         </div>
-                        <p class="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
+                        <p className="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
                             </svg>
@@ -300,77 +300,7 @@ const Work = () => {
                     </div>
                 </div>
             </div>
-            {/* <div class="reviews-row row-third">
-                <div class="reviews-card">
-                    <div class="card-img">
-                        <img src="https://temalcode-agency-portfolio.netlify.app/images/review6.png" alt=""/>
-                    </div>
-                    <div class="card-text">
-                        <div class="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div class="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-                        <p class="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            CEO of SomeCompany</p>
-                    </div>
-                </div>
-                <div class="reviews-card">
-                    <div class="card-img">
-                        <img src="https://temalcode-agency-portfolio.netlify.app/images/review7.png" alt=""/>
-                    </div>
-                    <div class="card-text">
-                        <div class="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div class="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-                        <p class="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            CEO of SomeCompany</p>
-                    </div>
-                </div>
-                <div class="reviews-card">
-                    <div class="card-img">
-                        <img src="https://temalcode-agency-portfolio.netlify.app/images/review1.png" alt=""/>
-                    </div>
-                    <div class="card-text">
-                        <div class="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div class="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-                        <p class="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            CEO of SomeCompany</p>
-                    </div>
-                </div>
-            </div> */}
+          
         </div>
     </section>
 

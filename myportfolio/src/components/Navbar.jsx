@@ -52,8 +52,7 @@ const Navbar = () => {
                     <li><NavLink to="/" className="nav-links">Home</NavLink></li>
                     <li><NavLink to="./work" className="nav-links">My Work</NavLink></li>
                     <li><NavLink to="./about" className="nav-links">About </NavLink></li>
-                    <li><NavLink to="./blog" className="nav-links"> Blog</NavLink></li>
-                    <li><NavLink to="./contact" className="nav-links">Contact Me</NavLink></li>
+                   <li><NavLink to="./contact" className="nav-links">Contact</NavLink></li>
                     <i class="ri-close-line" onClick={closeMenu}></i>
 
                     <div className="down-buttons">

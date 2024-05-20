@@ -7,6 +7,7 @@ import About from './About';
 
 
 
+
 const Routers = () => {
     return (
         <>
@@ -19,7 +20,7 @@ const Routers = () => {
 
                     <Route path='/about' element={<About/>}></Route>
 
-                    <Route path='/blog' element={<h1>Blog component</h1>}></Route>
+                    
 
                     <Route path='/contact' element={<h1>Contact component</h1>}></Route>
 

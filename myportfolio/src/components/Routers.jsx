@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Home';
 import Work from './Work';
 import About from './About';
+import Contact from './Contact';
 
 
 
@@ -19,10 +20,8 @@ const Routers = () => {
                     <Route path='/work' element={<Work/>}></Route>
 
                     <Route path='/about' element={<About/>}></Route>
-
                     
-
-                    <Route path='/contact' element={<h1>Contact component</h1>}></Route>
+                    <Route path='/contact' element={<Contact/>}></Route>
 
                 </Routes>
             </Router>

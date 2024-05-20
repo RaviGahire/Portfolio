@@ -3,6 +3,7 @@ import Navbar from './Navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './Home';
 import Work from './Work';
+import About from './About';
 
 
 
@@ -16,7 +17,7 @@ const Routers = () => {
                 
                     <Route path='/work' element={<Work/>}></Route>
 
-                    <Route path='/about' element={<h1>About component</h1>}></Route>
+                    <Route path='/about' element={<About/>}></Route>
 
                     <Route path='/blog' element={<h1>Blog component</h1>}></Route>
 

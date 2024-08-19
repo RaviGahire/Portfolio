@@ -1,5 +1,5 @@
 import React from 'react'
-import '../Css/work.css'
+import '../custom-css-files/work.css'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';

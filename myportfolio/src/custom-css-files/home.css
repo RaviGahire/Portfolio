@@ -15,7 +15,6 @@
   --main-bg: #14171a;
   --gray: #33333393;
   --light-gray: #494949b4;
-
   --font-main: Heading-Font;
   --font-regular-poppins: Poppins-Regular;
   --font-light-poppins: Poppins-Light;
@@ -26,6 +25,7 @@
 }
 
 .home-container {
+ 
   height: 100%;
   width: 100%;
   background: var(--main-bg);
@@ -175,8 +175,6 @@
 .card-1 .bttons {
   width: 100%;
   height: 10rem;
-
-  
 }
 .links {
   width: 100%;
@@ -185,7 +183,6 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
-
 }
 
 .button1 {

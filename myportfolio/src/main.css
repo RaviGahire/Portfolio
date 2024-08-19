@@ -4,3 +4,29 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Heading-Font;
+    src: url(/public/Assets/Fonts/Countless.ttf);
+  }
+  @font-face {
+    font-family: Poppins-Regular;
+    src: url(/public/Assets/Fonts/Poppins-Regular.ttf);
+  }
+  @font-face {
+    font-family: Poppins-Light;
+    src: url(/public/Assets/Fonts/Poppins-Light.ttf);
+  }
+  
+  :root {
+    --main-bg: #14171a;
+    --gray: #33333393;
+    --light-gray: #494949b4;
+    --font-main: Heading-Font;
+    --font-regular-poppins: Poppins-Regular;
+    --font-light-poppins: Poppins-Light;
+    --bs-white: #fff;
+    --bs-light: #f8f9fa;
+    --bs-warning: #ffc107;
+    --bs-secondary: #6c757d;
+  }
+

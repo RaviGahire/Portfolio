@@ -6,9 +6,6 @@ import Work from './Work';
 import About from './About';
 import Contact from './Contact';
 
-
-
-
 const Routers = () => {
     return (
         <>
@@ -26,9 +23,6 @@ const Routers = () => {
                 </Routes>
             </Router>
         </>
-
-
     )
 }
-
 export default Routers;

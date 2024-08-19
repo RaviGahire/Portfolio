@@ -1,51 +1,21 @@
-import React, { startTransition, useRef } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
-import '../Css/home.css'
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import TextPlugin from 'gsap/TextPlugin'
-import { ScrollTrigger } from 'gsap/all'
+import '../custom-css-files/home.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 
-
-gsap.registerPlugin(useGSAP, TextPlugin, ScrollTrigger)
 
 const Home = () => {
-
-    const cardTl = useRef();
-    // const bottomCrad= useRef();
-
-    useGSAP(() => {
-        const tl = gsap.timeline()
-        tl.to(".main-Heading span", {
-            repeat: -1, duration: 5, repeatDelay: 2, yoyo: true,
-            text: "Crafting Something Amazing Together"
-        })
-    });
-
-    useGSAP(() => {
-        cardTl.current = gsap.timeline()
-            .from(".card", {
-                y: 400, duration: 2, opacity: 0,
-            })
-            .from(".card-1", { y: 400, duration: 2, opacity: 0 })
-            .from(".card-1 .para1", { x: 400, duration: 0.9, opacity: 0, stagger: 0.5 })
-            .from(".card-1 i", { scale: 0, duration: 0.5 })
-            .from(".card-title", { scale: 0, duration: 0.2 })
-            .from(".bottom-container .bottom-dev-1", { x: 100, duration: 2.5, opacity: 0 })
-            .from(".bottom-dev-1 div", { x: -100, duration: 2.5, opacity: 0, stagger: 0.1 })
-            .from(" .bottom-dev-2", { x: 100, duration: 2.5, opacity: 0 })
-            .from(".bottom-dev-2 div", { x: -100, duration: 2.5, opacity: 0, stagger: 0.1, })
-
-    })
+   
+     
     return (
         <>
-            <div className="home-container">
+            <div className="home-container container">
                 <div className="main-Heading">
                     <h1>Let's start <span></span></h1>
                 </div>
                 <div className="cards">
-
                     <div class="card">
                         <div class="card-info">
                             <div class="card-avatar"></div>
@@ -77,10 +47,10 @@ const Home = () => {
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, odio?</p>
                         <div className="bttons">
                             <Link className='links' to='/' target='/'>
-                                <button className="button1" role="button">Hire Me</button>
+                                <button className="button1" role="main">Hire Me</button>
                             </Link>
                             <Link className='links' to='/' target='/'>
-                                <button className="button1" role="button">Contact</button>
+                                <button className="button1" role="main">Contact</button>
                             </Link>
                         </div>
                         <Link to="/about">

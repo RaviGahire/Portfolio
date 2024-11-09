@@ -1,87 +1,78 @@
-import React from "react"
+import React, { useRef } from "react"
 import "../custom-css-files/navbar.css"
-// import gsap from 'gsap'
-// import { useGSAP } from "@gsap/react"
+import gsap from 'gsap'
+import { useGSAP } from "@gsap/react"
 import { NavLink } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
-// gsap.registerPlugin(useGSAP)
+gsap.registerPlugin(useGSAP)
 
 const Navbar = () => {
-    // const tl = useRef()
-    // const openMenu = () => {
-    //     tl.current.play();
-    // }
-    // const closeMenu = () => {
-    //     tl.current.reverse();
-    // }
+    const tl = useRef()
 
-    // useGSAP(() => {
-    //     tl.current = gsap.timeline()
-    //         .to(".side-menu", {
-    //             right: 0,
-    //             duration: 0.2,
 
-    //         })
-    //         .from(".side-menu li", {
-    //             x: 200,
-    //             duration: 0.4,
-    //             opacity: 0,
-    //             stagger: 0.2
-    //         })
+    const openMenu = () => {
+        tl.current.play();
+    }
+    const closeMenu = () => {
+        tl.current.reverse();
+    }
 
-    //     tl.current.pause()
+    useGSAP(() => {
+        tl.current = gsap.timeline()
+            .to(".side-menu", {
+                right: 0,
+                duration: 0.2,
 
-    // });
+            })
+            .from(".side-menu li", {
+                x: 200,
+                duration: 0.4,
+                opacity: 0,
+                stagger: 0.2
+            })
+
+        tl.current.pause()
+
+    });
 
 
 
     return (
         <>
-            {/* <header className="container">
-                <div className="nav">
-                    <h1 className="logo"> Ravi Gahire <i className="ri-sun-fill"></i></h1>
-                    <i className="ri-menu-line" onClick={openMenu}></i>
-                </div>
-                <div classNameName="side-menu">
-                    <li><NavLink to="/" className="nav-links">Home</NavLink></li>
-                    <li><NavLink to="./work" className="nav-links">My Work</NavLink></li>
-                    <li><NavLink to="./about" className="nav-links">About </NavLink></li>
-                    <li><NavLink to="./contact" className="nav-links">Contact</NavLink></li>
-                    <i className="ri-close-line" onClick={closeMenu}></i>
-                </div>
-
-            </header> */}
-
-            <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark m-auto">
-                <div className="container-fluid ">
-                    <a className="navbar-brand" href="/">Navbar</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNavDropdown">
-                        <ul className="navbar-nav ">
-                            <li className="nav-item">
-                            <NavLink to="/" className="nav-links">Home</NavLink>
-                            </li>
-                            <li className="nav-item">
-                            <NavLink to="./work" className="nav-links">My Work</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/">Pricing</a>
-                            </li>
-                         
-                        </ul>
+            <header>
+                <nav className="navbar navbar-expand-lg bg-body-tertiary">
+                    <div className="container bg-dark rounded">
+                        <NavLink to="./" className="navbar-brand text-light mx-2 ">Ravi Gahire</NavLink>
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                    <path d="M2 3h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2z" />
+                                    <path d="M2 7h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2z" />
+                                    <path d="M2 11h12a1 1 0 1 1 0 2H2a1 1 0 1 1 0-2z" />
+                                </svg>
+                            </span>
+                        </button>
+                        <div className="collapse navbar-collapse" id="navbarNav">
+                            <ul className="navbar-nav mx-auto m-3 fs-light ">
+                                <li className="nav-item">
+                                    <NavLink to='/' className="nav-link active text-light">Home  </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink to='./about' className="nav-link active text-light">About  </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink to='./work' className="nav-link active text-light">Work  </NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink to='./contact' className="nav-link active text-light">Contact  </NavLink>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </nav>
-
-
-
-
-
-
+                </nav>
+            </header>
         </>
     )
 }

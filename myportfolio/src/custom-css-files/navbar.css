@@ -1,141 +1,22 @@
-/* Navbar css */
-body {
-  overflow-x: hidden;
+/* Remove any borders from the navbar-toggler and SVG */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: transparent;
 }
 
-.nav {
-  display: flex;
-  flex: content;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem 5rem;
-  color: var(--bs-white);
-  background: var(--main-bg);
-}
-.nav .logo {
-  font-size: 2rem;
-  font-family: var(--font-main);
-  font-weight: 200;
-}
-.nav .logo i {
-  position: absolute;
-  left: 2rem;
-  font-size: 2rem;
-  color: var(--bs-warning);
-  font-weight: 200;
-  animation: rotate 5s infinite;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.navbar-toggler-icon {
+  background-color: transparent;
+  border: none;
 }
 
-.nav i {
-  font-size: 2rem;
-  cursor: pointer;
-}
-.side-menu {
-  height: 50vw;
-  width: 25%;
-  position: absolute;
-  top: 0;
-  right: -25%;
-  background-color: var(--gray);
-  backdrop-filter: blur(10px);
-  padding: 10rem 3rem;
-}
-.side-menu li {
-  font-size: 2rem;
-  font-weight: 100;
-  font-family: var(--font-light-poppins);
-  margin: 2rem auto;
-  list-style-type: none;
+.navbar-toggler-icon svg {
+  fill: white;
+  stroke: none;
 }
 
-.side-menu .nav-links {
-  text-decoration: none;
-  color: var(--bs-white);
-  position: relative;
-}
-.side-menu .nav-links::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: var(--bs-warning);
-  transform: scale(0);
-  transition: all 200ms ease-in;
-}
-
-.side-menu .nav-links:hover::after {
-  transform: scale(1);
-}
-
-.side-menu i {
-  position: absolute;
-  top: 2rem;
-  right: 5rem;
-  font-size: 1rem;
-  background-color: #fff;
-  border-radius: 50%;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-.down-buttons {
-  width: 100%;
-  height: 10rem;
-  /* background-color: #ffc107; */
-  display: flex;
-  align-items: end;
-  justify-content: center;
-}
-
-/* Button CSS */
-.button-89 {
-  --b: 3px; /* border thickness */
-  --s: 0.45em; /* size of the corner */
-  --color: #ffc107;
-  padding: calc(0.5em + var(--s)) calc(0.9em + var(--s));
-  color: var(--bs-light);
-  --_p: var(--s);
-  background: conic-gradient(
-      from 90deg at var(--b) var(--b),
-      #0000 90deg,
-      var(--color) 0
-    )
-    var(--_p) var(--_p) / calc(100% - var(--b) - 2 * var(--_p))
-    calc(100% - var(--b) - 2 * var(--_p));
-  transition: 0.3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid #0000;
-  outline-offset: 0.6em;
-  font-size: 16px;
-  border: 0;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  margin: 2rem;
-  width: 100%;
-  font-family: var(--font-main);
-}
-
-.button-89:hover,
-.button-89:focus-visible {
-  --_p: 0px;
-  outline-color: var(--color);
-  outline-offset: 0.05em;
-  cursor: pointer;
-}
-
-.button-89:active {
-  background: var(--color);
-  color: #fff;
+.navbar-toggler:focus {
+  box-shadow: none !important; 
+  border: none !important;
 }
 

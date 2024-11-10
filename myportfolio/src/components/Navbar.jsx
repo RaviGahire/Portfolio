@@ -36,9 +36,6 @@ const Navbar = () => {
         tl.current.pause()
 
     });
-
-
-
     return (
         <>
             <header>
@@ -60,13 +57,13 @@ const Navbar = () => {
                                     <NavLink to='/' className="nav-link active text-light">Home  </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to='./about' className="nav-link active text-light">About  </NavLink>
+                                    <NavLink to='./about' className="nav-link text-light">About  </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to='./work' className="nav-link active text-light">Work  </NavLink>
+                                    <NavLink to='./work' className="nav-link text-light">Work  </NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink to='./contact' className="nav-link active text-light">Contact  </NavLink>
+                                    <NavLink to='./contact' className="nav-link text-light">Contact  </NavLink>
                                 </li>
                             </ul>
                         </div>

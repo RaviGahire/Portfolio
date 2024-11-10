@@ -1,4 +1,5 @@
-/* Remove any borders from the navbar-toggler and SVG */
+
+/* toggler icon of bosstrap 5.3 removed default style */
 .navbar-toggler {
   border: none;
   outline: none;
@@ -16,7 +17,30 @@
 }
 
 .navbar-toggler:focus {
-  box-shadow: none !important; 
+  box-shadow: none !important;
   border: none !important;
 }
+
+/* Underline of nav bar text */
+
+.nav-link {
+  position: relative;
+}
+.nav-link::before {
+  content: " ";
+  position: absolute;
+  bottom: 0.5px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 0;
+  height: 3px;
+  border-radius: 0.1px;
+  background-color: #f7f4f4;
+  transition: width 0.3s ease-in-out; 
+}
+
+.nav-link:hover::before {
+  width: 40px; 
+}
+
 

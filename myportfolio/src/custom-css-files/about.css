@@ -1,15 +1,9 @@
-@font-face {
-  font-family: Heading-Font;
-  src: url(/public/Assets/Fonts/Countless.ttf);
-}
+
 @font-face {
   font-family: Poppins-Regular;
   src: url(/public/Assets/Fonts/Poppins-Regular.ttf);
 }
-@font-face {
-  font-family: Poppins-Light;
-  src: url(/public/Assets/Fonts/Poppins-Light.ttf);
-}
+
 
 :root {
   --main-bg: #14171a;

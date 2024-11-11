@@ -39,8 +39,8 @@ const Navbar = () => {
     return (
         <>
             <header>
-                <nav className="navbar navbar-expand-lg bg-body-tertiary">
-                    <div className="container bg-dark rounded">
+                <nav className="navbar navbar-expand-lg p-2  bg-body-tertiary-custom-class">
+                    <div className="container rounded bg-dark border">
                         <NavLink to="./" className="navbar-brand text-light mx-2 ">Ravi Gahire</NavLink>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon">
@@ -67,6 +67,8 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </div>
+                       <span className="text-light fs-2"><i class="ri-contrast-2-line"></i></span>
+                       <span className="text-light fs-2"> <i class="ri-sun-fill"></i></span>
                     </div>
                 </nav>
             </header>

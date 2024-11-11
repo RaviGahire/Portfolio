@@ -1,9 +1,16 @@
 
+
+.bg-body-tertiary-custom-class{
+  background-color: #212121 !important;
+
+}
+
 /* toggler icon of bosstrap 5.3 removed default style */
 .navbar-toggler {
   border: none;
   outline: none;
   background-color: transparent;
+
 }
 
 .navbar-toggler-icon {

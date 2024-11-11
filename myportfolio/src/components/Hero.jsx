@@ -11,7 +11,7 @@ const Hero = () => {
                     <div className="hero-content">
                         <h1 className="display-1">Welcome to my portfolio</h1>
                         <p className="lead"><span className='text-info'>I am</span> <span className='typing'>Web dev</span></p>
-                        <Link href="#" className="btn btn-primary btn-lg mt-3 ">Resume</Link>
+                        <Link href="#" className="btn  btn-lg mt-3 glow-box ">Resume</Link>
                         <div className="social-icons mt-5">
                             <Link to="https://www.facebook.com/ravi.gahire" target='/' className='icon' aria-label="Facebook"><i class="ri-facebook-circle-line"></i></Link>
                             <Link to="https://x.com/RaviGahire" target='/' className='icon' aria-label="Twitter"><i class="ri-twitter-x-line"></i></Link>
@@ -19,6 +19,7 @@ const Hero = () => {
                             <Link to="https://www.linkedin.com/in/ravi-gahire-7855b110a/" target='/' className='icon' aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></Link>
                         </div>
                     </div>
+                    
                 </div>
             </section>
         </>

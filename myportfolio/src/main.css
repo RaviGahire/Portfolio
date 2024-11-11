@@ -18,15 +18,5 @@
   font-family: NomadaDidone-Regular;
   src: url(/public/Assets/Fonts/NomadaDidone-Regular.ttf);
 }
-:root {
-  --main-bg: #14171a;
-  --gray: #33333393;
-  --light-gray: #494949b4;
-  --font-main: Heading-Font;
-  --font-regular-poppins: Poppins-Regular;
-  --font-light-poppins: Poppins-Light;
-  --bs-white: #fff;
-  --bs-light: #f8f9fa;
-  --bs-warning: #ffc107;
-  --bs-secondary: #6c757d;
-}
+
+

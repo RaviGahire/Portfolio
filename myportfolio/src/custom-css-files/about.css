@@ -4,32 +4,16 @@
   border-radius: 50%;
 }
 
-.card-text {
-  height: 8rem;
-  background: transparent;
-  line-height: 30px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 0 50px;
-  overflow-y: visible;
+.line-height{
+  line-height: 1.5em;
 }
 
-.card-text-2 {
-  height: 200px;
-  padding: 0 200px !important;
-  text-align: left;
-  padding: 0 50px;
+.content-center
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
-.card-text-2 p{
-font-size: 1.2rem;
-line-height: 25px;
-
-}
-.card-text-2 i {
- margin-right: 10px;
-  
-  }
 
 /* Arrow animation */
 .arrow {
@@ -53,6 +37,29 @@ line-height: 25px;
     opacity: 0;
   }
 }
+
+.bg-bootstrap{
+background: #702FF9;
+
+}
+
+.bg-git{
+  background: #F54D27;
+}
+.bg-mongo{
+  background: #4FAA41;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* custom button  */
 .button {

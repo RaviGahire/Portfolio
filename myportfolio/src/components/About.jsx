@@ -2,6 +2,40 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../custom-css-files/about.css'
 
+const experiences = [
+  {
+    company: "Tech Innovations",
+    position: "As a Frontend Developer",
+    duration: "Jan 2022 - Present",
+    responsibilities: [
+      "Developed user interfaces with React.",
+      "Collaborated with cross-functional teams.",
+      "Optimized web performance and accessibility.",
+    ],
+  },
+  {
+    company: "Creative Solutions",
+    position: "As a Frontend Developer",
+    duration: "Jul 2020 - Dec 2021",
+    responsibilities: [
+      "Built responsive and interactive components.",
+      "Worked closely with backend developers.",
+      "Improved code quality and best practices.",
+    ],
+  },
+
+  {
+    company: "Tech Innovations",
+    position: "As a Frontend Developer",
+    duration: "Jan 2022 - Present",
+    responsibilities: [
+      "Developed user interfaces with React.",
+      "Collaborated with cross-functional teams.",
+      "Optimized web performance and accessibility.",
+    ],
+  },
+ 
+];
 
 const About = () => {
   return (
@@ -62,10 +96,10 @@ const About = () => {
           {/* Skill section */}
           <div className="card mx-5"></div>
           <div className="row justify-content-center mt-5">
-          <h3 className="fw-bold mb-4 Skills text-light text-center">My Skills</h3>
+            <h3 className="fw-bold mb-4 Skills text-light text-center">My Skills</h3>
             <div className="col-lg-10">
               <div className="card text-center border-0 shadow-sm p-5 bg-gradient bg-dark text-white">
-             <div className="row text-center">
+                <div className="row text-center">
                   <div className="col-6 col-sm-4 col-md-3 mb-4">
                     <div className="p-3 rounded bg-warning text-white shadow-sm JavaScript">
                       <i className="fab fa-js-square fa-2x mb-2"></i>
@@ -119,6 +153,33 @@ const About = () => {
             </div>
           </div>
         </div>
+        {/* work experience section  */}
+        <div className="container mt-5">
+      <h2 className="text-center mb-4 text-light">Work Experience</h2>
+      <div className="row">
+        {experiences.map((experience, index) => (
+          <div className="col-md-4 mb-3" key={index}>
+            <div className="card border-light">
+              <div className="card-body">
+                <h5 className="card-title">{experience.position}</h5>
+                <h6 className="card-subtitle text-muted">{experience.company}</h6>
+                {/* <p className="card-text"><strong>Duration:</strong> {experience.duration}</p> */}
+                <p>Duration : {experience.duration}</p>
+              
+                <ul className="list-unstyled">
+                  {experience.responsibilities.map((item, idx) => (
+                    <li key={idx}><i class="ri-code-s-slash-line"></i> {item}</li>
+                  ))}
+                </ul>
+<span><Link to="" target='/'><i class="ri-external-link-fill"></i></Link></span>
+
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
       </section>
     </>
 

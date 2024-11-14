@@ -1,9 +1,58 @@
 import React from 'react'
 import '../custom-css-files/work.css'
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+
+const projects = [
+  {
+    title: "Saving Bank Management System",
+    description: "A web application to manage bank accounts, transactions, and user information. Built using HTML, CSS, JavaScript, and Bootstrap.",
+    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    image: "https://via.placeholder.com/300x200", // Replace with your image URL or local image
+    link: "#", // Link to the project demo or GitHub repository
+  },
+  {
+    title: "E-commerce Platform",
+    description: "An online platform for purchasing products with a user-friendly interface and secure payment options.",
+    technologies: ["React", "Node.js", "MongoDB"],
+    image: "https://via.placeholder.com/300x200",
+    link: "#",
+  },
+  {
+    title: "Portfolio Website",
+    description: "A personal portfolio website showcasing my skills, projects, and experience.",
+    technologies: ["React", "Bootstrap"],
+    image: "https://via.placeholder.com/300x200",
+    link: "#",
+  },
+];
+
+const testimonials = [
+  {
+    name: "John Doe",
+    role: "CEO, Tech Innovations",
+    feedback:
+      "This team delivered exceptional results, exceeding our expectations and completing the project on time.",
+    image: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+  },
+  {
+    name: "Jane Smith",
+    role: "Project Manager, Creative Solutions",
+    feedback:
+      "A highly skilled developer who always goes the extra mile to ensure the project's success.",
+      image: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+    },
+  {
+    name: "Sarah Lee",
+    role: "Lead Designer, Design Co.",
+    feedback:
+      "Fantastic to work with! The project was completed with professionalism and attention to detail.",
+      image: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
+    },
+];
+
+
+
+
+
 
 
 const Work = () => {
@@ -11,300 +60,75 @@ const Work = () => {
 
   return (
     <>
-      <section>
-         <h1 className='my-work-text'>My-Work</h1>
-        <h2 className='project-text'>Project</h2>
-        <div className="work-container">
-          <div className="work-card ">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, nihil?</p>
-            <button className='button1'>Explore More</button>
-          </div>
-          <div className="svg-card "></div>
-        </div>
-        <h1 className='my-project-text'>My Projects</h1>
-        <div className="work-card-container">
+      <div className="container mt-5 ">
+        <h2 className="text-center mb-4 text-light">Projects</h2>
+        <div className="row">
+          {projects.map((project, index) => (
+            <div className="col-md-4 mb-3" key={index}>
+              <div className="card h-100">
 
-          <div className="work-card-1">
-            <Swiper
-              slidesPerView={3}
-              spaceBetween={30}
-              pagination={{
-                clickable: true,
-              }}
-              modules={[Pagination]}
-              className="mySwiper"
-            >
-              <SwiperSlide>
-                <div className="swiper_card">
-                  <div className="card_title"><h1>Project Name</h1></div>
-                  <div className="card_img">
-                  <img src="/Assets/img/pngs/bootstrap.jpeg" alt=""/>
-                  </div>
-                  <div className="card_info">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                    </p>
-                  </div>
-                  <div className="card_btn">
-                    <button className='btn'>explore</button>
-                  </div>
+
+                <h5 className="card-title">{project.title}</h5>
+                <div className="card-body">
+                  {/* Project Image */}
+                  <img src={project.image} className="card-img-top text-dark zindex-1" alt={project.title} />
+                  <p className="text-info">{project.description}</p>
+                  <p><strong>Technologies:</strong> {project.technologies.join(", ")}</p>
+                  <a href={project.link} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    View Project
+                  </a>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>   <div className="swiper_card">
-                  <div className="card_title"><h1>Project Name</h1></div>
-                  <div className="card_img">
-                  <img src="/Assets/img/pngs/bootstrap.jpeg" alt=""/>
-                  </div>
-                  <div className="card_info">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                    </p>
-                  </div>
-                  <div className="card_btn">
-                    <button className='btn'>explore</button>
-                  </div>
-                </div></SwiperSlide>
-              <SwiperSlide>
-              <div className="swiper_card">
-                  <div className="card_title"><h1>Project Name</h1></div>
-                  <div className="card_img">
-                  <img src="/Assets/img/pngs/bootstrap.jpeg" alt=""/>
-                  </div>
-                  <div className="card_info">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                    </p>
-                  </div>
-                  <div className="card_btn">
-                    <button className='btn'>explore</button>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide> <div className="swiper_card">
-                  <div className="card_title"><h1>Project Name</h1></div>
-                  <div className="card_img">
-                  <img src="/Assets/img/pngs/bootstrap.jpeg" alt=""/>
-                  </div>
-                  <div className="card_info">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                    </p>
-                  </div>
-                  <div className="card_btn">
-                    <button className='btn'>Explore</button>
-                  </div>
-                </div></SwiperSlide>
-              <SwiperSlide> <div className="swiper_card">
-                  <div className="card_title"><h1>Project Name</h1></div>
-                  <div className="card_img">
-                  <img src="/Assets/img/pngs/bootstrap.jpeg" alt=""/>
-                  </div>
-                  <div className="card_info">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                    </p>
-                  </div>
-                  <div className="card_btn">
-                    <button className='btn'>Explore</button>
-                  </div>
-                </div></SwiperSlide>
-              <SwiperSlide> <div className="swiper_card">
-                  <div className="card_title"><h1>Project Name</h1></div>
-                  <div className="card_img">
-                  <img src="/Assets/img/pngs/bootstrap.jpeg" alt=""/>
-                  </div>
-                  <div className="card_info">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                    </p>
-                  </div>
-                  <div className="card_btn">
-                    <button className='btn'>explore</button>
-                  </div>
-                </div></SwiperSlide>
-              <SwiperSlide> <div className="swiper_card">
-                  <div className="card_title"><h1>Project Name</h1></div>
-                  <div className="card_img">
-                  <img src="/Assets/img/pngs/bootstrap.jpeg" alt=""/>
-                  </div>
-                  <div className="card_info">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, vero!
-                    </p>
-                  </div>
-                  <div className="card_btn">
-                    <button className='btn'>explore</button>
-                  </div>
-                </div></SwiperSlide>
-           
-            </Swiper>
-          </div>
-        </div> 
-        <section className="reviews">
-        <div className="reviews-title">
-            <h1>Reviews</h1>
-        </div>
-        <div>
-            <div className="reviews-row row-first">
-                <div className="reviews-card">
-                    <img className="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review1.png" alt=""/>
-
-                    <div className="card-text">
-                        <div className="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div className="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-
-                        <div className="card-author">
-                            <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            <p>CEO of SomeCompany</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="reviews-card">
-                    <img className="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review2.png" alt=""/>
-
-                    <div className="card-text">
-                        <div className="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div className="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-
-                        <div className="card-author">
-                            <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            <p>CEO of SomeCompany</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="reviews-card">
-                    <img className="card-img" src="https://temalcode-agency-portfolio.netlify.app/images/review3.png" alt=""/>
-
-                    <div className="card-text">
-                        <div className="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div className="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-
-                        <div className="card-author">
-                            <svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            <p>CEO of SomeCompany</p>
-                        </div>
-                    </div>
-                </div>
-
+              </div>
             </div>
-            <div className="reviews-row row-second">
-                <div className="reviews-card">
-                    <div className="card-img">
-                        <img src="https://temalcode-agency-portfolio.netlify.app/images/review1.png" alt=""/>
-                    </div>
-                    <div className="card-text">
-                        <div className="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div className="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-                        <p className="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            CEO of SomeCompany</p>
-                    </div>
-                </div>
-                <div className="reviews-card">
-                    <div className="card-img">
-                        <img src="https://temalcode-agency-portfolio.netlify.app/images/review4.png" alt=""/>
-                    </div>
-                    <div className="card-text">
-                        <div className="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div className="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-                        <p className="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            CEO of SomeCompany</p>
-                    </div>
-                </div>
-                <div className="reviews-card">
-                    <div className="card-img">
-                        <img src="https://temalcode-agency-portfolio.netlify.app/images/review5.png" alt=""/>
-                    </div>
-                    <div className="card-text">
-                        <div className="card-title">
-                            <p>“Excellent Team with Creative Mindset”</p>
-                        </div>
-                        <div className="card-para">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare eu odio pretium sed amet,
-                                pulvinar nunc fringilla lectus.
-                            </p>
-                            <p>
-                                Adipiscing gravida rhoncus nunc, massa id. Et vestibulum scelerisque morbi porttitor
-                                sapien. Feugiat faucibus gravida sed adipiscing odio. Condimentum purus varius non </p>
-                        </div>
-                        <p className="card-author"><svg width="9" height="2" viewBox="0 0 9 2" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M0.526123 1.13867H8.25949" stroke="black" stroke-width="0.822209" />
-                            </svg>
-                            CEO of SomeCompany</p>
-                    </div>
-                </div>
-            </div>
-          
+          ))}
         </div>
-    </section>
+      </div>
 
-      </section>
+      {/* testimonial Section */}
+      <div className="container mt-5 mb-5">
+      <h2 className="text-center mb-4 text-light">Testimonial</h2>
+        <h5 className="text-center mb-4 text-light">What my Clients Say</h5>
+        <div id="testimonialCarousel" className="carousel slide text-light" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            {testimonials.map((testimonial, index) => (
+              <div
+                className={`text-light carousel-item ${index === 0 ? "active" : ""}`}
+                key={index}
+              >
+                <div className="text-center">
+                  <img
+                    src={testimonial.image}
+                    className="rounded-circle mb-3"
+                    alt={testimonial.name}
+                    style={{ width: "250px", height: "250px" }}
+                  />
+                  <p>{testimonial.feedback}</p>
+                  <h5>{testimonial.name}</h5>
+                  <h6 className=" text-light">{testimonial.role}</h6>
+                </div>
+              </div>
+            ))}
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#testimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
 
     </>
   )

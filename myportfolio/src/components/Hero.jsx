@@ -1,12 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../custom-css-files/hero.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 const Hero = () => {
     return (
         <>
-           <section className="hero-section d-flex justify-content-center align-items-center">
+           <section className="hero-section d-flex justify-content-center align-items-center ">
                 <div className="container text-center">
                     <div className="hero-content">
                         <h1 className="display-1">Welcome to my portfolio</h1>

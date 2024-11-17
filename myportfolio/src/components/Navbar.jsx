@@ -1,46 +1,46 @@
-import React, { useRef } from "react"
-import "../custom-css-files/navbar.css"
-import gsap from 'gsap'
-import { useGSAP } from "@gsap/react"
+import React, { useEffect, useState } from "react"
 import { NavLink } from "react-router-dom"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
-gsap.registerPlugin(useGSAP)
 
 const Navbar = () => {
-    const tl = useRef()
+
+    const [isScrolled, setIsScrolled] = useState(false)
+    const [darkMode, setDarkMode] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                setIsScrolled(true);
+              } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    const toggleDarkMode = () => {
+        setDarkMode(!darkMode);
+        document.body.classList.toggle("dark-mode");
+    };
 
 
-    const openMenu = () => {
-        tl.current.play();
-    }
-    const closeMenu = () => {
-        tl.current.reverse();
-    }
 
-    useGSAP(() => {
-        tl.current = gsap.timeline()
-            .to(".side-menu", {
-                right: 0,
-                duration: 0.2,
 
-            })
-            .from(".side-menu li", {
-                x: 200,
-                duration: 0.4,
-                opacity: 0,
-                stagger: 0.2
-            })
-
-        tl.current.pause()
-
-    });
     return (
         <>
             <header>
-                <nav className="navbar navbar-expand-lg p-2  bg-body-tertiary-custom-class">
-                    <div className="container rounded bg-dark border">
+                <nav
+                    className={`navbar navbar-expand-lg fixed-top ${isScrolled ? "bg-dark" : "bg-transparent"
+                        } navbar-${darkMode ? "dark" : "light"} `}
+                >
+                    <div className="container ">
                         <NavLink to="./" className="navbar-brand text-light mx-2 ">Ravi Gahire</NavLink>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                             <span className="navbar-toggler-icon">
@@ -67,11 +67,27 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </div>
-                       <span className="text-light fs-2"><i class="ri-contrast-2-line"></i></span>
-                       <span className="text-light fs-2"> <i class="ri-sun-fill"></i></span>
+                        <button
+                            className="btn border-0 text-light fs-4"
+                            onClick={toggleDarkMode}
+
+
+                        >
+                            {darkMode ? (
+                                <i className="ri-sun-fill"></i>
+                            ) : (
+                                <i className="ri-moon-line"></i>
+                            )}
+                        </button>
+
+
                     </div>
                 </nav>
             </header>
+
+
+
+
         </>
     )
 }

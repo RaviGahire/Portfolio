@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Fonts */
 @font-face {
   font-family: Poppins-Regular;
   src: url(/public/Assets/Fonts/Poppins-Regular.ttf);
@@ -19,4 +14,243 @@
   src: url(/public/Assets/Fonts/NomadaDidone-Regular.ttf);
 }
 
+/* Custome colors */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+
+
+:root {
+  --main-bg: #14171a;
+  --gray: #33333393;
+  --light-gray: #494949b4;
+  --font-main: Heading-Font;
+  --font-regular-poppins: Poppins-Regular;
+  --font-light-poppins: Poppins-Light;
+  --bs-white: #fff;
+  --bs-light: #f8f9fa;
+  --bs-warning: #ffc107;
+  --bs-secondary: #6c757d;
+}
+
+
+/* =============Body CSS=========== */
+
+body.dark-mode {
+  background-color: var(--bs-white);
+  color: var(--main-bg) ;
+}
+
+body.dark-mode{
+  background-color: #343a40 !important;
+}
+
+body.dark-mode {
+  color: #ffffff !important;
+}
+
+
+
+
+/* =====================Navbar CSS Start============================= */
+
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* toggler icon of bosstrap 5.3 removed default style */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: transparent;
+
+}
+
+.navbar-toggler-icon {
+  background-color: transparent;
+  border: none;
+}
+
+.navbar-toggler-icon svg {
+  fill: white;
+  stroke: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Underline of nav bar text */
+
+.nav-link {
+  position: relative;
+}
+.nav-link::before {
+  content: " ";
+  position: absolute;
+  bottom: 0.5px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  width: 0;
+  height: 3px;
+  border-radius: 0.1px;
+  background-color: #f7f4f4;
+  transition: width 0.3s ease-in-out; 
+}
+
+.nav-link:hover::before {
+  width: 40px; 
+}
+
+/* =====================Hero section CSS Start======================= */
+
+.hero-section {
+  width: 100%;
+  background: url(/public/Assets/img/my-bg-2.JPG) no-repeat center center/cover;
+  min-height: 100vh;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+}
+.hero-content {
+  max-width: 100%;
+}
+.social-icons {
+  width: 100%;
+  margin-top: 20px;
+}
+.social-icons .icon {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 2px;
+  transition: color 0.3s;
+}
+.social-icons .icon:hover {
+  color: #007bff;
+}
+
+/* Box with glowing border effect */
+.glow-box {
+ 
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  /* background-color: transparent !important; */
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Glowing border effect with ::before pseudo-element */
+.glow-box::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff0099, #00ccff, #ff00ff, #00ffcc);
+  background-size: 400%;
+  z-index: -1;
+  animation: glowing 8s linear infinite;
+}
+
+/* Keyframes for glowing effect */
+@keyframes glowing {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* =====================About section CSS Start======================= */
+
+.about-section{
+  margin-top: 6rem;
+}
+
+
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+}
+
+.line-height{
+  line-height: 1.5em;
+}
+
+.content-center
+{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/* Arrow animation */
+.arrow {
+  width: 200px;
+  font-size: 20px;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(20px); /* move down */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0); /* back to start */
+    opacity: 0;
+  }
+}
+
+.bg-bootstrap{
+background: #702FF9;
+
+}
+
+.bg-git{
+  background: #F54D27;
+}
+.bg-mongo{
+  background: #4FAA41;
+}
+
+
+
+/* =====================Work section CSS Start======================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================Contact section CSS Start======================= */

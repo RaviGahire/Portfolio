@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../custom-css-files/about.css'
+
 
 const experiences = [
   {
@@ -43,7 +43,7 @@ const About = () => {
     <>
       {/* <img src="./Assets/img/my-bg-2.JPG" className="mx-auto mb-4 profile-img" alt="profile" /> */}
 
-      <section className="about-section py-2 bg-dark">
+      <section className="about-section  ">
         <div className="container">
           <div className="row justify-content-center ">
             <div className="col-lg-12 ">

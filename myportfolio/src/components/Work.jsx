@@ -1,12 +1,16 @@
 import React from 'react'
-import '../custom-css-files/work.css'
+
+
+
+
+
 
 const projects = [
   {
     title: "Saving Bank Management System",
     description: "A web application to manage bank accounts, transactions, and user information. Built using HTML, CSS, JavaScript, and Bootstrap.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    image: "https://via.placeholder.com/300x200", // Replace with your image URL or local image
+    image: "https://via.placeholder.com/300x200", 
     link: "#", // Link to the project demo or GitHub repository
   },
   {
@@ -48,11 +52,6 @@ const testimonials = [
       image: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D",
     },
 ];
-
-
-
-
-
 
 
 const Work = () => {

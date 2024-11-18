@@ -1,3 +1,11 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
 /* Fonts */
 @font-face {
   font-family: Poppins-Regular;
@@ -13,54 +21,52 @@
   font-family: NomadaDidone-Regular;
   src: url(/public/Assets/Fonts/NomadaDidone-Regular.ttf);
 }
-
-/* Custome colors */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-
-:root {
-  --main-bg: #14171a;
-  --gray: #33333393;
-  --light-gray: #494949b4;
-  --font-main: Heading-Font;
-  --font-regular-poppins: Poppins-Regular;
-  --font-light-poppins: Poppins-Light;
-  --bs-white: #fff;
-  --bs-light: #f8f9fa;
-  --bs-warning: #ffc107;
-  --bs-secondary: #6c757d;
-}
-
-
 /* =============Body CSS=========== */
 
+/* Dark Mode Styles */
 body.dark-mode {
-  background-color: var(--bs-white);
-  color: var(--main-bg) ;
+  background-color: #121212;
+  color: #ffffff;
 }
-
-body.dark-mode{
+ 
+/* body.dark-mode .navbar {
   background-color: #343a40 !important;
-}
-
-body.dark-mode {
+}  */
+/* 
+body.dark-mode .nav-link {
   color: #ffffff !important;
+} */
+
+/* body.dark-mode .navbar-toggler-icon {
+  background-color: #ffffff;
+} */
+
+body.dark-mode button {
+  color: #ffffff;
 }
 
-
+body, .navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  
+}
 
 
 /* =====================Navbar CSS Start============================= */
-
-.navbar {
-  transition: background-color 0.3s ease, color 0.3s ease;
+.navbar-nav li {
+font-size: 1.1rem;
+font-weight: 500;
+font-family: Poppins-Regular;
 }
 
+.navbar-brand {
+ background-image: url(../public/Assets/logo.png);
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+border-radius: 50%;
+height: 60px;
+width: 60px;
+}
 /* toggler icon of bosstrap 5.3 removed default style */
 .navbar-toggler {
   border: none;
@@ -105,6 +111,13 @@ body.dark-mode {
 .nav-link:hover::before {
   width: 40px; 
 }
+
+
+
+
+
+
+
 
 /* =====================Hero section CSS Start======================= */
 

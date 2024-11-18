@@ -60,7 +60,7 @@ const Work = () => {
   return (
     <>
       <div className="container mt-5 ">
-        <h2 className="text-center mb-4 text-light">Projects</h2>
+        <h2 className="text-center mb-4 ">Projects</h2>
         <div className="row">
           {projects.map((project, index) => (
             <div className="col-md-4 mb-3" key={index}>
@@ -85,13 +85,13 @@ const Work = () => {
 
       {/* testimonial Section */}
       <div className="container mt-5 mb-5">
-      <h2 className="text-center mb-4 text-light">Testimonial</h2>
-        <h5 className="text-center mb-4 text-light">What my Clients Say</h5>
-        <div id="testimonialCarousel" className="carousel slide text-light" data-bs-ride="carousel">
+      <h2 className="text-center mb-4 ">Testimonial</h2>
+        <h5 className="text-center mb-4 ">What my Clients Say</h5>
+        <div id="testimonialCarousel" className="carousel slide " data-bs-ride="carousel">
           <div className="carousel-inner">
             {testimonials.map((testimonial, index) => (
               <div
-                className={`text-light carousel-item ${index === 0 ? "active" : ""}`}
+                className={` carousel-item ${index === 0 ? "active" : ""}`}
                 key={index}
               >
                 <div className="text-center">
@@ -103,7 +103,7 @@ const Work = () => {
                   />
                   <p>{testimonial.feedback}</p>
                   <h5>{testimonial.name}</h5>
-                  <h6 className=" text-light">{testimonial.role}</h6>
+                  <h6 className=" ">{testimonial.role}</h6>
                 </div>
               </div>
             ))}

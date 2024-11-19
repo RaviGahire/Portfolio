@@ -43,12 +43,12 @@ const About = () => {
     <>
       {/* <img src="./Assets/img/my-bg-2.JPG" className="mx-auto mb-4 profile-img" alt="profile" /> */}
 
-      <section className="about-section  ">
+      <section className="about-section">
         <div className="container">
           <div className="row justify-content-center ">
             <div className="col-lg-12 ">
-              <div className="card  text-center  border-0 p-4">
-                <h2 className="card-title fs-3 mb-3">About Me</h2>
+              <div className=" text-center border-0 p-4">
+                <h2 className=" fs-3 mb-3">About Me</h2>
                 <img src="./Assets/img/my-bg-2.JPG" className="mx-auto mb-2 mt-3 profile-img" alt="profile" />
                 <div className="social-icons mt-2">
                   <Link to="https://github.com/RaviGahire" target='/' className='icon ' aria-label="Facebook"><i class="ri-github-fill" title='Github'></i></Link>
@@ -94,11 +94,11 @@ const About = () => {
             </div>
           </div>
           {/* Skill section */}
-          <div className="card mx-5"></div>
+          <div className=" mx-5"></div>
           <div className="row justify-content-center mt-5">
             <h3 className="fw-bold mb-4 Skills  text-center">My Skills</h3>
             <div className="col-lg-10">
-              <div className="card text-center border-0 shadow-sm p-5 bg-gradient text-white">
+              <div className=" text-center border-0 shadow-lg p-5 bg-gradient text-white">
                 <div className="row text-center">
                   <div className="col-6 col-sm-4 col-md-3 mb-4">
                     <div className="p-3 rounded bg-warning text-white shadow-sm JavaScript">
@@ -158,20 +158,20 @@ const About = () => {
           <h2 className="text-center mb-4 ">Work Experience</h2>
           <div className="row">
             {experiences.map((experience, index) => (
-              <div className="col-md-4 mb-3" key={index}>
-                <div className="card border-light">
+              <div className="col-md-4 mb-3 shadow-lg  " key={index}>
+                <div className=" card border-light bg-gradient">
                   <div className="card-body">
-                    <h5 className="card-title">{experience.position}</h5>
-                    <h6 className="card-subtitle text-muted">{experience.company}</h6>
-                    {/* <p className="card-text"><strong>Duration:</strong> {experience.duration}</p> */}
-                    <p>Duration : {experience.duration}</p>
+                    <h5 className="card-title text-light">{experience.position}</h5>
+                    <h6 className="card-subtitle text-secondary my-1">{experience.company}</h6>
+                   
+                    <p className='text-info'>Duration : {experience.duration}</p>
 
-                    <ul className="list-unstyled">
+                    <ul className="list-unstyled text-info">
                       {experience.responsibilities.map((item, idx) => (
-                        <li key={idx}><i class="ri-code-s-slash-line"></i> {item}</li>
+                        <li key={idx}><i class="ri-code-s-slash-line mx-1"></i> {item}</li>
                       ))}
                     </ul>
-                    <span><Link to="" target='/'><i class="ri-external-link-fill"></i></Link></span>
+                  <div className="text-center fs-3  text-decoration-none">  <span className='text=center'><Link to="" target='/'><i class="ri-external-link-fill"></i></Link></span></div>
 
                   </div>
                 </div>

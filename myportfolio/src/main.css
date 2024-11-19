@@ -134,7 +134,6 @@ body,
   display: flex;
   align-items: center;
   justify-content: stretch;
-
   min-height: 5vh;
 }
 
@@ -149,10 +148,14 @@ body,
   margin: 0 20px;
   transition: color 0.3s;
   text-decoration: none;
+  
 }
+
+
 .social-icons .icon:hover {
   color: #007bff;
   transition: all 150ms ease-in;
+  
 }
 
 /* Box with glowing border effect */
@@ -201,6 +204,7 @@ body,
 .about-section {
   margin-top: 6rem;
 }
+
 
 .profile-img {
   width: 250px;

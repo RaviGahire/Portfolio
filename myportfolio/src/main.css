@@ -4,8 +4,6 @@
   box-sizing: border-box;
 }
 
-
-
 /* Fonts */
 @font-face {
   font-family: Poppins-Regular;
@@ -28,7 +26,7 @@ body.dark-mode {
   background-color: #121212;
   color: #ffffff;
 }
- 
+
 /* body.dark-mode .navbar {
   background-color: #343a40 !important;
 }  */
@@ -45,34 +43,32 @@ body.dark-mode button {
   color: #ffffff;
 }
 
-body, .navbar {
+body,
+.navbar {
   transition: background-color 0.3s ease, color 0.3s ease;
-  
 }
-
 
 /* =====================Navbar CSS Start============================= */
 .navbar-nav li {
-font-size: 1.1rem;
-font-weight: 500;
-font-family: Poppins-Regular;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: Poppins-Regular;
 }
 
 .navbar-brand {
- background-image: url(../public/Assets/logo.png);
-background-position: center;
-background-size: contain;
-background-repeat: no-repeat;
-border-radius: 50%;
-height: 60px;
-width: 60px;
+  background-image: url(../public/Assets/logo.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
 }
 /* toggler icon of bosstrap 5.3 removed default style */
 .navbar-toggler {
   border: none;
   outline: none;
   background-color: transparent;
-
 }
 
 .navbar-toggler-icon {
@@ -98,32 +94,26 @@ width: 60px;
 .nav-link::before {
   content: " ";
   position: absolute;
-  bottom: 0.5px; 
-  left: 50%; 
-  transform: translateX(-50%); 
+  bottom: 0.5px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 3px;
   border-radius: 0.1px;
   background-color: #f7f4f4;
-  transition: width 0.3s ease-in-out; 
+  transition: width 0.3s ease-in-out;
 }
 
 .nav-link:hover::before {
-  width: 40px; 
+  width: 40px;
 }
-
-
-
-
-
-
-
 
 /* =====================Hero section CSS Start======================= */
 
 .hero-section {
   width: 100%;
   background: url(/public/Assets/img/my-bg-2.JPG) no-repeat center center/cover;
+
   min-height: 100vh;
   color: white;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
@@ -133,23 +123,40 @@ width: 60px;
 .hero-content {
   max-width: 100%;
 }
+
+.main-heading {
+  text-shadow: #ffff 1px 1px 1px;
+  font-family:NomadaDidone-Regular ;
+  letter-spacing: 5px;
+}
+
+.typewriter {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+
+  min-height: 5vh;
+}
+
 .social-icons {
   width: 100%;
+  margin: 20px;
   margin-top: 20px;
 }
 .social-icons .icon {
   color: white;
-  font-size: 1.5rem;
-  margin: 0 2px;
+  font-size: 1.9rem;
+  margin: 0 20px;
   transition: color 0.3s;
+  text-decoration: none;
 }
 .social-icons .icon:hover {
   color: #007bff;
+  transition: all 150ms ease-in;
 }
 
 /* Box with glowing border effect */
 .glow-box {
- 
   font-size: 1rem;
   color: white;
   text-align: center;
@@ -189,14 +196,11 @@ width: 60px;
   }
 }
 
-
 /* =====================About section CSS Start======================= */
 
-.about-section{
+.about-section {
   margin-top: 6rem;
 }
-
-
 
 .profile-img {
   width: 250px;
@@ -204,15 +208,14 @@ width: 60px;
   border-radius: 50%;
 }
 
-.line-height{
+.line-height {
   line-height: 1.5em;
 }
 
-.content-center
-{
- display: flex;
- align-items: center;
- justify-content: center;
+.content-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Arrow animation */
@@ -238,32 +241,17 @@ width: 60px;
   }
 }
 
-.bg-bootstrap{
-background: #702FF9;
-
+.bg-bootstrap {
+  background: #702ff9;
 }
 
-.bg-git{
-  background: #F54D27;
+.bg-git {
+  background: #f54d27;
 }
-.bg-mongo{
-  background: #4FAA41;
+.bg-mongo {
+  background: #4faa41;
 }
-
-
 
 /* =====================Work section CSS Start======================= */
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* =====================Contact section CSS Start======================= */

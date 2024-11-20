@@ -56,19 +56,19 @@ const About = () => {
                   <Link to="https://www.linkedin.com/in/ravi-gahire-7855b110a/" target='/' className='icon' aria-label="LinkedIn"><i class="ri-linkedin-box-line" title='linkedin'></i></Link>
                 </div>
                 {/* devider div */}
+                <h3 className='mb-2'>Curious about me..? Here you have it </h3>
                 <div className="card"></div>
-                <div className="my-3">
-                  <h3 className='mb-2'>Curious about me..? Here you have it </h3>
-                  <div className="mb-2 p-2"> <span className='arrow'><i class="ri-arrow-down-line"></i></span></div>
+                <div className="my-2">
+                  <div className="mb-2"> <span className='arrow'><i class="ri-arrow-down-line"></i></span></div>
                   <div className="">
-                    <p className='my-2 lead line-height p-1'>Hello..! I'm Ravi Gahire, a passionate developer with a love for creating beautiful and functional web applications. I specialize in front-end development and constantly learn new technologies to enhance my skills and deliver top-quality work.
+                    <p className='my-2 lead line-height fw-normal p-1'>Hello..! I'm Ravi Gahire, a passionate developer with a love for creating beautiful and functional web applications. I specialize in front-end development and constantly learn new technologies to enhance my skills and deliver top-quality work.
                     </p>
                   </div>
-                  <div className=" content-center">
+                  <div className="content-center">
                     <div className="col-md-8 my-3 px-1">
-                      <p className='fw-light line-height'>I began my journey as a web developer in 2022, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.
+                      <p className=' fw-medium line-height'>I began my journey as a web developer in 2022, and since then, I've continued to grow and evolve as a developer, taking on new challenges and learning the latest technologies along the way.
                         I'm building cutting-edge web applications using modern technologies such as React.js, Javascript, Node.js, and much more.</p>
-                      <p className='fw-light line-height'>I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way to development</p>
+                      <p className='fw-medium line-height'>I am very much a progressive thinker and enjoy working on products end to end, from ideation all the way to development</p>
                     </div>
                   </div>
                 </div>
@@ -97,6 +97,8 @@ const About = () => {
           <div className=" mx-5"></div>
           <div className="row justify-content-center mt-5">
             <h3 className="fw-bold mb-4 Skills  text-center">My Skills</h3>
+            <h5 className='text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quas.
+            </h5>
             <div className="col-lg-10">
               <div className=" text-center border-0 shadow-lg p-5 bg-gradient text-white">
                 <div className="row text-center">
@@ -158,21 +160,18 @@ const About = () => {
           <h2 className="text-center mb-4 ">Work Experience</h2>
           <div className="row">
             {experiences.map((experience, index) => (
-              <div className="col-md-4 mb-3 shadow-lg  " key={index}>
-                <div className=" card border-light bg-gradient">
+              <div className="col-md-4 mb-3 " key={index}>
+                <div className=" card bg-none border-light shadow-lg   ">
                   <div className="card-body">
-                    <h5 className="card-title text-light">{experience.position}</h5>
+                    <h5 className="card-title text-warning ">{experience.position}</h5>
                     <h6 className="card-subtitle text-secondary my-1">{experience.company}</h6>
-                   
                     <p className='text-info'>Duration : {experience.duration}</p>
-
-                    <ul className="list-unstyled text-info">
+                    <ul className="list-unstyled text-secondary mb-0">
                       {experience.responsibilities.map((item, idx) => (
                         <li key={idx}><i class="ri-code-s-slash-line mx-1"></i> {item}</li>
                       ))}
                     </ul>
-                  <div className="text-center fs-3  text-decoration-none">  <span className='text=center'><Link to="" target='/'><i class="ri-external-link-fill"></i></Link></span></div>
-
+                  <div className="link-icon"> <Link to="" target='/' className='text-decoration-none   fs-4'><i class="ri-external-link-fill text-center "></i></Link></div>
                   </div>
                 </div>
               </div>
@@ -182,7 +181,6 @@ const About = () => {
 
       </section>
     </>
-
   )
 }
 

@@ -25,27 +25,19 @@ const Contact = () => {
 
   return (
     <>
-
-      <div className="container ">
-        <div className="row">
-          <h1 className="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, aspernatur.
-
-          </h1>
-        </div>
+<div className="contact-section">
 
 
-
-      </div>
-
-
-
-      <div className="container mt-5 w-50">
+      <div className="container  w-50">
+      <h1 className="fs-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quasi non quis temporibus, asperiores tenetur eius minus eligendi quos adipisci!
+      </h1>
         {/* Contact Form Section */}
         <h2 className="text-center mb-4 ">Contact Me </h2>
-        <div className="row ">
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3 ">
-              <label htmlFor="name" className="form-label ">Name</label>
+        <div className="row">
+          <div className=" bg-gradient shadow-lg rounded">
+          <form onSubmit={handleSubmit} >
+            <div className="mb-3 px-5 my-4">
+              <label htmlFor="name" className="form-label "> Full Name </label>
               <input
                 type="text"
                 className="form-control  "
@@ -54,11 +46,14 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                placeholder="Legal Name"
               />
             </div>
 
-            <div className="mb-3 ">
+            <div className="mb-3 px-5 my-4">
               <label htmlFor="email" className="form-label">Email</label>
+             
+              
               <input
                 type="email"
                 className="form-control  "
@@ -67,10 +62,11 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                placeholder="Personal Email"
               />
             </div>
 
-            <div className="mb-3 ">
+            <div className="mb-3 px-5 my-4">
               <label htmlFor="message" className="form-label">Message</label>
               <textarea
                 className="form-control  "
@@ -82,10 +78,13 @@ const Contact = () => {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn btn-primary">
+           <div className="text-center">
+           <button type="submit" className="btn btn-primary px-5 my-4 ">
               Submit
             </button>
+           </div>
           </form>
+          </div>
           <div className="container my-5 bg-gradient rounded">
             <div className="row justify-content-center">
               <span className="  text-center">
@@ -113,7 +112,12 @@ const Contact = () => {
           </div>
         </div>
       </div>
+
+      </div>
     </>
+
+
+    
   );
 };
 

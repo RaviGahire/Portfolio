@@ -205,7 +205,6 @@ body,
   margin-top: 6rem;
 }
 
-
 .profile-img {
   width: 250px;
   height: 250px;
@@ -256,6 +255,45 @@ body,
   background: #4faa41;
 }
 
+.bg-none{
+  background: none;
+}
+
+.link-icon{
+  width: 100%;
+  display: flex;
+  margin-left: -20px;
+  align-items: center;
+  justify-content: flex-end;
+
+}
+
 /* =====================Work section CSS Start======================= */
 
+.project-section{
+  margin-top: 10rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =====================Contact section CSS Start======================= */
+.contact-section{
+  margin-top: 10rem;
+}

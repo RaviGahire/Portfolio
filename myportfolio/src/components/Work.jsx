@@ -10,21 +10,21 @@ const projects = [
     title: "Saving Bank Management System",
     description: "A web application to manage bank accounts, transactions, and user information. Built using HTML, CSS, JavaScript, and Bootstrap.",
     technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    image: "https://via.placeholder.com/300x200", 
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1PZvnLdVS0dKqROhOPb5WWpRnjtkjDTPJA&s", 
     link: "#", // Link to the project demo or GitHub repository
   },
   {
     title: "E-commerce Platform",
     description: "An online platform for purchasing products with a user-friendly interface and secure payment options.",
     technologies: ["React", "Node.js", "MongoDB"],
-    image: "https://via.placeholder.com/300x200",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1PZvnLdVS0dKqROhOPb5WWpRnjtkjDTPJA&s",
     link: "#",
   },
   {
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my skills, projects, and experience.",
     technologies: ["React", "Bootstrap"],
-    image: "https://via.placeholder.com/300x200",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1PZvnLdVS0dKqROhOPb5WWpRnjtkjDTPJA&s",
     link: "#",
   },
 ];
@@ -55,19 +55,19 @@ const testimonials = [
 
 
 const Work = () => {
-
-
   return (
     <>
-      <div className="container mt-5 ">
+    <div className=" project-section">
+      <div className="container">
         <h2 className="text-center mb-4 ">Projects</h2>
+        <h6 className='mt-5 mb-3 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, voluptas.</h6>
         <div className="row">
           {projects.map((project, index) => (
             <div className="col-md-4 mb-3" key={index}>
-              <div className="card h-100">
+              <div className="card bg-none h-100">
 
 
-                <h5 className="card-title">{project.title}</h5>
+                <h5 className="card-title text-warning text-center mb-0">{project.title}</h5>
                 <div className="card-body">
                   {/* Project Image */}
                   <img src={project.image} className="card-img-top text-dark zindex-1" alt={project.title} />
@@ -128,7 +128,7 @@ const Work = () => {
           </button>
         </div>
       </div>
-
+      </div>
     </>
   )
 }

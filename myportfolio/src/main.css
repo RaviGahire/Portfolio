@@ -11,14 +11,18 @@
 }
 
 @font-face {
-  font-family: CrimsonText-Regular;
-  src: url(/public/Assets/Fonts/CrimsonText-Regular.ttf);
+  font-family: CinzelDecorative-Regular;
+  src: url(/public/Assets/Fonts/CinzelDecorative-Regular.ttf);
 }
 
-@font-face {
-  font-family: NomadaDidone-Regular;
-  src: url(/public/Assets/Fonts/NomadaDidone-Regular.ttf);
+.custom-font-1 {
+  font-family: Poppins-Regular;
 }
+
+.custom-font-2 {
+  font-family: CinzelDecorative-Regular;
+}
+
 /* =============Body CSS=========== */
 
 /* Dark Mode Styles */
@@ -61,8 +65,8 @@ body,
   background-size: contain;
   background-repeat: no-repeat;
   border-radius: 50%;
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 /* toggler icon of bosstrap 5.3 removed default style */
 .navbar-toggler {
@@ -125,8 +129,8 @@ body,
 }
 
 .main-heading {
+  font-size: 3.5rem;
   text-shadow: #ffff 1px 1px 1px;
-  font-family:NomadaDidone-Regular ;
   letter-spacing: 5px;
 }
 
@@ -148,14 +152,11 @@ body,
   margin: 0 20px;
   transition: color 0.3s;
   text-decoration: none;
-  
 }
-
 
 .social-icons .icon:hover {
   color: #007bff;
   transition: all 150ms ease-in;
-  
 }
 
 /* Box with glowing border effect */
@@ -255,23 +256,78 @@ body,
   background: #4faa41;
 }
 
-.bg-none{
+.bg-none {
   background: none;
 }
 
-.link-icon{
+.link-icon {
   width: 100%;
   display: flex;
   margin-left: -20px;
   align-items: center;
   justify-content: flex-end;
-
 }
 
 /* =====================Work section CSS Start======================= */
 
-.project-section{
+.project-section {
   margin-top: 10rem;
+}
+
+/* =====================Contact section CSS Start======================= */
+.contact-section {
+  margin-top: 10rem;
+}
+
+/* =================Media  ========================= */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .theme-btn {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    justify-content: baseline;
+  }
+
+  .bg-transparent {
+    background: #1b9de2 !important;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar-brand {
+      border-radius: 50%;
+    height: 35px;
+    width: 35px;
+  }
+
+
+
+  
+}
+
+@media (max-width: 992px) {
+ 
+  .theme-btn {
+ position: absolute;
+ right: 0;
+ margin-right: 15px;
+
+  }
+
+  .bg-transparent {
+    background: #1b9de2 !important;
+  }
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -284,16 +340,10 @@ body,
 
 
 
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
 
-
-
-
-
-
-
-
-
-/* =====================Contact section CSS Start======================= */
-.contact-section{
-  margin-top: 10rem;
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
 }

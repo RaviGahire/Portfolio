@@ -89,7 +89,7 @@ const Contact = () => {
             <div className="row justify-content-center">
               <span className="  text-center">
                 <span className="fs-3"><i class="ri-map-pin-line"></i></span>
-                <h5><Link style={{textDecoration:"none", color:"white",fontSize:'24px'}}  to='https://www.google.com/maps/place/Pune,+Maharashtra/@18.5245986,73.7805655,12z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bf2e67461101:0x828d43bf9d9ee343!8m2!3d18.5204303!4d73.8567437!16zL20vMDE1eTJx?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D' target="./">Pune</Link></h5>
+                <h5><Link style={{textDecoration:"none",fontSize:'24px'}}  to='https://www.google.com/maps/place/Pune,+Maharashtra/@18.5245986,73.7805655,12z/data=!3m1!4b1!4m6!3m5!1s0x3bc2bf2e67461101:0x828d43bf9d9ee343!8m2!3d18.5204303!4d73.8567437!16zL20vMDE1eTJx?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D' target="./">Pune</Link></h5>
               </span>
               <div className="">
                 <p className="text-center my-1 lead fw-medium" style={{fontSize:'19px', lineHeight:'24px'}}>What’s next..? Feel free to reach out to me if you are looking for a developer, have a query, or simply want to connect.</p>
@@ -103,7 +103,7 @@ const Contact = () => {
         </div>
         {/* Social Icons Section */}
         <div className="mt-5 text-center">
-          <h4 className="">Follow Us</h4>
+          <h4 className="">Follow Me</h4>
           <div className="d-flex justify-content-center mt-3">
             <Link to="https://www.facebook.com/ravi.gahire" target='/' className='icon' aria-label="Facebook"><i class="ri-facebook-circle-line"></i></Link>
             <Link to="https://x.com/RaviGahire" target='/' className='icon' aria-label="Twitter"><i class="ri-twitter-x-line"></i></Link>

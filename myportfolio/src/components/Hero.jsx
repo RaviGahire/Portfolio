@@ -16,7 +16,7 @@ const Hero = () => {
             <section className="hero-section d-flex justify-content-center align-items-center  ">
                 <div className="container text-center">
                     <div className="hero-content">
-                        <h1 className="display-1 main-heading fw-semibold">Ravi Gahire</h1>
+                        <h1 className="display-1 main-heading fw-semibold custom-font-1 "> Ravi Gahire</h1>
                     <div className="row  justify-content-center">
                     <div className=" col-md-6  m-2 typewriter ">
                      <p className='fw-semibold text-info fs-4'> Hello, I am a <span className='text-light'></span></p>

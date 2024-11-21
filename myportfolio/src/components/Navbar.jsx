@@ -47,7 +47,7 @@ const Navbar = () => {
         >
           <div className="container rounded">
             <NavLink to="./" className="navbar-brand mx-2">
-            
+           
             </NavLink>
             <button
               className="navbar-toggler"
@@ -95,12 +95,9 @@ const Navbar = () => {
                     Contact
                   </NavLink>
                 </li>
-              </ul>
-            </div>
-
-            {/* Dark Mode Button */}
-            <button
-              className="btn border-0 fs-4"
+                   </ul>
+                   <button
+              className="btn border-0 fs-4 theme-btn"
               onClick={toggleDarkMode}
             >
               {darkMode ? (
@@ -109,6 +106,12 @@ const Navbar = () => {
                 <i className="ri-moon-line"></i> // Dark Mode Icon (Moon)
               )}
             </button>
+
+
+            </div>
+
+            {/* Dark Mode Button */}
+           
           </div>
         </nav>
       </header>

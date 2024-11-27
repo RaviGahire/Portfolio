@@ -26,14 +26,13 @@ const Contact = () => {
   return (
     <>
 <div className="contact-section">
-
-
       <div className="container  w-50">
-      <h1 className="fs-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque quasi non quis temporibus, asperiores tenetur eius minus eligendi quos adipisci!
+        <div className="custom-bg"><h2>Contact Me</h2></div>
+     
+      <h1 className="fs-5 mb-3 text-center">What’s next? Feel free to reach out to me if you are looking for a developer, have a query, or simply want to connect.
       </h1>
         {/* Contact Form Section */}
-        <h2 className="text-center mb-4 ">Contact Me </h2>
-        <div className="row">
+          <div className="row ">
           <div className=" bg-gradient shadow-lg rounded">
           <form onSubmit={handleSubmit} >
             <div className="mb-3 px-5 my-4">
@@ -99,18 +98,19 @@ const Contact = () => {
                 </ul>
               </div>
             </div>
-          </div>
-        </div>
-        {/* Social Icons Section */}
-        <div className="mt-5 text-center">
+              {/* Social Icons Section */}
+        <div className=" text-center mb-4">
           <h4 className="">Follow Me</h4>
-          <div className="d-flex justify-content-center mt-3">
+          <div className="d-flex justify-content-center   mt-3">
             <Link to="https://www.facebook.com/ravi.gahire" target='/' className='icon' aria-label="Facebook"><i class="ri-facebook-circle-line"></i></Link>
             <Link to="https://x.com/RaviGahire" target='/' className='icon' aria-label="Twitter"><i class="ri-twitter-x-line"></i></Link>
             <Link to="" target='/' className='icon' aria-label="Instagram"><i class="ri-instagram-line"></i></Link>
             <Link to="https://www.linkedin.com/in/ravi-gahire-7855b110a/" target='/' className='icon' aria-label="LinkedIn"><i class="ri-linkedin-box-line"></i></Link>
           </div>
         </div>
+          </div>
+        </div>
+      
       </div>
 
       </div>

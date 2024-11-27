@@ -59,8 +59,8 @@ const Work = () => {
     <>
     <div className=" project-section">
       <div className="container">
-        <h2 className="text-center mb-4 ">Projects</h2>
-        <h6 className='mt-5 mb-3 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, voluptas.</h6>
+    <div className="custom-bg"><h2>projects</h2></div>
+        <h6 className='mt-2 mb-3 text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, voluptas.</h6>
         <div className="row">
           {projects.map((project, index) => (
             <div className="col-md-4 mb-3" key={index}>
@@ -85,7 +85,9 @@ const Work = () => {
 
       {/* testimonial Section */}
       <div className="container mt-5 mb-5">
+        <div className="custom-bg">
       <h2 className="text-center mb-4 ">Testimonial</h2>
+      </div>
         <h5 className="text-center mb-4 ">What my Clients Say</h5>
         <div id="testimonialCarousel" className="carousel slide " data-bs-ride="carousel">
           <div className="carousel-inner">

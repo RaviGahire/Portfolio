@@ -48,7 +48,9 @@ const About = () => {
           <div className="row justify-content-center ">
             <div className="col-lg-12 ">
               <div className=" text-center border-0 p-4">
-                <h2 className=" fs-3 mb-3">About Me</h2>
+              <div className="custom-bg">
+              <h2 >About Me</h2>
+              </div>
                 <img src="./Assets/img/my-bg-2.JPG" className="mx-auto mb-2 mt-3 profile-img" alt="profile" />
                 <div className="social-icons mt-2">
                   <Link to="https://github.com/RaviGahire" target='/' className='icon ' aria-label="Facebook"><i class="ri-github-fill" title='Github'></i></Link>
@@ -96,7 +98,9 @@ const About = () => {
           {/* Skill section */}
           <div className=" mx-5"></div>
           <div className="row justify-content-center mt-5">
-            <h3 className="fw-bold mb-4 Skills  text-center">My Skills</h3>
+          <div className="custom-bg">
+              <h2 >My skills</h2>
+              </div>
             <h5 className='text-center'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, quas.
             </h5>
             <div className="col-lg-10">
@@ -157,7 +161,7 @@ const About = () => {
         </div>
         {/* work experience section  */}
         <div className="container mt-5">
-          <h2 className="text-center mb-4 ">Work Experience</h2>
+        <div className="custom-bg mb-3">  <h2>Work Experience</h2></div>
           <div className="row">
             {experiences.map((experience, index) => (
               <div className="col-md-4 mb-3 " key={index}>

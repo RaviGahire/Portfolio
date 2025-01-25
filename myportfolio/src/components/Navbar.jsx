@@ -42,7 +42,7 @@ const Navbar = () => {
     <>
       <header>
         <nav
-          className={`navbar navbar-expand-lg fixed-top ${isScrolled ? "bg-info" : "bg-transparent"
+          className={`navbar navbar-expand-lg fixed-top ${isScrolled ? "bg-primary" : "bg-transparent"
             } navbar-${darkMode ? "dark" : "light"}`}
         >
           <div className="container rounded">

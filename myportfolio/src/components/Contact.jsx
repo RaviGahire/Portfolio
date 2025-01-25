@@ -32,10 +32,10 @@ const Contact = () => {
       <h1 className="fs-5 mb-3 text-center">What’s next? Feel free to reach out to me if you are looking for a developer, have a query, or simply want to connect.
       </h1>
         {/* Contact Form Section */}
-          <div className="row ">
+          <div className="row">
           <div className=" bg-gradient shadow-lg rounded">
           <form onSubmit={handleSubmit} >
-            <div className="mb-3 px-5 my-4">
+            <div className="mb-3 px-5 my-4 ">
               <label htmlFor="name" className="form-label "> Full Name </label>
               <input
                 type="text"
@@ -55,7 +55,7 @@ const Contact = () => {
               
               <input
                 type="email"
-                className="form-control  "
+                className="form-control "
                 id="email"
                 name="email"
                 value={formData.email}

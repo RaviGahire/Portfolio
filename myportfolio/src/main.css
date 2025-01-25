@@ -285,12 +285,12 @@ body,
 /* =====================Work section CSS Start======================= */
 
 .project-section {
-  margin-top: 10rem;
+  margin-top: 6rem;
 }
 
 /* =====================Contact section CSS Start======================= */
 .contact-section {
-  margin-top: 8rem;
+  margin-top: 6rem;
 }
 
 .contact-section input:focus {
@@ -337,7 +337,8 @@ body,
   }
 
   /* contact section */
-  .contact-section .container {
+  .contact-section  {
+    
     width: 100% !important;
   }
 

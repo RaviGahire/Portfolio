@@ -12,10 +12,8 @@ const Hero = () => {
 
     useGSAP(() => {
         const tl = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
-        tl.to(".typewriter span", { duration: 4, text: " Web Developer, Freelancer", })
-
-
-        
+        tl.to(".typewriter span", { duration: 4, text: " Web Developer, Freelancer", });
+           
     });
     return (
         <>
@@ -23,25 +21,14 @@ const Hero = () => {
                 <div className="container text-center">
                     <div className="hero-content">
                         <h1 className="display-1 main-heading fw-semibold custom-font-1 ">
-                            
-                        <span>R</span>
-                        <span>A</span>
-                        <span>V</span>
-                        <span>I</span>
-                    
-                        <span>G</span>
-                        <span>A</span>
-                        <span>H</span>
-                        <span>I</span>
-                        <span>R</span>
-                        <span>E</span>             
+           Ravi Gahire
                              </h1>
                         <div className="row  justify-content-center">
                             <div className=" col-md-4  m-2 typewriter ">
                                 <p className='fw-semibold text-info fs-5'> Hello..! I am a <span className='text-light'></span></p>
                             </div>
                         </div>
-                        <Link href="#" className="btn  btn-lg mt-3 glow-box">Resume</Link>
+                        <Link href="#" className="btn  btn-lg mt-3 glow-box">Download CV</Link>
                         <div className="social-icons mt-5">
                             <Link to="https://www.facebook.com/ravi.gahire" target='/' className='icon' aria-label="Facebook"><i class="ri-facebook-circle-line"></i></Link>
                             <Link to="https://x.com/RaviGahire" target='/' className='icon' aria-label="Twitter"><i class="ri-twitter-x-line"></i></Link>

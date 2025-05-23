@@ -6,23 +6,26 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { useGSAP } from '@gsap/react';
 gsap.registerPlugin(TextPlugin, useGSAP);
+
+
 const Hero = () => {
+    useGSAP(()=>{
+        const tl = gsap.timeline({repeat: -1, repeatDelay: 2.5, yoyo:true})
+        tl.to('.main-heading',{duration:1.5, opacity:1, y:-200})
 
-
-
+     
+    })
     useGSAP(() => {
         const tl = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
-        tl.to(".typewriter span", { duration: 4, text: " Web Developer, Freelancer", });
+        tl.to(".typewriter span", { duration: 3, text: " Web Developer, Freelancer", });
            
     });
-    return (
+       return (
         <>
             <section className="hero-section d-flex justify-content-center align-items-center  ">
                 <div className="container text-center">
                     <div className="hero-content">
-                        <h1 className="display-1 main-heading fw-semibold custom-font-1 ">
-           Ravi Gahire
-                             </h1>
+                        <h1 className="display-1 main-heading fw-semibold custom-font-1 ">Ravi Gahire</h1>
                         <div className="row  justify-content-center">
                             <div className=" col-md-4  m-2 typewriter ">
                                 <p className='fw-semibold text-info fs-5'> Hello..! I am a <span className='text-light'></span></p>

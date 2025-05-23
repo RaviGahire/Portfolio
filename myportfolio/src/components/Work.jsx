@@ -6,11 +6,18 @@ import React from 'react'
 
 
 const projects = [
+   {
+    title: "Portfolio Website",
+    description: "A personal portfolio website showcasing my skills, projects, and experience.",
+    technologies: ["React", "Bootstrap"],
+    image: "/Assets/img/portfolio.png",
+    link: "#",
+  },
   {
-    title: "Saving Bank Management System",
-    description: "A web application to manage bank accounts, transactions, and user information. Built using HTML, CSS, JavaScript, and Bootstrap.",
-    technologies: ["HTML", "CSS", "JavaScript", "Bootstrap"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1PZvnLdVS0dKqROhOPb5WWpRnjtkjDTPJA&s", 
+    title: "Focus On Today",
+    description: "Focus on Today is a simple and intuitive to-do list web application designed to help users set and complete their daily goals efficiently. Unlike traditional to-do apps.",
+    technologies: ["HTML", "CSS", "JavaScript", "Figma"],
+    image: "/Assets/img/focusontody.png", 
     link: "#", // Link to the project demo or GitHub repository
   },
   {
@@ -20,13 +27,7 @@ const projects = [
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1PZvnLdVS0dKqROhOPb5WWpRnjtkjDTPJA&s",
     link: "#",
   },
-  {
-    title: "Portfolio Website",
-    description: "A personal portfolio website showcasing my skills, projects, and experience.",
-    technologies: ["React", "Bootstrap"],
-    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS1PZvnLdVS0dKqROhOPb5WWpRnjtkjDTPJA&s",
-    link: "#",
-  },
+ 
 ];
 
 const testimonials = [
@@ -64,15 +65,13 @@ const Work = () => {
         <div className="row">
           {projects.map((project, index) => (
             <div className="col-md-4 mb-3" key={index}>
-              <div className="card bg-none h-100">
-
-
-                <h5 className="card-title text-warning text-center mb-0">{project.title}</h5>
-                <div className="card-body">
+              <div className="card bg-none h-100 ">
+                <h5 className="card-title text-warning text-center">{project.title}</h5>
+                <div className="card-body  ">
                   {/* Project Image */}
-                  <img src={project.image} className="card-img-top text-dark zindex-1" alt={project.title} />
-                  <p className="text-info">{project.description}</p>
-                  <p><strong>Technologies:</strong> {project.technologies.join(", ")}</p>
+                  <img src={project.image} className="card-img-top img-fluid h-50" alt={project.title}/>
+                  <p className="text-secondary ">{project.description}</p>
+                  <p><strong className='text-warning'>Technologies:</strong> <span className='text-secondary'>{project.technologies.join(", ")}</span></p>
                   <a href={project.link} className="btn btn-primary" target="_blank" rel="noopener noreferrer">
                     View Project
                   </a>

@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
-import { IconBrandGithub, IconBrandGmail, IconBrandLinkedin, IconBrandX, IconCode, IconWorld } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandGmail, IconBrandLinkedin, IconBrandX, IconCode, IconGitCommit, IconWorld } from '@tabler/icons-react';
 
 export const App = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false);
   const [codeLineIndex, setCodeLineIndex] = useState(0);
+  const [githubData, setGithubData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
 
   // Animated code snippet
@@ -21,7 +23,6 @@ export const App = () => {
 
 
   useEffect(() => {
-
     // Aside scroll
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -42,6 +43,63 @@ export const App = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // Your GitHub username
+  const GITHUB_USERNAME = 'ravigahire';
+
+  // Fetch GitHub data
+  useEffect(() => {
+    const fetchGitHubData = async () => {
+      try {
+        // Fetch user data
+        const userResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
+        const userData = await userResponse.json();
+
+        // Fetch repositories
+        const reposResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
+        const reposData = await reposResponse.json();
+
+        // Calculate total stars
+        const totalStars = reposData.reduce((sum, repo) => sum + repo.stargazers_count, 0);
+
+        // Calculate language stats
+        const languageStats = {};
+        reposData.forEach(repo => {
+          if (repo.language) {
+            languageStats[repo.language] = (languageStats[repo.language] || 0) + 1;
+          }
+        });
+
+        // Convert to percentages
+        const totalRepos = Object.values(languageStats).reduce((a, b) => a + b, 0);
+        const languagePercentages = Object.entries(languageStats)
+          .map(([lang, count]) => ({
+            language: lang,
+            percentage: Math.round((count / totalRepos) * 100)
+          }))
+          .sort((a, b) => b.percentage - a.percentage)
+          .slice(0, 4);
+
+        setGithubData({
+          followers: userData.followers,
+          publicRepos: userData.public_repos,
+          totalStars: totalStars,
+          languages: languagePercentages,
+          avatarUrl: userData.avatar_url,
+          bio: userData.bio
+        });
+
+        console.log(userData)
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching GitHub data:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchGitHubData();
+  }, []);
+
+
   return (
     <>
       {/* Mobile UI */}
@@ -53,16 +111,13 @@ export const App = () => {
 
       {/* Desktop UI */}
       <div className="hidden lg:block">
-        <aside className={`text-white bg-white dark:bg-gray-950 hidden lg:block w-[330px] min-h-screen fixed left-0 top-0 transition-transform duration-300 ${isScrolled ? '-translate-x-full' : 'translate-x-0'
+        <aside className={`text-white bg-white dark:bg-gray-950 hidden lg:block w-[330px] lg:min-h-fit 2xl:min-h-screen fixed left-0 top-0 transition-transform duration-300 ${isScrolled ? '-translate-x-full' : 'translate-x-0'
           }`}>
 
           {/* My Intro section */}
           <div className="text-center py-2 2xl:py-5 3xl:py-10">
-            {/* Small Label */}
-
-
             {/* Profile Image */}
-            <div className="w-24 h-24 mx-auto mt-6 rounded-full overflow-hidden ring-2 ring-gray-700 dark:ring-gray-300 ring-offset-4 ring-offset-gray-900 dark:ring-offset-white">
+            <div className="w-20 h-20 mx-auto rounded-full overflow-hidden ring ring-gray-700 dark:ring-gray-300 ring-offset-4 ring-offset-gray-900 dark:ring-offset-gray-50">
               <img
                 className="w-full h-full object-cover"
                 src="/mypic.jpg"
@@ -70,119 +125,154 @@ export const App = () => {
               />
             </div>
             {/* Animated Code Snippet */}
-            <div className=" p-6 shadow-lg overflow-hidden">
+            <div className=" p-3 shadow-lg overflow-hidden">
               <div className="flex items-center gap-2 mb-4">
-                <IconCode  className="w-5 h-5 text-green-400" />
+                <IconCode className="w-5 h-5 text-green-400" />
                 <h3 className="font-semibold text-gray-400 dark:text-gray-200">Code Philosophy</h3>
-                </div>
+              </div>
               <div className="font-mono text-start text-sm space-y-1">
                 {codeLines.map((line, index) => (
                   <div
                     key={index}
                     className={`transition-all duration-500 ${index === codeLineIndex
-                        ? 'text-green-400 translate-x-2 font-bold'
-                        : 'text-gray-400'
+                      ? 'text-green-400 translate-x-2 font-bold'
+                      : 'text-gray-400'
                       }`}
                   >
-                    <span className="text-gray-600 mr-4">{index + 1}</span>
+                    <span className="text-gray-600 mr-2">{index + 1}</span>
                     {line}
                   </div>
                 ))}
               </div>
             </div>
-
-
-
-
-
             {/* Divider */}
-            <div className="w-14 h-1 bg-amber-500 dark:bg-amber-600 mx-auto my-2 rounded-full"></div>
+            {/* <div className="w-14 h-1 bg-amber-500 dark:bg-amber-600 mx-auto my-2 rounded-full"></div> */}
           </div>
           {/* Divider */}
           <div className="w-80 mx-auto h-px bg-amber-500 dark:bg-slate-600 rounded-full"></div>
 
-          {/* Personal Info */}
-          <div className="mt-4">
-            <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider mb-2 text-center">
+
+          {/* GitHub Stats */}
+          <div className="bg-inherit dark:bg-inherit rounded-xl p-3 shadow-lg">
+            <div className="flex items-center gap-2 mb-3">
+              <IconGitCommit className="w-5 h-5 text-gray-700 dark:text-green-400" />
+              <h3 className="font-semibold text-gray-800 dark:text-gray-200">GitHub Stats</h3>
+            </div>
+
+            {loading ? (
+              <div className="text-center py-8">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 dark:border-gray-100 mx-auto"></div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Loading GitHub data...</p>
+              </div>
+            ) : githubData ? (
+              <>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
+                  <div className="text-center ">
+                    <div className="text-xl font-bold text-gary-600 dark:text-yellow-400">
+                      {githubData.publicRepos}
+                    </div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Public Repos</div>
+                  </div>
+                  <div className="text-center rounded-lg ">
+                    <div className="text-xl font-bold text-gray-600 dark:text-blue-400">
+                      {githubData.totalStars}
+                    </div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Total Stars</div>
+                  </div>
+                  <div className="text-center rounded-lg col-span-2 md:col-span-1">
+                    <div className="text-xl font-bold text-green-600 dark:text-green-400">
+                      {githubData.followers}
+                    </div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">Followers</div>
+                  </div>
+                </div>
+
+                {/* Language Stats */}
+                {githubData.languages.length > 0 && (
+                  <div className="mt-6">
+                    <h4 className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">Top Languages</h4>
+                    <div className="space-y-3">
+                      {githubData.languages.map((lang, index) => {
+                        const colors = ['bg-yellow-500', 'bg-blue-500', 'bg-green-500', 'bg-pink-500'];
+                        return (
+                          <div key={index}>
+                            <div className="flex justify-between text-xs mb-1">
+                              <span className="text-gray-600 dark:text-gray-400">{lang.language}</span>
+                              <span className="text-gray-500 dark:text-gray-500">{lang.percentage}%</span>
+                            </div>
+                            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-1">
+                              <div
+                                className={`${colors[index % colors.length]} h-1 rounded-full transition-all duration-1000`}
+                                style={{ width: `${lang.percentage}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <div className="text-center py-8">
+                <p className="text-sm text-red-500">Failed to load GitHub data</p>
+              </div>
+            )}
+          </div>
+
+          {/* Divider */}
+          <div className="w-80 mx-auto h-px mt-4 bg-amber-500 dark:bg-slate-700 rounded-full"></div>
+
+          <div>
+            <h3 className="text-sm font-light dark:text-gray-200 text-center my-3 tracking-wide">
               Connect With Me
             </h3>
 
-            <div className="flex flex-col">
-              {/* Email address */}
+            <div className="flex gap-8 justify-center items-center">
               <a
-                href="mailto:ravigahire3@gmail.com"
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group"
-              >
-                <div className="w-10 h-10 bg-gray-100 dark:bg-gray-700 shadow dark:shadow-amber-500/50 flex items-center justify-center rounded-lg group-hover:scale-110 transition-transform">
-                  <IconBrandGmail className="text-slate-800 dark:text-slate-200" stroke={1.5} />
-                </div>
-                <span className="text-gray-700 text-sm tracking-wide dark:text-gray-300 flex-1">
-                  demo@gmail.com
-                </span>
-              </a>
-
-              {/* GitHub */}
-              <a
-                href="https://github.com/ravigahire"
+                href="https://github.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group"
+                className="p-3 bg-gray-900 rounded-lg hover:bg-black transition-colors"
+                aria-label="GitHub"
               >
-                <div className="w-10 h-10 bg-gray-100 dark:bg-gray-700 shadow dark:shadow-amber-500/50 flex items-center justify-center rounded-lg group-hover:scale-110 transition-transform">
-                  <IconBrandGithub className="text-slate-800 dark:text-slate-200" stroke={1.5} />
-                </div>
-                <span className="text-gray-700 text-sm tracking-wide dark:text-gray-300 flex-1">
-                  github
-                </span>
+                <IconBrandGithub className="w-4 h-4 text-white" />
               </a>
 
-              {/* LinkedIn */}
               <a
-                href="https://linkedin.com/in/ravigahire"
+                href="https://linkedin.com/in/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group"
+                className="p-3 bg-gray-900 rounded-lg hover:bg-black transition-colors"
+                aria-label="LinkedIn"
               >
-                <div className="w-10 h-10 bg-gray-100 dark:bg-gray-700 shadow dark:shadow-amber-500/50 flex items-center justify-center rounded-lg group-hover:scale-110 transition-transform">
-                  <IconBrandLinkedin className="text-slate-800 dark:text-slate-200" stroke={1.5} />
-                </div>
-                <span className="text-gray-700 text-sm tracking-wide dark:text-gray-300 flex-1">
-                  linkedin
-                </span>
+                <IconBrandLinkedin className="w-4 h-4 text-white" />
               </a>
 
-              {/* Twitter/X */}
               <a
-                href="https://twitter.com/ravigahire"
+                href="https://x.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group"
+                className="p-3 bg-gray-900 rounded-lg hover:bg-black transition-colors"
+                aria-label="Twitter"
               >
-                <div className="w-10 h-10 bg-gray-100 dark:bg-gray-700 shadow dark:shadow-amber-500/50 flex items-center justify-center rounded-lg group-hover:scale-110 transition-transform">
-                  <IconBrandX className="text-slate-800 dark:text-slate-200" stroke={1.5} />
-                </div>
-                <span className="text-gray-700 text-sm tracking-wide dark:text-gray-300 flex-1">
-                  @ravigahire
-                </span>
-              </a>
-
-              {/* Portfolio Website */}
-              <a
-                href="https://ravigahire.dev"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors group"
-              >
-                <div className="w-10 h-10 bg-gray-100 dark:bg-gray-700 shadow dark:shadow-amber-500/50 flex items-center justify-center rounded-lg group-hover:scale-110 transition-transform">
-                  <IconWorld className="text-slate-800 dark:text-slate-200" stroke={1.5} />
-                </div>
-                <span className="text-gray-700 text-sm tracking-wide dark:text-gray-300 flex-1">
-                  ravigahire
-                </span>
+                <IconBrandX className="w-4 h-4 text-white" />
               </a>
             </div>
           </div>
+
+
         </aside>
+
+
+
+
+
+
+
+
+
+
         {/* main content */}
         <main className={` h-[120vh] p-5 transition-all duration-300 ${isScrolled ? 'max-w-7xl mx-auto' : 'lg:ml-[330px]'
           }`}>

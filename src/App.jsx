@@ -45,7 +45,7 @@ export const App = () => {
             <div className="w-24 h-24 mx-auto mt-6 rounded-full overflow-hidden ring-2 ring-gray-700 dark:ring-gray-300 ring-offset-4 ring-offset-gray-900 dark:ring-offset-white">
               <img
                 className="w-full h-full object-cover"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/9/92/Chitti_%28character%29.jpg/250px-Chitti_%28character%29.jpg"
+                src="/mypic.jpg"
                 alt="Ravi Gahire"
               />
             </div>

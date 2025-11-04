@@ -1,9 +1,22 @@
 import { useEffect, useState } from "react"
-import { IconBrandGithub, IconBrandGmail, IconBrandLinkedin, IconBrandX, IconWorld } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandGmail, IconBrandLinkedin, IconBrandX, IconCode, IconWorld } from '@tabler/icons-react';
 
 export const App = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobile, setIsMobile] = useState(false);
+  const [codeLineIndex, setCodeLineIndex] = useState(0);
+
+
+  // Animated code snippet
+  const codeLines = [
+    "const bit_about_me = {",
+    "name: 'Ravi Gahire',",
+    "role: 'Front-end developer',",
+    "love: ['Code','Music','Coffee'],",
+    "status: 'Always Learning'",
+    "};"
+  ];
+
 
 
 
@@ -22,6 +35,13 @@ export const App = () => {
 
   }, [])
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCodeLineIndex((prev) => (prev + 1) % codeLines.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <>
       {/* Mobile UI */}
@@ -39,7 +59,7 @@ export const App = () => {
           {/* My Intro section */}
           <div className="text-center py-2 2xl:py-5 3xl:py-10">
             {/* Small Label */}
-          
+
 
             {/* Profile Image */}
             <div className="w-24 h-24 mx-auto mt-6 rounded-full overflow-hidden ring-2 ring-gray-700 dark:ring-gray-300 ring-offset-4 ring-offset-gray-900 dark:ring-offset-white">
@@ -49,29 +69,39 @@ export const App = () => {
                 alt="Ravi Gahire"
               />
             </div>
+            {/* Animated Code Snippet */}
+            <div className=" p-6 shadow-lg overflow-hidden">
+              <div className="flex items-center gap-2 mb-4">
+                <IconCode  className="w-5 h-5 text-green-400" />
+                <h3 className="font-semibold text-gray-400 dark:text-gray-200">Code Philosophy</h3>
+                </div>
+              <div className="font-mono text-start text-sm space-y-1">
+                {codeLines.map((line, index) => (
+                  <div
+                    key={index}
+                    className={`transition-all duration-500 ${index === codeLineIndex
+                        ? 'text-green-400 translate-x-2 font-bold'
+                        : 'text-gray-400'
+                      }`}
+                  >
+                    <span className="text-gray-600 mr-4">{index + 1}</span>
+                    {line}
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            {/* Name - Large Typography */}
-            <h1 className="text-xl font-bold text-slate-800 dark:text-slate-50 mt-4 uppercase tracking-wide">
-              Ravi Gahire
-            </h1>
 
-            {/* Title */}
-            <p className="text-md text-gray-300 dark:text-slate-300 font-light tracking-wide my-2">
-              front-end developer
-            </p>
 
-            {/* Location/Detail */}
-            <p className="text-sm text-gray-400 dark:text-slate-400 tracking-wider">
-               India 
-            </p>
+
 
             {/* Divider */}
             <div className="w-14 h-1 bg-amber-500 dark:bg-amber-600 mx-auto my-2 rounded-full"></div>
           </div>
-
-          {/* Personal Info */}
+          {/* Divider */}
           <div className="w-80 mx-auto h-px bg-amber-500 dark:bg-slate-600 rounded-full"></div>
 
+          {/* Personal Info */}
           <div className="mt-4">
             <h3 className="text-sm font-semibold text-gray-600 dark:text-gray-400 uppercase tracking-wider mb-2 text-center">
               Connect With Me
@@ -160,7 +190,7 @@ export const App = () => {
 
 
 
-          </main>
+        </main>
       </div>
 
     </>

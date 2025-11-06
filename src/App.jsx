@@ -14,7 +14,7 @@ export const App = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   useEffect(() => {
     // Aside scroll
-    const handleScroll = () => setIsScrolled(window.scrollY > 100);
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
 

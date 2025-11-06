@@ -50,7 +50,7 @@ export const App = () => {
 
           {/*Page routing */}
      
-            <div className="bg-amber-300 ">
+            <div>
               <Routes>
                 {navItems.map((item, index) => (
                   <Route key={index} path={item.path} element={item.element} />

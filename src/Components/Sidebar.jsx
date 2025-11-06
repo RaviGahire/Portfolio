@@ -96,7 +96,7 @@ export const Sidebar = () => {
 
     return (
         <>
-            <aside className={`text-white bg-white dark:bg-gray-950 hidden lg:block w-[330px] lg:min-h-fit 2xl:min-h-screen fixed left-0 top-0 transition-transform duration-300 ${isScrolled ? '-translate-x-full' : 'translate-x-0'
+            <aside className={`text-white bg-white dark:bg-gradient-to-b from-gray-950 to-gray-900 hidden lg:block w-[330px] lg:min-h-fit 2xl:min-h-screen fixed left-0 top-0 transition-transform duration-300 ${isScrolled ? '-translate-x-full' : 'translate-x-0'
                 }`}>
 
                 {/* My Intro section */}
@@ -138,7 +138,7 @@ export const Sidebar = () => {
 
 
                 {/* GitHub Stats */}
-                <div className="bg-inherit dark:bg-inherit rounded-xl p-3 shadow-lg">
+                <div className="bg-inherit dark:bg-transparent rounded-xl p-3 shadow-lg">
                     <div className="flex items-center gap-2 mb-3">
                         <IconGitCommit className="w-5 h-5 text-gray-700 dark:text-green-400" />
                         <h3 className="font-semibold text-gray-800 dark:text-gray-200">GitHub Stats</h3>

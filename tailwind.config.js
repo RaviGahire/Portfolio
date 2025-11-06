@@ -6,11 +6,13 @@ export default {
     ],
     darkMode: 'class', // or 'selector' in v4
     theme: {
-        extend: {},
-        screens: {
-            '2xl': '1400px',
-            '3xl': '1900px',
-        }
+        extend: {
+            backgroundImage: {
+                // custom gradient variable
+                'dark-radial': 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(226, 232, 240, 0.15), transparent 70%), #000000',
+            }
+        },
+        screens: {}
     },
     plugins: [],
 }

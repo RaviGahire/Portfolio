@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { motion } from "motion/react";
 import { Sidebar } from "./Components/Sidebar";
-import { VerticalNavbar } from "./Components/VerticalNavbar";
+import { Navbar } from "./Components/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Home } from './Components/Pages/Home';
 import { About } from './Components/Pages/About';
@@ -46,7 +46,7 @@ export const App = () => {
       <div className="hidden lg:block">
         <Router>
           {/*Sidebar toggle on scroll */}
-          {isScrolled ? <VerticalNavbar /> : <Sidebar />}
+          {isScrolled ? <Navbar /> : <Sidebar />}
 
           {/*Page routing */}
      

@@ -1,9 +1,7 @@
 import { IconMail } from '@tabler/icons-react'
 import { Link } from 'react-router-dom'
 
-export const ContactBtn = () => {
-
-
+export const ResumeBtn = () => {
 
   return (
  <Link
@@ -28,7 +26,7 @@ export const ContactBtn = () => {
       
       {/* Button Text */}
       <span className="text-xs font-bold text-white tracking-tight">
-        Contact
+        Resume
       </span>
     </div>
 

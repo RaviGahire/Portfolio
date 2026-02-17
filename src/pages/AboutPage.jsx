@@ -2,6 +2,10 @@
 
 export const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <>
+    <div className="text-white bg-amber-100">Hello</div>
+    
+    
+    </>
   )
 }

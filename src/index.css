@@ -1,3 +1,31 @@
 @import "tailwindcss";
 
 
+body{
+    background: #0f0f0f;
+}
+
+/* Custom Animations */
+.border-blink {
+  animation: blink 200ms ease-in-out 2s infinite linear normal;
+}
+
+/* Custom Shadow */
+.custom-shadow {
+  box-shadow: inset 1px -1px 5px black;
+}
+
+.corner-shapes {
+  border-radius: 10px 10px 10px 10px;
+  corner-shape: bevel scoop scoop bevel;
+}
+
+
+/* Custom Navbar */
+:root {
+  --black: #0f0f0f;
+  --gray: #3f3f3f;
+  --white: #fff;
+}
+
+

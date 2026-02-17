@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { HomePage } from '../pages/HomePage'
+import {MainLayout} from '../layout/MainLayout'
+import { ProfilePage } from '../pages/ProfilePage'
 import { AboutPage } from '../pages/AboutPage'
-import { MainLayout } from '../layout/MainLayout'
-import { WorkPage } from '../pages/WorkPage'
-import {MyBlogs} from '../pages/MyBlogs'
-import {Contact} from '../components/Contact'
+import { ProjectPage } from '../pages/ProjectPage'
+import { MyBlogs } from '../pages/MyBlogs'
+import { Contact } from '../components/Contact'
 
 
 export const AppRoutes = () => {
@@ -13,9 +13,9 @@ export const AppRoutes = () => {
         <Router>
             <MainLayout>
                 <Routes>
-                    <Route path={'/'} element={<HomePage />} />
+                    <Route path={'/'} element={<ProfilePage />} />
                     <Route path={'/aboutme'} element={<AboutPage />} />
-                    <Route path={'/work'} element={<WorkPage/>} />
+                    <Route path={'/projects'} element={<ProjectPage/>} />
                     <Route path={'/blogs'} element={<MyBlogs />} />
                     <Route path={'/contact'} element={<Contact />} />
                 </Routes>

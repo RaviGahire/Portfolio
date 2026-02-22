@@ -6,7 +6,7 @@ export const Navbar = () => {
 
   const navItems = [
     { title: 'Profile', path: '/' },
-    { title: 'Projects', path: '/projects' },
+    { title: 'Work', path: '/work' },
     { title: 'About', path: '/aboutme' },
     { title: 'Blogs', path: '/blogs' },
     

@@ -9,14 +9,8 @@ export const Header = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-
-            if (window.scrollY > 20) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
-            }
+            setIsScrolled(window.scrollY > 20);
         };
-
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -24,37 +18,38 @@ export const Header = () => {
     return (
         <header
             aria-label='header'
-            className="sticky top-0 z-50 w-full px-4 "
+            className="fixed top-0 left-0 z-100 w-full md:px-4 md:pt-4 transition-all duration-300"
         >
             <motion.div
                 initial={false}
                 animate={{
-
-                    paddingTop: isScrolled ? "10px" : "16px",
-                    paddingBottom: isScrolled ? "10px" : "16px",
-                    backgroundColor: isScrolled ? "rgba(0, 0, 0, 0.8)" : "rgba(0, 0, 0, 0)",
+                    // Only shrink width on desktop (md), keep 100% on mobile for stability
+                    width: isScrolled ? "95%" : "100%",
+                    backgroundColor: isScrolled ? "rgba(10, 10, 10, 0.8)" : "rgba(10, 10, 10, 0)",
                     borderColor: isScrolled ? "rgba(255, 255, 255, 0.1)" : "rgba(255, 255, 255, 0)",
-                    width: isScrolled ? "95%" : "100%"
                 }}
-                transition={{ duration: 0.4, ease: "easeInOut" }}
+                transition={{ duration: 0.4 }}
                 className={`
                     flex justify-between items-center max-w-7xl mx-auto 
-                    rounded-2xl backdrop-blur-md border 
-                    ${isScrolled ? 'shadow-2xl shadow-indigo-500/10' : ''}
+                    rounded-3xl backdrop-blur-md border px-4 py-3
+                    ${isScrolled ? 'shadow-xl' : ''}
                 `}
             >
-                <div className="hidden md:block mx-2">
+                {/* Logo Area */}
+                <div className="shrink-0">
                     <Logo />
                 </div>
 
-                <div className="">
+                {/* Navbar Area - This remains centered */}
+                <div className="grow flex justify-center">
                     <Navbar />
                 </div>
 
-                <div className="hidden md:block mx-2">
+                {/* Resume Area */}
+                <div className="hidden md:block shrink-0">
                     <ResumeBtn />
                 </div>
             </motion.div>
         </header>
-    )
-}
+    );
+};

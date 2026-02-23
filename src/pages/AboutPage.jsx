@@ -1,69 +1,158 @@
+import { Footer } from "../components/Footer"
+import { TechStack } from "../components/TechStack"
+import { GradientBorder } from "../utils/GradientBorder"
 import { ImageCarousel } from "../utils/ImageCarousel"
+import { TypWritterText } from "../utils/TypWritterText"
+import { motion } from "motion/react"
 
 
 export const AboutPage = () => {
+
+  const expData = [
+    { sr_no: '1 -', org: 'SELF-DIRECTED LEARNING', role: 'Mern stack', fromTo: 'Oct 2025 — Present' },
+    { sr_no: '2 -', org: 'Rego Digital Solution', role: 'React Js intern', fromTo: 'May 2025 - Oct 2025' },
+    { sr_no: '3 -', org: 'Mphasis Ltd', role: 'Trn Processing Officer', fromTo: 'May 2022 - May 2025' },
+  ]
+
   return (
     <>
-<div className="text-white py-20 px-4 md:px-0 selection:bg-indigo-500 selection:text-white">
-  {/* Heading with Gradient & Motion */}
-  <div className="max-w-6xl mb-12 group">
-    <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl 
-                   font-black leading-[1.1] tracking-tighter text-left animate-in fade-in slide-in-from-bottom-4 duration-1000">
-      I'm a <span className="text-transparent bg-clip-text bg-linear-to-r from-indigo-400 to-cyan-400 hover:to-indigo-500 transition-all duration-500 cursor-default">
-        frontend developer
-      </span>, 
-      a builder, and a gamer with a deep interest in 
-      <span className="relative inline-block ml-2 group-hover:rotate-1 transition-transform">
-        <span className="text-indigo-500 italic">philosophy</span>
-        <div className="absolute -bottom-2 left-0 w-0 h-1 bg-indigo-500 transition-all duration-500 group-hover:w-full"></div>
-      </span>.
-    </h2>
-  </div>
-
-  {/* Paragraph & CTA Grid */}
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-    <div className="max-w-xl">
-      <p className="text-gray-400 text-xl leading-relaxed text-left mb-6 font-medium">
-        Accusantium accusamus nobis sapiente expedita repellat ipsam. 
-        I craft digital experiences that balance <span className="text-white">logic with aesthetics</span>.
-      </p>
-      
-      <div className="space-y-4 text-gray-400 border-l-2 border-indigo-500/30 pl-6 py-2">
-        <p>
-          Open to contract and freelance opportunities. If you're working on something cool, 
-          <span className="text-indigo-400 font-bold hover:underline cursor-pointer ml-1">let's chat!</span>
-        </p>
-        <p className="text-sm uppercase tracking-widest font-bold text-gray-500">
-          Reach out on: 
-          <span className="text-white hover:text-indigo-400 transition-colors cursor-pointer ml-2">LinkedIn</span> • 
-          <span className="text-white hover:text-indigo-400 transition-colors cursor-pointer ml-2">X</span> • 
-          <span className="text-white hover:text-indigo-400 transition-colors cursor-pointer ml-2">Email</span>
-        </p>
-      </div>
-    </div>
-
-    {/* Modernized List / Skill Tags */}
-    <div className="flex flex-wrap gap-3">
-      {[
-        "Creative Problem Solver",
-        "React & Tailwind Expert",
-        "Lifelong Learner",
-        "Passionate Gamer"
-      ].map((item, i) => (
-        <div key={i} className="px-5 py-3 rounded-2xl bg-white/5 border border-white/10 hover:border-indigo-500/50 hover:bg-white/10 transition-all duration-300 group">
-          <span className="text-indigo-400 mr-2 opacity-0 group-hover:opacity-100 transition-opacity">#</span>
-          <span className="text-gray-200 font-medium tracking-tight">{item}</span>
+      <section aria-label="about-me" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-24">
+        <div className="text-white">
+          <div className="mb-4">
+            <TypWritterText
+              titleOne='Journey so far'
+              titleSecond='A journey exploring new horizons'
+            />
+          </div>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl sm:text-4xl md:text-6xl tracking-wide font-bold uppercase leading-tight"
+          >
+            I’m a frontend developer and a builder
+            <span className="text-green-500"> — </span>
+            always seeking new adventures.
+          </motion.h2>
         </div>
-      ))}
-    </div>
-  </div>
-</div>
 
+        <div className="mt-6 md:mt-10">
+          <GradientBorder />
+        </div>
 
-<ImageCarousel/>
+        <div className="my-12 md:my-24">
+          <h2 className="text-2xl md:text-4xl uppercase font-bold text-white">Journey</h2>
+          <motion.div
+            initial={{ width: 0 }}
+            whileInView={{ width: "5rem" }}
+            transition={{ duration: 0.8 }}
+            className="h-1 bg-green-500 mt-2"
+          ></motion.div>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="md:col-span-5 relative group w-full max-w-md mx-auto md:max-w-none"
+          >
+            <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 aspect-[4/5]">
+              <img
+                src="mypic.jpg"
+                alt="mypic"
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+              />
+            </div>
+            <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-16 h-16 md:w-24 md:h-24 border-t-2 border-l-2 border-green-500/30 rounded-tl-2xl"></div>
+            <div className="absolute -bottom-10 -right-10 w-48 h-48 md:w-64 md:h-64 bg-green-500/10 blur-[80px] md:blur-[100px] rounded-full"></div>
+          </motion.div>
 
+          <div className="md:col-span-7 flex flex-col justify-center mt-8 md:mt-0">
+            <div className="space-y-8 md:space-y-12">
+              {expData.map((item, index) => (
+                <motion.div
+                  key={item.role}
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="group flex gap-4 md:gap-6 items-start border-b border-white/5 pb-6 md:pb-8"
+                >
+                  <span className="text-green-500 font-mono text-sm pt-1 md:pt-2">0{index + 1} —</span>
+                  <div>
+                    <h3 className="text-white text-xl md:text-3xl font-bold group-hover:text-green-400 transition-colors">
+                      {item.org}
+                    </h3>
+                    <p className="text-neutral-400 text-base md:text-lg mt-1 font-medium italic">
+                      {item.role}
+                    </p>
+                    <p className="text-neutral-600 font-mono text-[10px] md:text-xs uppercase tracking-widest mt-2">
+                      {item.fromTo}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 mt-20 md:mt-32">
+          <div className="md:col-span-7 text-white order-2 md:order-1">
+            <div className="mb-6">
+              <h2 className="text-3xl md:text-4xl uppercase font-bold">Bit about me</h2>
+              <motion.div
+                initial={{ width: 0 }}
+                whileInView={{ width: "4rem" }}
+                transition={{ duration: 0.8 }}
+                className="h-1 bg-green-500 mt-2"
+              ></motion.div>
+            </div>
+
+            <div className="space-y-6 text-neutral-400 text-base md:text-xl leading-relaxed">
+              <p>
+                I specialize in bridging the gap between <span className="text-white font-medium">design and code</span>.
+                My approach is rooted in creating digital experiences that aren't just functional,
+                but feel alive through motion and interaction.
+              </p>
+              <p>
+                When I'm not pushing pixels or debugging states, I'm usually exploring new
+                technologies like 3D web environments or optimizing performance for
+                next-generation web apps.
+              </p>
+            </div>
+          </div>
+
+          <div className="md:col-span-5 order-1 md:order-2">
+            <div className="relative group p-6 md:p-8 rounded-3xl bg-neutral-900/40 border border-white/5 overflow-hidden">
+              <div className="relative z-10 space-y-6 md:space-y-8">
+                <div>
+                  <p className="text-green-500 font-mono text-[10px] md:text-xs uppercase tracking-widest mb-1">Location</p>
+                  <p className="text-white text-xl md:text-2xl font-bold">Pune, Maharashtra, India</p>
+                </div>
+                <div>
+                  <p className="text-green-500 font-mono text-[10px] md:text-xs uppercase tracking-widest mb-1">Philosophy</p>
+                  <p className="text-white text-xl md:text-2xl font-bold italic">"Build to inspire, not just to solve."</p>
+                </div>
+                <div className="flex gap-8 md:gap-10 pt-2">
+                  <div>
+                    <p className="text-green-500 font-mono text-[10px] md:text-xs uppercase tracking-widest mb-1">Projects</p>
+                    <p className="text-white text-3xl md:text-4xl font-bold">2+</p>
+                  </div>
+                  <div>
+                    <p className="text-green-500 font-mono text-[10px] md:text-xs uppercase tracking-widest mb-1">Experience</p>
+                    <p className="text-white text-3xl md:text-4xl font-bold whitespace-nowrap">3.5 Yrs</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-green-500/5 blur-[60px] rounded-full group-hover:bg-green-500/10 transition-colors"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <ImageCarousel />
+      <Footer />
     </>
   )
 }

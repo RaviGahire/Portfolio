@@ -10,58 +10,43 @@ const [hoverText , setHoverText] = useState('Transforming Design into Code')
   const projects = [
     {
       title: "MasterTrack",
-      tech: "React / node / github/ mongodb",
-      size: "md:col-span-8",
-      liveliks: '',
-      github: "",
-      img: 'https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_user_personalization&w=740&q=80',
-      subtitle: 'Learning Management System'
+      tech: "React / node / git / github / mongodb / tailwind",
+      size: "md:col-span-6",
+      liveliks:'',
+      github: "https://github.com/RaviGahire/lms-app",
+      img: 'masterTrack.png',
+      subtitle: 'Learning Management System Under-development'
     },
     {
       title: "Weather 24",
       tech: "React / Tailwind / REST API",
-      size: "md:col-span-4",
-      liveliks: "",
-      github: "",
-      img: 'https://www.invensislearning.com/blog/wp-content/uploads/2019/07/banner-image-All-You-Wanted-to-Know-About-Project-Management-Basics.jpg',
+      size: "md:col-span-6",
+      liveliks:'https://weather-forecast-in-react.vercel.app/',
+      github: "https://github.com/RaviGahire/weather-forecast-in-react",
+      img: 'weather24.png',
       subtitle: 'Weather forcaste App'
     },
     {
-      title: "Logic Gate",
-      tech: "TypeScript",
-      size: "md:col-span-4",
-      liveliks: "",
-      github: "",
-      img: 'https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_user_personalization&w=740&q=80',
-      subtitle: ''
+      title: "Pragati fab arts",
+      tech: "React / tailwind / node / mongoDB / git / github",
+      size: "md:col-span-6",
+      liveliks: "https://pragati-web-application.netlify.app/",
+      github: "https://github.com/RaviGahire/pragati-web-app",
+      img: 'pragati.png',
+      subtitle: 'Under-Development'
     },
-    {
-      title: "Ethereal",
-      tech: "Next.js / GSAP",
-      size: "md:col-span-8",
-      liveliks: "",
-      github: "",
-      img: 'https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_user_personalization&w=740&q=80',
-      subtitle: ''
+  {
+      title: "Weather Now",
+      tech: "Html / css / javascript / rest api",
+      size: "md:col-span-6",
+      liveliks: "https://realtime-weather-forecaste.netlify.app/",
+      github: "https://github.com/RaviGahire/weather-forecast-app",
+      img: 'now.png',
+      subtitle: 'Real-time weather forcaste app build with javascript'
     },
-    {
-      title: "Ethereal",
-      tech: "Next.js / GSAP",
-      size: "md:col-span-4",
-      liveliks: "",
-      github: "",
-      img: 'https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_user_personalization&w=740&q=80',
-      subtitle: ''
-    },
-    {
-      title: "Ethereal",
-      tech: "Next.js / GSAP",
-      size: "md:col-span-8",
-      liveliks: "",
-      github: "",
-      img: 'https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg?semt=ais_user_personalization&w=740&q=80',
-      dis: ''
-    },
+
+
+
   ];
 
    const sentence = {
@@ -119,7 +104,7 @@ const [hoverText , setHoverText] = useState('Transforming Design into Code')
             </h2>
           </div>
           <p className="hidden md:block text-green-500 font-mono text-xs uppercase tracking-widest pb-2">
-            [ 004 Projects ]
+            [ 00{projects.length} Projects ]
           </p>
         </motion.div>
 
@@ -141,18 +126,22 @@ const [hoverText , setHoverText] = useState('Transforming Design into Code')
                     <h3 className="text-xl font-bold tracking-tight font-secondary">
                       {project.title}
                     </h3>
-                    <p className="text-neutral-500 font-mono text-xs mt-1 uppercase tracking-wider">
+                    <p className="text-neutral-300 font-mono text-xs mt-1 uppercase tracking-wider">
                       {project.tech}
                     </p>
                   </div>
                   <div className="flex gap-3">
-                    <Link to={project.github}>
+                    <Link 
+                    target="_blank"
+                    to={project.github}>
                       <IconBrandGithub
                         size={20}
                         className="text-neutral-600 hover:text-white cursor-pointer transition-colors"
                       />
                     </Link>
-                    <Link tp={project.liveliks}>
+                    <Link 
+                    target="_blank"
+                    to={project.liveliks}>
                       <IconArrowUpRight
                         size={20}
                         className="text-neutral-600 group-hover:text-green-500 rotate-45 group-hover:rotate-0 transition-all"
@@ -165,7 +154,7 @@ const [hoverText , setHoverText] = useState('Transforming Design into Code')
                   <img
                     src={project.img}
                     alt={project.title}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-fit object-center"
                   />
                   {/* subtitle overlay */}
                   <div className="absolute inset-0 bg-linear-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" >

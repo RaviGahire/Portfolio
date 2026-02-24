@@ -1,5 +1,4 @@
 import { Footer } from "../components/Footer"
-import { TechStack } from "../components/TechStack"
 import { GradientBorder } from "../utils/GradientBorder"
 import { ImageCarousel } from "../utils/ImageCarousel"
 import { TypWritterText } from "../utils/TypWritterText"

@@ -1,7 +1,7 @@
-import React from "react";
+
 import { motion } from "framer-motion";
 import { TypWritterText } from "../utils/TypWritterText";
-import { title } from "motion/react-client";
+
 
 export const TechStack = () => {
   const technologies = [

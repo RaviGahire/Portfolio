@@ -1,7 +1,5 @@
 import { motion } from 'motion/react'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { GradientBorder } from '../utils/GradientBorder';
 import { Footer } from '../components/Footer';
 import { MotivationSection } from '../components/MotivationSection';
 import { AnimatedMouse } from '../utils/AnimatedMouse';

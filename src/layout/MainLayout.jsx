@@ -1,6 +1,5 @@
-import { motion } from 'motion/react'
 import { Header } from '../components/Header'
-import React, { useMemo ,useState, useRef } from 'react';
+
 
 
 export const MainLayout = ({ children }) => {

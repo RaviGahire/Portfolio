@@ -1,22 +1,56 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
+import { TypWritterText } from "../utils/TypWritterText";
+import { title } from "motion/react-client";
 
 export const TechStack = () => {
   const technologies = [
-    { category: "Frontend", tools: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"] },
-    { category: "Backend / DB", tools: ["Node.js", "Express", "MongoDB", "PostgreSQL", "Firebase"] },
-    { category: "Tools / Design", tools: ["Git", "Figma", "Docker", "GSAP", "Three.js"] }
+    {
+      category: "Frontend",
+      tools: [    
+        "HTML",
+        "CSS",
+        "JavaScript",
+           "React.js",
+           "Bootstrap",
+        "Tailwind",
+        
+      ],
+    },
+    {
+      category: "Backend / DB",
+      tools: ["Node.js", "Express", "MongoDB","RESTfull APIs"],
+    },
+    {
+      category: "Tools / Design / Animation",
+      tools: ["Git","GitHub", "Figma",  "GSAP", "Motion" , "VS Code" ,"Postman"],
+    },
   ];
 
+const technologiesImages = [
+  {imgUrl:'https://s3.eu-west-1.amazonaws.com/images.tutorialedge.net/images/node.png' ,title:'Node js'},
+  {imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbAmafdPNr9fd0KC0Z98WYEC7Wl1wYlPVf-A&s' ,title:'Recat js'},
+  {imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfTvKkYl6oBVPdL1xXw4ohTPuLVLh7F7EZhA&s' ,title:'js'},
+  {imgUrl:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz8kjY-UjPOXB3LXoMIK9VjWYt3GXabhFaIQ&s' ,title:'Mongo'},
+  {imgUrl:'https://s3.eu-west-1.amazonaws.com/images.tutorialedge.net/images/node.png' ,title:'Node js'}
+]
+
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-24">
-      <div className="mb-12 md:mb-20">
-        <p className="text-green-500 font-mono text-xs uppercase tracking-[0.4em] mb-2">// Capabilities</p>
-        <h2 className="text-3xl md:text-5xl font-bold uppercase text-white">Technical Toolkit</h2>
-        <div className="h-1 bg-green-500 w-20 mt-4"></div>
+    <section className="max-w-7xl mx-auto px-6 sm:px-6 py-12 md:py-24">
+      <div className=" mb-8 md:mb-20">
+        <TypWritterText titleOne="Skills" titleSecond="Capabilities" />
+        <h2 className="text-xl md:text-5xl font-bold uppercase text-white">
+          Technical Toolkit
+        </h2>
+        <motion.div
+          initial={{ width: 0 }}
+          whileInView={{ width: "5rem" }}
+          transition={{ duration: 0.8 }}
+          className="h-1 bg-green-500 mt-2"
+        ></motion.div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
         {technologies.map((tech, index) => (
           <motion.div
             key={tech.category}
@@ -24,12 +58,11 @@ export const TechStack = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="p-8 rounded-3xl bg-neutral-900/40 border border-white/5 hover:border-green-500/30 transition-all duration-500 group"
+            className=" p-4 md:p-8 rounded-md bg-neutral-900/40 border border-white/5 hover:border-green-500/30 transition-all duration-500 group"
           >
-            <h3 className="text-neutral-500 font-mono text-xs uppercase tracking-widest mb-6 group-hover:text-green-500 transition-colors">
+            <h3 className="text-green-500 font-mono text-xs uppercase tracking-widest mb-6 group-hover:text-green-500 transition-colors">
               {tech.category}
             </h3>
-            
             <div className="flex flex-wrap gap-3">
               {tech.tools.map((tool) => (
                 <span
@@ -44,15 +77,22 @@ export const TechStack = () => {
         ))}
       </div>
 
-      <div className="mt-16 p-8 rounded-[2.5rem] bg-linear-to-r from-green-500/5 to-transparent border border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="mt-8 md:mt-16 p-4 md:p-8 rounded-md bg-linear-to-r from-green-500/5 to-transparent border border-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
         <p className="text-neutral-400 text-lg">
-          Currently exploring <span className="text-white font-semibold">WebGPU</span> and <span className="text-white font-semibold">AI Integration</span>.
+          Currently exploring{" "}
+          <span className="text-white font-semibold">Node</span> and{" "}
+          <span className="text-white font-semibold">AI Integration</span>.
         </p>
         <div className="flex -space-x-3">
-            {/* You can map small icons here for a "trusted by" or "active tools" look */}
-            {[1, 2, 3, 4].map((i) => (
-              <div key={i} className="w-10 h-10 rounded-full border-2 border-neutral-900 bg-neutral-800"></div>
-            ))}
+          {/* You can map small icons here*/}
+          {technologiesImages.map((items , i) => (
+            <div
+              key={i}
+              className="w-10 h-10 rounded-full border-2 border-neutral-900 bg-neutral-800 cursor-pointer overflow-hidden"
+            >
+              <img className="w-full object-cover" src={items.imgUrl} alt={items.title} />
+            </div>
+          ))}
         </div>
       </div>
     </section>

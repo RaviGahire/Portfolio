@@ -5,6 +5,7 @@ import { GradientBorder } from '../utils/GradientBorder';
 import { Footer } from '../components/Footer';
 import { MotivationSection } from '../components/MotivationSection';
 import { AnimatedMouse } from '../utils/AnimatedMouse';
+import {TechStack} from '../components/TechStack';
 
 const OWNER_DATA = {
   name: "I'm Ravi Gahire",
@@ -98,9 +99,11 @@ export const ProfilePage = () => {
       </section>
       {/* AnimatedMouse */}
       <AnimatedMouse />
-      {/* motivation section */}
+         {/* motivation section */}
       <MotivationSection />
       {/* Footer */}
+         {/* Tech stack */}
+      <TechStack/>
       <Footer />
     </>
   );

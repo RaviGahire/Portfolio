@@ -9,14 +9,14 @@ import { motion } from "motion/react"
 export const AboutPage = () => {
 
   const expData = [
-    { sr_no: '1 -', org: 'SELF-DIRECTED LEARNING', role: 'Mern stack', fromTo: 'Oct 2025 — Present' },
-    { sr_no: '2 -', org: 'Rego Digital Solution', role: 'React Js intern', fromTo: 'May 2025 - Oct 2025' },
-    { sr_no: '3 -', org: 'Mphasis Ltd', role: 'Trn Processing Officer', fromTo: 'May 2022 - May 2025' },
+    {  org: 'Self-Directed learning', role: 'Mern stack', fromTo: 'Oct 2025 — Present' },
+    {  org: 'Rego Digital Solution', role: 'React Js intern', fromTo: 'May 2025 - Oct 2025' },
+    {  org: 'Mphasis Ltd', role: 'Trn Processing Officer', fromTo: 'May 2022 - May 2025' },
   ]
 
   return (
     <>
-      <section aria-label="about-me" className="max-w-7xl mx-auto px-4 sm:px-6 py-12 md:py-24">
+      <section aria-label="about-me" className="max-w-7xl mx-auto px-6 sm:px-6 py-20 md:mt-20 md:py-24">
         <div className="text-white">
           <div className="mb-4">
             <TypWritterText
@@ -28,7 +28,7 @@ export const AboutPage = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-6xl tracking-wide font-bold uppercase leading-tight"
+            className="text-xl sm:text-4xl md:text-6xl tracking-wide font-bold uppercase leading-tight"
           >
             I’m a frontend developer and a builder
             <span className="text-green-500"> — </span>
@@ -40,8 +40,8 @@ export const AboutPage = () => {
           <GradientBorder />
         </div>
 
-        <div className="my-12 md:my-24">
-          <h2 className="text-2xl md:text-4xl uppercase font-bold text-white">Journey</h2>
+        <div className="my-8 md:my-24">
+          <h2 className="text-xl md:text-5xl uppercase font-bold text-white">Journey</h2>
           <motion.div
             initial={{ width: 0 }}
             whileInView={{ width: "5rem" }}
@@ -50,7 +50,7 @@ export const AboutPage = () => {
           ></motion.div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-16 items-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -58,7 +58,7 @@ export const AboutPage = () => {
             transition={{ duration: 0.6 }}
             className="md:col-span-5 relative group w-full max-w-md mx-auto md:max-w-none"
           >
-            <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 aspect-[4/5]">
+            <div className="relative z-10 rounded-2xl overflow-hidden border border-white/10 md:aspect-4/5">
               <img
                 src="mypic.jpg"
                 alt="mypic"
@@ -70,7 +70,7 @@ export const AboutPage = () => {
           </motion.div>
 
           <div className="md:col-span-7 flex flex-col justify-center mt-8 md:mt-0">
-            <div className="space-y-8 md:space-y-12">
+            <div className="space-y-4 md:space-y-12">
               {expData.map((item, index) => (
                 <motion.div
                   key={item.role}
@@ -82,7 +82,7 @@ export const AboutPage = () => {
                 >
                   <span className="text-green-500 font-mono text-sm pt-1 md:pt-2">0{index + 1} —</span>
                   <div>
-                    <h3 className="text-white text-xl md:text-3xl font-bold group-hover:text-green-400 transition-colors">
+                    <h3 className="text-white text-md md:text-3xl font-bold group-hover:text-green-400 transition-colors">
                       {item.org}
                     </h3>
                     <p className="text-neutral-400 text-base md:text-lg mt-1 font-medium italic">
@@ -98,10 +98,10 @@ export const AboutPage = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 mt-20 md:mt-32">
-          <div className="md:col-span-7 text-white order-2 md:order-1">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12 mt-10 md:mt-30">
+          <div className=" md:col-span-7 text-white order-2 md:order-1">
             <div className="mb-6">
-              <h2 className="text-3xl md:text-4xl uppercase font-bold">Bit about me</h2>
+              <h2 className="text-xl md:text-5xl uppercase font-bold text-white">Bit about me</h2>
               <motion.div
                 initial={{ width: 0 }}
                 whileInView={{ width: "4rem" }}
@@ -125,7 +125,7 @@ export const AboutPage = () => {
           </div>
 
           <div className="md:col-span-5 order-1 md:order-2">
-            <div className="relative group p-6 md:p-8 rounded-3xl bg-neutral-900/40 border border-white/5 overflow-hidden">
+            <div className="relative group p-6 md:p-8 rounded-md bg-neutral-900/40 border border-white/5 overflow-hidden">
               <div className="relative z-10 space-y-6 md:space-y-8">
                 <div>
                   <p className="text-green-500 font-mono text-[10px] md:text-xs uppercase tracking-widest mb-1">Location</p>
@@ -138,11 +138,11 @@ export const AboutPage = () => {
                 <div className="flex gap-8 md:gap-10 pt-2">
                   <div>
                     <p className="text-green-500 font-mono text-[10px] md:text-xs uppercase tracking-widest mb-1">Projects</p>
-                    <p className="text-white text-3xl md:text-4xl font-bold">2+</p>
+                    <p className="text-white text-xl md:text-4xl font-bold">2+</p>
                   </div>
                   <div>
                     <p className="text-green-500 font-mono text-[10px] md:text-xs uppercase tracking-widest mb-1">Experience</p>
-                    <p className="text-white text-3xl md:text-4xl font-bold whitespace-nowrap">3.5 Yrs</p>
+                    <p className="text-white text-xl md:text-4xl font-bold whitespace-nowrap">3.5 Yrs</p>
                   </div>
                 </div>
               </div>

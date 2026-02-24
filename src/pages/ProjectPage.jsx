@@ -82,14 +82,14 @@ const [hoverText , setHoverText] = useState('Transforming Design into Code')
     <>
       <section
         aria-label="work-section"
-        className="text-white py-20 max-w-7xl mx-auto px-2 md:px-0"
+        className="text-white py-10 mt-10 md:py-20 md:mt-20 max-w-7xl mx-auto px-2 md:px-2"
       >
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          className="flex justify-between items-end mb-8 pb-6"
+          className="flex justify-between items-end mb-2 md:mb-8 pb-6"
         >
 
           {/* Hover text */}

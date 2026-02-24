@@ -4,7 +4,7 @@ import { Navbar } from './Navbar'
 import { Logo } from '../utils/Logo'
 import { ResumeBtn } from '../utils/ResumeBtn'
 
-export const Header = () => {
+export const HeaderComponent = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {

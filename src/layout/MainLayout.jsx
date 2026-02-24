@@ -1,11 +1,11 @@
-import { Header } from '../components/Header'
+import { HeaderComponent } from "../components/Header"
 
 
 
 export const MainLayout = ({ children }) => {
     return (
         <>
-            <Header />
+            <HeaderComponent />
             <main aria-label='ravi-gahire-portfolio' className=' mx-auto max-w-7xl z-100 min-h-screen'>
                             
                 {children}

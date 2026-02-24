@@ -18,7 +18,7 @@ export const Header = () => {
     return (
         <header
             aria-label='header'
-            className="fixed top-0 left-0 z-100 w-full md:px-4 md:pt-4 transition-all duration-300"
+            className="fixed top-0 left-0 z-100 w-full md:px-4 md:pt-4 transition-all duration-300 pointer-events-none"
         >
             <motion.div
                 initial={false}
@@ -36,7 +36,7 @@ export const Header = () => {
                 `}
             >
                 {/* Logo Area */}
-                <div className="shrink-0">
+                <div className="shrink-0 ">
                     <Logo />
                 </div>
 

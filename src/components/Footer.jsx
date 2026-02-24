@@ -29,7 +29,8 @@ export const Footer = () => {
         {/* Social Links */}
         <div className="flex items-center gap-6 md:gap-8">
           <Link 
-            to="#" 
+            to="https://www.linkedin.com/in/ravi-gahire-7855b110a/" 
+            target='_blank'
             className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-neutral-400 hover:text-white transition-all group"
           >
             <IconBrandLinkedin size={18} className="group-hover:-translate-y-1 transition-transform" />
@@ -37,7 +38,8 @@ export const Footer = () => {
           </Link>
 
           <Link 
-            to="#" 
+            to="mailto:ravigahire3@gmail.com" 
+            target='_blank'
             className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-neutral-400 hover:text-white transition-all group"
           >
             <IconMail size={18} className="group-hover:-translate-y-1 transition-transform" />
@@ -45,7 +47,8 @@ export const Footer = () => {
           </Link>
 
           <Link 
-            to="#" 
+            to="https://x.com/RaviGahire" 
+            target='_blank'
             className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-neutral-400 hover:text-white transition-all group"
           >
             <IconBrandX size={18} className="group-hover:-translate-y-1 transition-transform" />
@@ -53,7 +56,8 @@ export const Footer = () => {
           </Link>
 
           <Link 
-            to="#" 
+            to="https://github.com/RaviGahire" 
+            target='_blank'
             className="flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.2em] text-neutral-400 hover:text-white transition-all group"
           >
             <IconBrandGithub size={18} className="group-hover:-translate-y-1 transition-transform" />

@@ -70,10 +70,8 @@ export const MotivationSection = () => {
           </motion.div>
 
           <motion.p variants={itemVariants} className="text-base md:text-md leading-relaxed">
-            <span className="text-white font-bold ">Ravi Gahire — </span>
-            Creativity is the heartbeat of design. Every pixel you place and every concept you bring to life reflects your unique vision.
-            Julia Cameron in <span className="italic text-neutral-500 underline decoration-neutral-600 underline-offset-4">The Artist’s Way</span> reminds me that creativity is a force within us, something to discover and nurture.
-            Embrace the process, trust your instincts, and let your passion guide you. Keep pushing boundaries and stay true to your artistic journey.
+            <span className="text-white font-bold ">Creativity is the core of development. Every line of code you write and every feature you build reflects your unique problem-solving approach. Just like Julia Cameron explains in
+            Julia Cameron in <span className="italic text-neutral-500 underline decoration-neutral-600 underline-offset-4">The Artist’s Way</span> creativity isn’t something external—it’s a skill you uncover and strengthen over time.
           </motion.p>
 
           <motion.h3

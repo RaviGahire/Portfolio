@@ -8,8 +8,8 @@ import { motion } from "motion/react"
 export const AboutPage = () => {
 
   const expData = [
-    {  org: 'Self-Directed learning', role: 'Mern stack', fromTo: 'Oct 2025 — Present' },
-    {  org: 'Rego Digital Solution', role: 'React Js intern', fromTo: 'May 2025 - Oct 2025' },
+    {  org: 'Self-Directed learning', role: 'Mern stack', fromTo: 'Ongoing' },
+    {  org: 'Rego Digital Solution', role: 'React Js intern', fromTo: 'Jun 2025 - Present' },
     {  org: 'Mphasis Ltd', role: 'Trn Processing Officer', fromTo: 'May 2022 - May 2025' },
   ]
 

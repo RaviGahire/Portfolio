@@ -87,9 +87,9 @@ export const AboutPage = () => {
                     <p className="text-neutral-400 text-base md:text-lg mt-1 font-medium italic">
                       {item.role}
                     </p>
-                    <p className="text-neutral-600 font-mono text-[10px] md:text-xs uppercase tracking-widest mt-2">
+                    {/* <p className="text-neutral-600 font-mono text-[10px] md:text-xs uppercase tracking-widest mt-2">
                       {item.fromTo}
-                    </p>
+                    </p> */}
                   </div>
                 </motion.div>
               ))}

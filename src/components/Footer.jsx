@@ -27,7 +27,7 @@ export const Footer = () => {
         </div>
 
         {/* Social Links */}
-        <div className="flex items-center gap-6 md:gap-8">
+        {/* <div className="flex items-center gap-6 md:gap-8">
           <Link 
             to="https://www.linkedin.com/in/ravi-gahire-7855b110a/" 
             target='_blank'
@@ -63,7 +63,7 @@ export const Footer = () => {
             <IconBrandGithub size={18} className="group-hover:-translate-y-1 transition-transform" />
             <span className="hidden sm:inline">Github</span>
           </Link>
-        </div>
+        </div> */}
       </div>
             
       <div className="text-center mt-8 opacity-50">

@@ -1,0 +1,32 @@
+:root {
+  /* Base Background */
+  --bg-dark: #16171d;
+
+  /* Text Colors */
+  --primary-text: #ffffff;
+  --secondary-text: #867e8e;
+  --dark-borders: #3b3440;
+  --light-borders: #e5e4e7;
+
+  /* Purple Accent Hierarchy */
+  --purple: #6c3bff;
+  --lavender: #b39aff;
+  --wine-purple: #140033;
+  --nickel: #3b3440;
+
+  /* Gradient Signature */
+  --primary-gradient: linear-gradient(
+    135deg,
+    #6c3bff,
+    #ba189a,
+    #f4563a,
+    #fa7444
+  );
+  --secondary-gradient: linear-gradient(135deg, #a200ff, #fa7444);
+  --vite-gradient: linear-gradient(
+    135deg,
+    #41d1ff 0%,
+    #646cff 50%,
+    #bd34fe 100%
+  );
+}

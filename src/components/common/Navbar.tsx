@@ -47,6 +47,7 @@ export const Navbar = () => {
       <div className="hidden md:block">
         <div className=" flex items-center justify-center gap-4 md:gap-8">
           {NavItems.map((item, index) => (
+            
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -58,7 +59,9 @@ export const Navbar = () => {
                 className="group flex items-center justify-center gap-0.5 text-primary-text font-SourceSans3 tracking-wide text-sm sm:text-md md:text-[18px]"
               >
                 <span>[</span>
-                <span className="transition-transform duration-300 group-hover:translate-x-16">
+                <span className="transition-transform duration-300 group-hover:translate-x-[var(--x)]"
+                style={{ "--x": `${item.label.length * 12}px` } as React.CSSProperties}
+                >
                   ]
                 </span>
                 <span className="transition-transform duration-300 group-hover:-translate-x-1">

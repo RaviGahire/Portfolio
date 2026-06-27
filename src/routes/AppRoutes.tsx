@@ -15,8 +15,8 @@ export const AppRoutes = () => {
   const routes: RoutesPaths[] = [
     {
       path: "/",
-      // element: <Home />,
-       element: <>Home page</>,
+      element: <Home />,
+    
     },
     {
       path: "/my-work",

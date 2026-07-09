@@ -107,7 +107,8 @@ export const Navbar = () => {
                   <NavLink
                     to={item.path}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-primary-text font-SourceSans3 text-base tracking-wide transition-colors hover:bg-white/5"
+                    className="flex items-center gap-2 rounded-md px-3 py-2 text-primary-text font-light text-shadow-2xs
+                     font-SourceSans3 text-base tracking-wider transition-colors hover:bg-white/5"
                   >
                     <span>[</span>
                     <span>{item.label}</span>

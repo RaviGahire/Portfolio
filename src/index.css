@@ -8,7 +8,7 @@
 @font-face {
   font-family: "SourceSans3", sans-serif;
   font-style: normal;
-  src: url('./assets/fonts/SourceSans3-Regular.ttf') format("truetype"); 
+  src: url("./assets/fonts/SourceSans3-Regular.ttf") format("truetype");
 }
 
 :root {
@@ -19,6 +19,11 @@
     #f4563a,
     #fa7444
   );
+  --radial-purple-glow: radial-gradient(
+    circle,
+    oklch(0.541 0.281 293.009 / 0.28),
+    transparent 70%
+  );
   --secondary-gradient: linear-gradient(135deg, #a200ff, #fa7444);
   --vite-gradient: linear-gradient(
     135deg,
@@ -26,12 +31,14 @@
     #646cff 50%,
     #bd34fe 100%
   );
+
+
+
 }
 
 @theme {
   /* Colors */
   --color-bg-dark: #16171d;
-
   --color-primary-text: #ffffff;
   --color-secondary-text: #867e8e;
   --color-dark-borders: #3b3440;
@@ -42,6 +49,8 @@
   --color-lavender: #b39aff;
   --color-wine-purple: #140033;
   --color-nickel: #3b3440;
+  --color-nickel: #3b3440;
+  --color-hover-nickel: #4f4557d7;
 
   /* Font */
   --font-redressed: "Redressed", cursive;

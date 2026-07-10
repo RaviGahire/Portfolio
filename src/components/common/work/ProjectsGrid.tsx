@@ -61,8 +61,7 @@ export const ProjectsGrid = () => {
         {projectData.map((item, index) => (
           // cards
           <div
-  
-            key={index}
+              key={index}
             className="w-full max-w-full border-t border-dark-borders flex flex-col"
           >
             {/* header  */}
@@ -87,7 +86,8 @@ export const ProjectsGrid = () => {
               {/* Image Wrapper */}
               <div className="w-full aspect-3/4 max-w-82">
                 <img
-                  className="w-full h-full object-cover "
+                  className="w-full h-full object-cover"
+                  loading="lazy"
                   src={item.image}
                   alt={`${item.name} image`}
                 />

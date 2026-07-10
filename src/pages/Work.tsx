@@ -1,19 +1,23 @@
 import { IconLayoutGrid } from "@tabler/icons-react";
 import { Badge } from "../components/common/Badge";
 import { Heading } from "../components/common/Heading";
-import { ProjectDetail } from "../components/work/ProjectDetail";
 import { ProjectsGrid } from "../components/work/ProjectsGrid";
+import { projectData } from "../data/AllData"
+import { useState } from "react";
+import { ProjectDetail } from "../components/work/ProjectDetail";
 
 export const Work = () => {
+const [selectedProject, setSelectedProject] = useState(null);
+
   return (
-    <section aria-label="work-or-project-section" className="h-auto bg-bg-dark">
-      <div>
+    <section aria-label="work-or-project-section" className="h-auto bg-bg-dark py-8">
+      <div className="flex flex-col justify-center items-center">
         <Badge
           title="Portfolio"
           icon={<IconLayoutGrid stroke={2} size={18} />}
         />
 
-        <div className="flex justify-center items-center ">
+        <div>
           {" "}
           <Heading
             title="Selected Work"
@@ -21,8 +25,23 @@ export const Work = () => {
           />
         </div>
       </div>
-      <ProjectsGrid />
-      {/* <ProjectDetail /> */}
+      {/* Project card grid */}
+      <ProjectsGrid 
+      projects={projectData}
+      onProjectClick={setSelectedProject}
+      />
+
+      {/* Project details */}
+      {selectedProject && (
+        <ProjectDetail
+        project={selectedProject}
+        onClose={() => setSelectedProject(null)}
+        />
+
+      )
+
+      }
+
     </section>
   );
 };

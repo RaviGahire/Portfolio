@@ -11,14 +11,14 @@ export const Home = () => {
           <div className="max-w-3xl min-h-150 flex mx-auto flex-col justify-center items-center gap-8">
             <div className="inline-flex rounded-full bg-[#7f22fe]/10 border-[#7f22fe]/30 border border-solid px-4 py-1.5 items-center gap-2">
               <span className="size-1.5 rounded-full bg-(image:--secondary-gradient) animate-pulse" />
-              <span className="font-bold font-redressed text-secondary-text text-xs leading-4">
+              <span className="font-bold tracking-wider font-elmsSans text-secondary-text text-xs ">
                 Available for new projects
               </span>
             </div>
             {/* Name */}
             <div className="flex flex-col items-center gap-4">
               <h1
-                className="text-[60px] md:text-[88px] leading-none font-SourceSans3 
+                className="text-[60px] md:text-[88px] leading-none font-poppins 
               text-transparent bg-clip-text bg-(image:--vite-gradient) font-light tracking-wide uppercase"
               >
                 Ravi
@@ -29,11 +29,11 @@ export const Home = () => {
               <div className="bg-(image:--vite-gradient) rounded-full w-16 md:w-32 h-1" />
             </div>
             {/* info */}
-            <p className="text-[18px] md:text-[22px] text-secondary-text font-redressed max-w-xl font-semibold tracking-tight">
+            <p className="text-[18px] md:text-[22px] text-secondary-text font-elmsSans max-w-xl tracking-wide">
               {`Full-Stack Developer & Creative Technologist building polished, modern digital experiences.`}
             </p>
             {/* buttons */}
-            <div className="flex flex-col md:flex-row mt-2 items-center gap-4 font-redressed">
+            <div className="flex flex-col md:flex-row mt-2 items-center gap-4 font-elmsSans">
               <button
                 className="flex cursor-pointer items-center 
               justify-center gap-1 bg-(image:--vite-gradient) 

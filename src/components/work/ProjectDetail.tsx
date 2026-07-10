@@ -1,20 +1,14 @@
 import { IconMinus } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 
-type ProjectDetailsProps = {
-  id: number;
-  name: string;
-  category: string;
-  year: number;
-  design: string;
-  Role: string;
-  tech: string[];
-  url: string;
-  desc: string;
-  img: string;
-};
 
-export const ProjectDetail = () => {
+
+
+export const ProjectDetail = ({project,onClose}) => {
+
+
+
+  
   return (
     <section aria-label="project-details">
       <div className="flex flex-col md:flex-row justify-center items-start bg-nickel p-4">
@@ -23,8 +17,8 @@ export const ProjectDetail = () => {
           {/* project image  */}
           <img
             className="size-full aspect-square object-cover"
-            src="https://harryjatkins.com/_astro/onelab.3a12fe69_1vAWMb.webp"
-            alt="project-image"
+            src={project.image}
+            alt={project.name}
           />
         </div>
 
@@ -35,14 +29,18 @@ export const ProjectDetail = () => {
             {/* project name */}
             <div>
               <p className="font-semibold font-poppins md:text-xl tracking-wide">
-                OneLab
+                {project.name}
               </p>
-              <span className="text-secondary-text font-elmsSans font-semibold">Website</span>
+              <span className="text-secondary-text font-elmsSans font-semibold">
+                {project.category}
+              </span>
             </div>
             {/* close btn */}
             <button
+            onClick={()=>onClose()}
               className="size-8 flex justify-center items-center text-2xl cursor-pointer 
-             text-white bg-gray-800 rounded-full">
+             text-white bg-gray-800 rounded-full"
+            >
               <IconMinus stroke={2} size={12} />
             </button>
           </div>
@@ -50,39 +48,42 @@ export const ProjectDetail = () => {
           {/* info */}
           <div className="flex border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1 font-elmsSans">
             <span className="w-1/2 tracking-wider">ID</span>
-            <span className="tracking-wide">24</span>
+            <span className="tracking-wide">{project.id}</span>
           </div>
 
           <div className="flex border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1 font-elmsSans">
             <span className="w-1/2 tracking-wider">Year</span>
-            <span className="tracking-wide">2025</span>
+            <span className="tracking-wide">{project.year}</span>
           </div>
 
           <div className="flex border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1 font-elmsSans">
             <span className="w-1/2 text-shadow-2xs tracking-wider">Design</span>
-            <span className="tracking-wide">Independent Designers Collective</span>
+            <span className="tracking-wide">
+              {project.design}
+            </span>
           </div>
 
           <div className="flex border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1 font-elmsSans">
             <span className="w-1/2 tracking-wider">Role</span>
-            <span className="tracking-wide">Developer</span>
+            <span className="tracking-wide">{project.role}</span>
           </div>
 
           <div className="flex border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1 font-elmsSans">
             <span className="w-1/2 tracking-wider">Stack</span>
             <div className="leading-5 tracking-wide">
-              HTML <br />
-              CSS
-              <br /> JavaScript
-              <br /> CMS
-              setup
-              <br /> Theme creation
+           {project.stack}
             </div>
           </div>
 
           <div className="flex border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1 font-elmsSans">
             <span className="w-1/2 tracking-wider">URL</span>
-           <Link to={'/#'} target="_blank" className="tracking-wide hover:text-lavender transition-colors duration-300 ease-linear">onelab.in</Link>
+            <Link
+              to={project.url}
+              target="_blank"
+              className="tracking-wide hover:text-lavender transition-colors duration-300 ease-linear"
+            >
+              {project.url}
+            </Link>
           </div>
         </div>
       </div>

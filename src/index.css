@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "Redressed", sans-serif;
+  font-family: "ElmsSans", sans-serif;
   font-style: normal;
-  src: url("./assets/fonts/Redressed-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/ElmsSans-Regular.ttf") format("truetype");
 }
 @font-face {
-  font-family: "SourceSans3", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
-  src: url("./assets/fonts/SourceSans3-Regular.ttf") format("truetype");
+  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
 }
 
 :root {
@@ -53,6 +53,6 @@
   --color-hover-nickel: #4f4557d7;
 
   /* Font */
-  --font-redressed: "Redressed", cursive;
-  --font-SourceSans3: "SourceSans3";
+  --font-elmsSans: "ElmsSans";
+  --font-poppins: "Poppins";
 }

@@ -3,6 +3,7 @@ import { Badge } from "../components/common/Badge";
 import { Heading } from "../components/common/Heading";
 import { ProjectsGrid } from "../components/common/work/ProjectsGrid";
 import { div } from "motion/react-client";
+import { ProjectDetail } from "../components/common/work/ProjectDetail";
 
 export const Work = () => {
   return (
@@ -19,7 +20,8 @@ export const Work = () => {
         />
       
       </div>
-        <ProjectsGrid />
+        {/* <ProjectsGrid /> */}
+        <ProjectDetail/>
     </section>
   );
 };

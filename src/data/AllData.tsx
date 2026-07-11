@@ -65,3 +65,53 @@ export const projectData = [
       "https://images.unsplash.com/photo-1783173561737-202300de9165?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOXx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
+
+type skills = {
+  name:string;
+  img:string;
+}
+
+export const skillImages:skills[]= [{
+  name:"html",
+  img:"https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_1280.png"
+},{
+  name:"Css",
+  img:"https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_1280.png"
+},{
+  name:"React Js",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6hhv7kFXJIk_cJ95J_zrK26cDFQPYHoHFyBtvrMwKRg&s=10"
+},{
+  name:"Tailwind Css",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXp1KtxHwrs2XlXC1xI912nK9awB0LR20GMvgHRW7m-A&s=10"
+}
+,{
+  name:"JavaScript",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzlvHmiH22cX8B9cdJ9FKCBJNhvEqBM8fkQWsjVm_aQA&s=10"
+}
+,{
+  name:"TypeScript",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOcTdrgd1PJKSRU7X-4T05EprGo0jpnksh5if0qsgUUg&s=10"
+}
+,{
+  name:"Node Js",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgM8fZVPkLAW2Z5LPbDtLyVB4oyRAfihgXz2vE-OpOJ7VptN1e3WtGCxwQ&s=10"
+},{
+  name:"MongoDB",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTePD5QOo7Oi41KyDK6VEYSYUJ_bo7oeyWQnSjBVxwDrQ&s=10"
+}
+,{
+  name:"Express Js",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRks1x32lO-Gn79ulpJQZw_ZDWbFR35Y-9MFqx0uOgxUw&s=10"
+}
+,{
+  name:"Figma",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgw5DAz6KVHQFt_4j3b30e23Gdu9vx5pROp_fAg_BmTQ&s=10"
+}
+,{
+  name:"Vs Code",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoH3-Kz2zs_keybFP8apPDQmL6rcG_eb7AhCXz9J-7aA&s=10"
+},{
+  name:"Postman",
+  img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMgAzXYltcAawiBh-pWq71vvSKLOl0Nt1xRpkn6LWTSg&s=10"
+}
+]

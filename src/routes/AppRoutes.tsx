@@ -1,10 +1,10 @@
 import type { ReactElement } from "react";
-import { BrowserRouter , Routes, Route } from "react-router-dom";
-import { Home } from "../pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "../layout/Layout";
 import { Work } from "../pages/Work";
 import { About } from "../pages/About";
 import { Header } from "../components/common/Header";
+import { Home } from "../pages/Home";
 
 export const AppRoutes = () => {
   type RoutesPaths = {
@@ -34,9 +34,9 @@ export const AppRoutes = () => {
 
   return (
     <BrowserRouter>
-    {/* Header */}
-    <Header/>
-    {/* main Layout */}
+      {/* Header */}
+      <Header />
+      {/* main Layout */}
       <Layout>
         <Routes>
           {routes.map((items) => (

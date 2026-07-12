@@ -10,7 +10,7 @@ export const Work = () => {
 const [selectedProject, setSelectedProject] = useState(null);
 
   return (
-    <section aria-label="work-or-project-section" className="h-auto bg-bg-dark py-8">
+    <section aria-label="work-or-project-section" className="relative min-h-auto bg-bg-dark py-8">
       <div className="flex flex-col justify-center items-center">
         <Badge
           title="Portfolio"
@@ -39,7 +39,6 @@ const [selectedProject, setSelectedProject] = useState(null);
         />
 
       )
-
       }
 
     </section>

@@ -1,4 +1,9 @@
 import { IconChevronDown, IconLayoutGrid } from "@tabler/icons-react";
+import { Work } from "./Work";
+import { About } from "./About";
+import { Badge } from "../components/common/Badge";
+import { IconVignette } from "../components/svgs/IconVignette";
+import { Underline } from "../components/common/Underline";
 
 export const Home = () => {
   return (
@@ -9,12 +14,11 @@ export const Home = () => {
         <div className="bg-[radial-gradient(oklch(1_0_0/.04)_1px,transparent_1px)] pointer-events-none absolute inset-0" />
         <section className="relative text-center flex p-12 flex-col justify-center items-center">
           <div className="max-w-3xl min-h-150 flex mx-auto flex-col justify-center items-center gap-8">
-            <div className="inline-flex rounded-full bg-[#7f22fe]/10 border-[#7f22fe]/30 border border-solid px-4 py-1.5 items-center gap-2">
-              <span className="size-1.5 rounded-full bg-(image:--secondary-gradient) animate-pulse" />
-              <span className="font-bold tracking-wider font-elmsSans text-secondary-text text-xs ">
-                Available for new projects
-              </span>
-            </div>
+            {/* Badge */}
+            <Badge
+              title="Available for new projects"
+              icon={<IconVignette height={24} width={24} stroke={2} />}
+            />
             {/* Name */}
             <div className="flex flex-col items-center gap-4">
               <h1
@@ -26,7 +30,7 @@ export const Home = () => {
                 gahire
               </h1>
               {/* custom underline */}
-              <div className="bg-(image:--vite-gradient) rounded-full w-16 md:w-32 h-1" />
+              <Underline />
             </div>
             {/* info */}
             <p className="text-[18px] md:text-[22px] text-secondary-text font-elmsSans max-w-xl tracking-wide">
@@ -37,7 +41,7 @@ export const Home = () => {
               <button
                 className="flex cursor-pointer items-center 
               justify-center gap-1 bg-(image:--vite-gradient) 
-               font-bold rounded-xl text-violet-50 text-[14px] md:text-base md:leading-6 px-4 h-10 md:px-8 md:h-12"
+               font-bold rounded-xl text-white text-[14px] md:text-base md:leading-6 px-4 h-10 md:px-8 md:h-12"
               >
                 <IconLayoutGrid className="size-4 md:size-5" />
                 View My Work
@@ -71,6 +75,10 @@ export const Home = () => {
           </div>
         </section>
       </div>
+      {/* Work */}
+      <Work />
+      {/* About */}
+      <About />
     </div>
   );
 };

@@ -8,23 +8,24 @@ export const MyStack = () => {
           My Stack
         </h4>
       </div>
-      <div className="border border-dark-borders w-full" />
+      <div className="border border-dark-borders w-full"/>
       {/* skills iamges */}
-    <div className="w-full flex justify-around items-center gap-4">
-  {skillImages.map((skill) => (
-    <div
-      key={skill.name} 
-      className="size-10 shrink-0 rounded-full overflow-hidden"
-      title={skill.name}
-    >
-      <img 
-        className="size-full object-cover" 
-        src={skill.img} 
-        alt={`${skill.name} icon`} 
-      />
-    </div>
-  ))}
-</div>
+      <div className="w-full flex justify-around items-center gap-4">
+        {skillImages.map((skill) => (
+          <div
+            key={skill.name}
+            className="size-10 shrink-0 rounded-full overflow-hidden"
+            title={skill.name}
+          >
+            <img
+              className="size-full object-cover"
+              loading="lazy"
+              src={skill.img}
+              alt={`${skill.name} icon`}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

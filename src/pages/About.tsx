@@ -4,10 +4,10 @@ import { Heading } from "../components/common/Heading";
 
 export const About = () => {
   return (
-    <section aria-label="about-me-section" className="bg-bg-dark">
-      <div>
+    <section aria-label="about-me-section" className="bg-bg-dark h-auto py-10">
+      <div className="max-w-7xl mx-auto ">
         {/* Heading */}
-        <div>
+        <div className="py-10 ">
           <Heading title="About me" />
         </div>
         {/* Experience */}

@@ -1,39 +1,42 @@
 import { AnimatePresence, motion } from "motion/react";
-import { NavLink } from "react-router-dom";
-import { Logo } from "./Logo";
 import { useState } from "react";
 import { IconMenu, IconX } from "@tabler/icons-react";
+import { Logo } from "./Logo";
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   type NavTab = {
+    id: string;
     label: string;
     path: string;
   };
 
   const NavItems: NavTab[] = [
     {
+      id: "home",
       label: "Home",
       path: "/",
     },
     {
+      id: "work",
       label: "Work",
-      path: "/my-work",
+      path: "/#work",
     },
     {
+      id: "about",
       label: "About",
-      path: "/about-me",
+      path: "/#about",
     },
     {
+      id: "contact",
       label: "Contact",
-      path: "/contact-me",
+      path: "/#contact",
     },
   ];
 
   return (
-    <motion.nav className="flex px-4 md:px-20 justify-between items-center h-12 md:h-16">
-      {/* Logo Side */}
+    <motion.nav className="relative flex h-12 items-center justify-between px-4 md:h-16 md:px-20">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
@@ -42,51 +45,49 @@ export const Navbar = () => {
         <Logo />
       </motion.div>
 
-      {/* Navigatation tabs */}
-      {/* Desktop */}
       <div className="hidden md:block">
-        <div className=" flex items-center justify-center gap-4 md:gap-8">
+        <div className="flex items-center justify-center gap-4 md:gap-8">
           {NavItems.map((item, index) => (
-            
             <motion.div
+              key={item.label}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 + index * 0.08, duration: 0.3 }}
             >
-              <NavLink
-                key={item.label}
-                to={item.path}
-                className="group flex items-center justify-center gap-0.5 text-primary-text font-SourceSans3 tracking-wide text-sm sm:text-md md:text-[18px]"
+              <a
+                href={item.path}
+                className="group flex items-center justify-center gap-0.5 font-SourceSans3 text-sm tracking-wide text-primary-text sm:text-md md:text-[18px]"
               >
                 <span>[</span>
-                <span className="transition-transform duration-300 group-hover:translate-x-[var(--x)]"
-                style={{ "--x": `${item.label.length * 12}px` } as React.CSSProperties}
+                <span
+                  className="transition-transform duration-300 group-hover:translate-x-[var(--x)]"
+                  style={
+                    { "--x": `${item.label.length * 12}px` } as React.CSSProperties
+                  }
                 >
                   ]
                 </span>
                 <span className="transition-transform duration-300 group-hover:-translate-x-1">
                   {item.label}
                 </span>
-              </NavLink>
+              </a>
             </motion.div>
           ))}
         </div>
       </div>
 
-      {/* Mobile Button  */}
       <div className="md:hidden">
         <button
           onClick={() => setOpen(!open)}
           className="flex h-10 w-10 items-center justify-center rounded-md border border-white/20 text-primary-text"
           aria-label="Toggle menu"
         >
-          <span className="text-xl ">
+          <span className="text-xl">
             {open ? <IconX stroke={2} /> : <IconMenu />}
           </span>
         </button>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {open && (
           <motion.div
@@ -104,16 +105,15 @@ export const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.08, duration: 0.25 }}
                 >
-                  <NavLink
-                    to={item.path}
+                  <a
+                    href={item.path}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-2 rounded-md px-3 py-2 text-primary-text font-light text-shadow-2xs
-                     font-SourceSans3 text-base tracking-wider transition-colors hover:bg-white/5"
+                    className="flex items-center gap-2 rounded-md px-3 py-2 font-SourceSans3 text-base font-light tracking-wider text-primary-text text-shadow-2xs transition-colors hover:bg-white/5"
                   >
                     <span>[</span>
                     <span>{item.label}</span>
                     <span>]</span>
-                  </NavLink>
+                  </a>
                 </motion.div>
               ))}
             </div>

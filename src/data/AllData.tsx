@@ -123,16 +123,22 @@ export const skillImages: skills[] = [
 ];
 
 export const ExperienceData = [
-  { org: "Self-Directed learning", role: "Mern stack", fromTo: "Ongoing" },
+
+    {
+    org: "Botmakers",
+    role: "Full stack intern",
+    fromTo: "Jun 2026 - Present",
+  },
+  // { org: "Self-Directed learning", role: "Mern stack", fromTo: "Ongoing" },
   {
     org: "Rego Digital Solution",
     role: "React Js intern",
-    fromTo: "Jun 2025 - Present",
+    fromTo: "May 2025 - May 2026",
   },
   {
     org: "Mphasis Ltd",
     role: "Trn Processing Officer",
     fromTo: "May 2022 - May 2025",
   },
-  {},
+ 
 ];

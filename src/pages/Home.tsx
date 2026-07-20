@@ -7,7 +7,7 @@ import { Underline } from "../components/common/Underline";
 
 export const Home = () => {
   return (
-    <div>
+    <section id="home">
       <div className="relative bg-zinc-950 text-neutral-50 h-fit min-h-screen w-screen min-w-screen max-w-screen overflow-hidden">
         <div className="hidden md:block size-100 bg-(image:--radial-purple-glow) blur-2xl pointer-events-none rounded-full absolute -right-32 -top-32" />
         <div className="hidden md:block size-100 bg-(image:--radial-purple-glow) blur-2xl  pointer-events-none rounded-full absolute -left-40 -bottom-40" />
@@ -79,6 +79,6 @@ export const Home = () => {
       <Work />
       {/* About */}
       <About />
-    </div>
+    </section>
   );
 };

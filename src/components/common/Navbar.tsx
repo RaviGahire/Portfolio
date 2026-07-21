@@ -47,32 +47,44 @@ export const Navbar = () => {
 
       <div className="hidden md:block">
         <div className="flex items-center justify-center gap-4 md:gap-8">
-          {NavItems.map((item, index) => (
-            <motion.div
-              key={item.label}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + index * 0.08, duration: 0.3 }}
-            >
-              <a
-                href={item.path}
-                className="group flex items-center justify-center gap-0.5 font-SourceSans3 text-sm tracking-wide text-primary-text sm:text-md md:text-[18px]"
+          {NavItems.map((item, index) => {
+
+            let xVal: number;
+            if (item.label.length <= 4) {
+              xVal = 55;
+            } else if (item.label.length === 5) {
+              xVal = 56;
+            } else {
+              xVal = 69;
+            }
+
+            return (
+              <motion.div
+                key={item.label}
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 + index * 0.08, duration: 0.3 }}
               >
-                <span>[</span>
-                <span
-                  className="transition-transform duration-300 group-hover:translate-x-[var(--x)]"
-                  style={
-                    { "--x": `${item.label.length * 12}px` } as React.CSSProperties
-                  }
+                <a
+                  href={item.path}
+                  className="group font-poppins capitalize flex items-center justify-center 
+                gap-0.5 text-sm tracking-wide text-primary-text sm:text-md md:text-[18px]"
                 >
-                  ]
-                </span>
-                <span className="transition-transform duration-300 group-hover:-translate-x-1">
-                  {item.label}
-                </span>
-              </a>
-            </motion.div>
-          ))}
+                  <span>[</span>
+                  <span
+                    className="transition-transform duration-300 group-hover:translate-x-(--x)"
+                    style={{ "--x": `${xVal}px` } as React.CSSProperties}
+                  >
+                    ]
+                  </span>
+
+                  <span className="transition-transform duration-300 group-hover:-translate-x-1">
+                    {item.label}
+                  </span>
+                </a>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 

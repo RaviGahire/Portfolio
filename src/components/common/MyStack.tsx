@@ -2,30 +2,23 @@ import { skillImages } from "../../data/AllData";
 
 export const MyStack = () => {
   return (
-    <div className="flex justify-center items-center w-full py-4 bg-bg-dark text-white mt-10">
-      <div className="w-1/5 flex justify-end">
-        <h4 className="text-2xl font-semibold uppercase font-poppins mr-4">
-          My Stack
-        </h4>
+<div className="w-full overflow-hidden bg-bg-dark text-white [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+  <div className="flex w-max animate-scroll items-center gap-4">
+    {[...skillImages, ...skillImages].map((skill, index) => (
+      <div
+        key={`${skill.name}-${index}`}
+        className="size-10 shrink-0 overflow-hidden rounded-full"
+        title={skill.name}
+      >
+        <img
+          className="size-full object-cover"
+          loading="lazy"
+          src={skill.img}
+          alt={`${skill.name} icon`}
+        />
       </div>
-      <div className="border border-dark-borders w-full"/>
-      {/* skills iamges */}
-      <div className="w-full flex justify-around items-center gap-4">
-        {skillImages.map((skill) => (
-          <div
-            key={skill.name}
-            className="size-10 shrink-0 rounded-full overflow-hidden"
-            title={skill.name}
-          >
-            <img
-              className="size-full object-cover"
-              loading="lazy"
-              src={skill.img}
-              alt={`${skill.name} icon`}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
+    ))}
+  </div>
+</div>
   );
 };

@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { MyStack } from "../common/MyStack";
 
 export const Experience = ({ expData}) => {
   return (
@@ -59,7 +60,10 @@ export const Experience = ({ expData}) => {
             </motion.div>
           ))}
         </div>
-
+     {/* my stack */}
+             <div className=" pt-4 md:pt-5 lg:pt-30 ">
+                 <MyStack/>
+             </div>
          </div>
          
     </div>

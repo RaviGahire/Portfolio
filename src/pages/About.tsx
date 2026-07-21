@@ -2,7 +2,6 @@ import { Experience } from "../components/about/Experience";
 import { ExperienceData } from "../data/AllData";
 import { Heading } from "../components/common/Heading";
 import { Badge } from "../components/common/Badge";
-import { MyStack } from "../components/common/MyStack";
 
 export const About = () => {
   return (
@@ -24,10 +23,6 @@ export const About = () => {
         <div>
           <Experience expData={ExperienceData} />
         </div>
-        {/* my stack */}
-             <div className="px-4">
-                 <MyStack/>
-             </div>
       </div>
     </section>
   );

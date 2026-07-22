@@ -1,3 +1,5 @@
+import { Underline } from "./Underline";
+
 type HeadingProps = {
   title: string;
   subTitle?: string; // optional
@@ -8,16 +10,18 @@ export const Heading = ({ title, subTitle }: HeadingProps) => {
     <div className="max-w-xl space-y-4 text-center">
       {/* Heading */}
       <div className="space-y-2">
-        <h2 className="font-poppins text-3xl font-bold uppercase tracking-[0.15em] text-white">
+        <h2 className="font-inter text-3xl font-bold uppercase tracking-[0.15em] text-white">
           {title}
         </h2>
         {/* glow line */}
-        <div className="h-1 w-20 rounded-full mx-auto bg-(image:--vite-gradient)" />
+        <div className="flex justify-center items-center mt-3">
+          <Underline/>
+        </div>
       </div>
 
-      {/* Description */}
+      {/* subtitle */}
       {subTitle && (
-        <p className="max-w-xl font-elmsSans md:text-xl tracking-wide leading-6 text-secondary-text">
+        <p className="max-w-xl font-inter md:text-xl tracking-tight font-medium leading-6 text-secondary-text">
           {subTitle}
         </p>
       )}

@@ -48,12 +48,11 @@ export const Navbar = () => {
       <div className="hidden md:block">
         <div className="flex items-center justify-center gap-4 md:gap-8">
           {NavItems.map((item, index) => {
-
             let xVal: number;
             if (item.label.length <= 4) {
-              xVal = 55;
+              xVal = 50;
             } else if (item.label.length === 5) {
-              xVal = 56;
+              xVal = 52;
             } else {
               xVal = 69;
             }
@@ -67,8 +66,8 @@ export const Navbar = () => {
               >
                 <a
                   href={item.path}
-                  className="group font-poppins capitalize flex items-center justify-center 
-                gap-0.5 text-sm tracking-wide text-primary-text sm:text-md md:text-[18px]"
+                  className="group font-inter font-medium capitalize flex items-center justify-center 
+                gap-0.5 text-sm text-primary-text sm:text-md md:text-[14px]"
                 >
                   <span>[</span>
                   <span
@@ -78,7 +77,7 @@ export const Navbar = () => {
                     ]
                   </span>
 
-                  <span className="transition-transform duration-300 group-hover:-translate-x-1">
+                  <span className="transition-transform duration-300 group-hover:-translate-x-0.5">
                     {item.label}
                   </span>
                 </a>
@@ -120,7 +119,7 @@ export const Navbar = () => {
                   <a
                     href={item.path}
                     onClick={() => setOpen(false)}
-                    className="flex items-center gap-2 rounded-md px-3 py-2 font-SourceSans3 text-base font-light tracking-wider text-primary-text text-shadow-2xs transition-colors hover:bg-white/5"
+                    className="flex items-center gap-2 rounded-md px-3 py-2 font-inter text-[14px] font-medium  text-primary-text text-shadow-2xs"
                   >
                     <span>[</span>
                     <span>{item.label}</span>

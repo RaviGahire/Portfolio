@@ -27,23 +27,24 @@ export const ProjectsGrid = ({ projects, onProjectClick }) => {
             <div className="flex justify-between items-center py-5">
               <div>
                 {/* name */}
-                <h4 className="text-[16px] text-primary-text uppercase font-semibold">
+                <h4 className="text-[14px] text-primary-text uppercase font-inter tracking-wide font-semibold">
                   {project.name}
                 </h4>
-                <p className="text-[14px] text-secondary-text font-medium leading-0 pt-2">
+                <p className="text-[14px] text-secondary-text font-medium font-inter leading-0 pt-3">
                   {project.category}
                 </p>
               </div>
               {/* Numbers */}
               <div>
-                <span className="text-lavender">0{index + 1}</span>
+                <span className="text-lavender font-inter font-bold">0{index + 1}</span>
               </div>
             </div>
 
             {/* inner card */}
-            <div className="bg-nickel hover:bg-hover-nickel transition-colors duration-150 ease-in-out pt-12 rounded-md flex-1 flex items-baseline justify-center cursor-pointer">
+            <div className=" bg-bg-dark border-t border-l border-r border-dark-borders  hover:bg-hover-nickel 
+            transition-colors duration-300 ease-in-out pt-3 rounded-md flex-1 flex items-baseline justify-center cursor-pointer">
               {/* Image Wrapper */}
-              <div className="w-full aspect-3/4 max-w-82">
+              <div className="w-full aspect-3/4 max-w-82 mask-b-from-50 hover:mask-none transition-all duration-300 ease-linear overflow-hidden rounded-sm">
                 <img
                   className="w-full h-full object-cover"
                   loading="lazy"

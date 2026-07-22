@@ -1,10 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
-@font-face {
-  font-family: "ElmsSans", sans-serif;
-  font-style: normal;
-  src: url("./assets/fonts/ElmsSans-Regular.ttf") format("truetype");
-}
 @font-face {
   font-family: "Poppins", sans-serif;
   font-style: normal;
@@ -19,21 +15,16 @@
     #f4563a,
     #fa7444
   );
-  --radial-purple-glow: radial-gradient(
-    circle,
-    oklch(0.541 0.281 293.009 / 0.28),
-    transparent 70%
-  );
+  --radial-purple-glow: radial-gradient(circle, oklch(0.541 0.281 293.009 / 0.28), transparent 70%);
+
   --secondary-gradient: linear-gradient(135deg, #a200ff, #fa7444);
+
   --vite-gradient: linear-gradient(
     135deg,
     #41d1ff 0%,
     #646cff 50%,
     #bd34fe 100%
   );
-
-
-
 }
 
 @theme {
@@ -52,8 +43,8 @@
   --color-nickel: #3b3440;
   --color-hover-nickel: #4f4557d7;
 
-  /* Font */
-  --font-elmsSans: "ElmsSans";
+  /* Fonts */
+  --font-inter: "Inter", sans-serif;
   --font-poppins: "Poppins";
 }
 

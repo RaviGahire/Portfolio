@@ -13,14 +13,14 @@ export const Work = () => {
     <section
       id="work"
       aria-label="work-or-project-section"
-      className="relative min-h-auto bg-bg-dark py-8"
+      className="relative min-h-auto bg-zinc-950 py-8 border-t border-dark-borders"
     >
       <div className="flex flex-col justify-center items-center">
         {/* Badge */}
-        <div className="mb-4">
+        <div className="my-4">
           <Badge
-            title="My Work"
-            icon={<IconLayoutGrid stroke={2} size={18} />}
+            title="My work"
+            icon={<IconLayoutGrid className="text-white" stroke={2} size={18} />}
           />
         </div>
         {/* Heading */}
@@ -29,9 +29,9 @@ export const Work = () => {
             title="Selected Work"
             subTitle="A collection of projects I've built and designed with care craft, and attention to detail."
           />
-        </div>
-        
+        </div>     
       </div>
+      
       {/* Project card grid */}
       <ProjectsGrid
         projects={projectData}

@@ -7,7 +7,7 @@ type Badgeprops = {
 
 export const Badge = ({ title, icon }: Badgeprops) => {
   return (
-      <div className="inline-flex rounded-full bg-[#7f22fe]/10 border-[#7f22fe]/30 border border-solid px-4 py-1.5 items-center gap-2">
+      <div className="inline-flex rounded-full bg-(image:--radial-purple-glow) border border-solid border-dark-borders/40 px-4 py-1.5 items-center gap-2">
               {icon ? (<>
               <div>{icon}</div>
               </>) : (
@@ -15,7 +15,7 @@ export const Badge = ({ title, icon }: Badgeprops) => {
               )
 
               }
-              <span className="font-semibold  font-poppins text-secondary-text text-sm ">
+              <span className=" font-light md:font-medium font-inter tracking-wider text-primary-text/80 text-[10px] md:text-[12px] ">
                 {title}
                 </span>
             </div>

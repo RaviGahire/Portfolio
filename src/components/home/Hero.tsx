@@ -1,14 +1,10 @@
 import { IconChevronDown, IconLayoutGrid, IconPhoneCall } from '@tabler/icons-react'
-import React from 'react'
 import { Badge } from '../common/Badge'
 import { IconVignette } from '../svgs/IconVignette'
 import { Underline } from '../common/Underline'
 
 export const Hero = () => {
-  return (
-    <>
-    
-    {/* Hero  */}
+  return (       
         <section
           id="home"
           aria-label="hero-section"
@@ -94,6 +90,5 @@ export const Hero = () => {
             <IconChevronDown className="size-5 animate-bounce text-[#7f22fe]" />
           </div>
         </section>
-    </>
   )
 }

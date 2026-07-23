@@ -8,16 +8,17 @@ export const About = () => {
     <section
       id="about"
       aria-label="about-me-section"
-      className="bg-bg-dark h-auto py-10"
+      className="bg-zinc-950 h-auto py-8 border-t border-dark-borders"
     >
       <div>
         {/* Heading */}
-        <div className="py-10 flex flex-col justify-center items-center ">
+        <div className=" flex flex-col justify-center items-center ">
           <div className="mb-4">
-            <Badge title="bit about me " />
+            <Badge title="A bit about me " />
           </div>
-
-          <Heading title="About me" subTitle="hello " />
+          <div className="mb-4">
+            <Heading title="About me" />
+          </div>
         </div>
         {/* Experience */}
         <div>

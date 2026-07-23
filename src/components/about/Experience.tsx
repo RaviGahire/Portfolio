@@ -1,7 +1,10 @@
 import { motion } from "motion/react";
 import { MyStack } from "../common/MyStack";
 
-export const Experience = ({ expData}) => {
+type Props = {
+  expData: string[];
+};
+export const Experience = ({ expData }:Props) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-16 items-center px-4">
       {/* Image */}
@@ -19,22 +22,20 @@ export const Experience = ({ expData}) => {
             className="w-full h-full mask-b-from-10% transform hover:scale-110 object-cover grayscale group-hover:grayscale-0 transition-all duration-700 rounded-xl"
           />
           <div className="absolute left-0 right-0 bottom-0 p-8 transform -translate-x-40 group-hover:translate-x-0 transition-transform duration-700 ease-linear ">
-            <p className="uppercase text-base tracking-[5px] text-lavender mb-1 font-semibold font-elmsSans">
+            <p className="uppercase text-base tracking-[5px] text-lavender mb-1 font-semibold font-inter">
               based in
             </p>
-            <p className="text-sm text-secondary-text font-poppins tracking-wider flex items-center gap-2">
+            <p className="text-sm text-secondary-text font-inter tracking-wider flex items-center gap-2">
               Pune, India
               <span className="size-2 bg-lavender rounded-full animate-ping"></span>
             </p>
           </div>
         </div>
-
-      
       </motion.div>
       {/* EXPERIENCE */}
       <div className="md:col-span-7 flex flex-col justify-center mt-8 md:mt-0">
         <div className="space-y-3 md:space-y-8">
-          {expData.map((item: any, index: number ) => (
+          {expData.map((item: any, index: number) => (
             <motion.div
               key={item.role}
               initial={{ opacity: 0, x: 20 }}
@@ -43,29 +44,33 @@ export const Experience = ({ expData}) => {
               transition={{ delay: index * 0.2 }}
               className="group flex gap-4 md:gap-3 items-start border-b border-white/5 pb-3 md:pb-4"
             >
-              <span className="text-purple font-elmsSans text-xl ">
-                0{expData.length - index} 
+              <span className="text-purple font-inter font-bold text-xl ">
+                0{expData.length - index}
               </span>
               <div>
-              <h3 className="text-white text-md md:text-xl font-semibold group-hover:text-lavender transition-colors font-poppins tracking-wide">
+                <h3 className="text-primary-text text-md md:text-xl font-semibold group-hover:text-lavender transition-colors font-inter tracking-wide">
                   {item.org}
                 </h3>
-                <p className="text-neutral-400 text-base md:text-lg mt-1 font-medium italic font-elmsSans">
+                <p className="text-secondary-text text-[14px] md:text-lg mt-1 font-medium italic font-inter">
                   {item.role}
                 </p>
-                <p className="text-neutral-600 text-[10px] md:text-xs uppercase tracking-widest mt-2 font-elmsSans">
+                <p className="text-neutral-600 text-[10px] md:text-xs uppercase tracking-widest mt-2 font-poppins">
                   {item.fromTo}
                 </p>
               </div>
             </motion.div>
           ))}
         </div>
-     {/* my stack */}
-             <div className=" pt-4 md:pt-5 lg:pt-30 ">
-                 <MyStack/>
-             </div>
-         </div>
-         
+        {/* my stack */}
+        <div className="pt-4 md:pt-8 ">
+          <div className="pb-3">
+            <p className=" lg:text-2xl font-inter font-semibold text-lavender underline underline-offset-4">
+              My stack
+            </p>
+          </div>
+          <MyStack />
+        </div>
+      </div>
     </div>
   );
 };

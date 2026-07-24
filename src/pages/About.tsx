@@ -3,16 +3,18 @@ import { ExperienceData } from "../data/AllData";
 import { Heading } from "../components/common/Heading";
 import { Badge } from "../components/common/Badge";
 
+
+
 export const About = () => {
   return (
     <section
       id="about"
       aria-label="about-me-section"
-      className="bg-zinc-950 h-auto py-8 border-t border-dark-borders"
+      className="bg-zinc-950 h-auto py-8 border-t border-dark-borders min-h-screen"
     >
       <div>
         {/* Heading */}
-        <div className=" flex flex-col justify-center items-center ">
+        <div className=" flex flex-col justify-center items-center">
           <div className="mb-4">
             <Badge title="A bit about me " />
           </div>

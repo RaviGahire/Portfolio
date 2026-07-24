@@ -21,7 +21,7 @@ export const Heading = ({ title, subTitle }: HeadingProps) => {
 
       {/* subtitle */}
       {subTitle && (
-        <p className="max-w-xl font-inter md:text-xl tracking-tight font-medium leading-6 text-secondary-text">
+        <p className="max-w-xl font-inter md:text-xl tracking-tight font-normal leading-6 text-secondary-text antialiased text-pretty">
           {subTitle}
         </p>
       )}

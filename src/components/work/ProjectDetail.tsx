@@ -1,7 +1,13 @@
 import { IconMinus } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import { type Project } from "../../data/AllData";
 
-export const ProjectDetail = ({ project, onClose }) => {
+type Props = {
+  project : Project;
+  onClose : () => void ;
+}
+
+export const ProjectDetail = ({ project, onClose } : Props) => {
   return (
     <section
       aria-label="project-details"

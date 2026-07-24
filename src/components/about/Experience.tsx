@@ -1,10 +1,16 @@
 import { motion } from "motion/react";
 import { MyStack } from "../common/MyStack";
 
-type Props = {
-  expData: string[];
+interface ExperienceItem {
+  org: string;
+  role: string;
+  fromTo: string;
+}
+
+type ExperienceProps = {
+  expData: ExperienceItem[];
 };
-export const Experience = ({ expData }:Props) => {
+export const Experience = ({ expData }:ExperienceProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-16 items-center px-4">
       {/* Image */}
@@ -62,9 +68,9 @@ export const Experience = ({ expData }:Props) => {
           ))}
         </div>
         {/* my stack */}
-        <div className="pt-4 md:pt-8 ">
-          <div className="pb-3">
-            <p className=" lg:text-2xl font-inter font-semibold text-lavender underline underline-offset-4">
+        <div className="pt-4 md:pt-8 flex flex-col items-center justify-center ">
+          <div className="pb-8 ">
+            <p className="text-base lg:text-2xl font-inter font-semibold text-primary-text underline underline-offset-4">
               My stack
             </p>
           </div>

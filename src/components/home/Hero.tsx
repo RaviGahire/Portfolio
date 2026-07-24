@@ -29,7 +29,7 @@ export const Hero = () => {
             </div>
             {/* info */}
             <p className="max-w-xl text-[18px] md:text-[20px] text-secondary-text font-inter font-normal tracking-tight leading-7 px-3 
-              md:px-0 text-pretty ">
+              md:px-0 text-pretty antialiased ">
               Full-Stack Developer & Creative Technologist building polished, modern digital experiences.
             </p>
             {/* buttons */}

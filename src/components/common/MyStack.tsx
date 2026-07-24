@@ -2,7 +2,8 @@ import { skillImages } from "../../data/AllData";
 
 export const MyStack = () => {
   return (
-<div className="w-full overflow-hidden bg-bg-dark text-white [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
+<div className="w-full overflow-hidden bg-transparent text-white 
+[mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]">
   <div className="flex w-max animate-scroll items-center gap-4">
     {[...skillImages, ...skillImages].map((skill, index) => (
       <div

@@ -1,25 +1,20 @@
+import { type Project } from "../../data/AllData";
+
+interface Props {
+  projects: Project[];
+ onProjectClick: (project:Project) => void;
+}
+export const ProjectsGrid = ({ projects, onProjectClick }: Props) => {
 
 
-type ProjectTypes = {
-  id: number;
-  name: string;
-  link: string;
-  category: string;
-  image: string;
-};
-
-
-
-export const ProjectsGrid = ({ projects, onProjectClick }) => {
-
-
+  
   return (
     <section aria-label="project-section">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 p-4 w-full mx-auto">
-        {projects.map((project:any, index:number) => (
+        {projects.map((project: any, index: number) => (
           // cards
           <div
-              onClick={() => onProjectClick(project)}
+            onClick={() => onProjectClick(project)}
             key={project.name}
             className="w-full max-w-full border-t border-dark-borders flex flex-col"
           >
@@ -36,13 +31,17 @@ export const ProjectsGrid = ({ projects, onProjectClick }) => {
               </div>
               {/* Numbers */}
               <div>
-                <span className="text-lavender font-inter font-bold">0{index + 1}</span>
+                <span className="text-lavender font-inter font-bold">
+                  0{index + 1}
+                </span>
               </div>
             </div>
 
             {/* inner card */}
-            <div className=" bg-bg-dark border-t border-l border-r border-dark-borders  hover:bg-hover-nickel 
-            transition-colors duration-300 ease-in-out pt-3 rounded-md flex-1 flex items-baseline justify-center cursor-pointer">
+            <div
+              className=" bg-bg-dark border-t border-l border-r border-dark-borders  hover:bg-hover-nickel 
+            transition-colors duration-300 ease-in-out pt-3 rounded-md flex-1 flex items-baseline justify-center cursor-pointer"
+            >
               {/* Image Wrapper */}
               <div className="w-full aspect-3/4 max-w-82 mask-b-from-50 hover:mask-none transition-all duration-300 ease-linear overflow-hidden rounded-sm">
                 <img
@@ -56,6 +55,6 @@ export const ProjectsGrid = ({ projects, onProjectClick }) => {
           </div>
         ))}
       </div>
-       </section>
+    </section>
   );
 };

@@ -5,8 +5,6 @@ interface Props {
  onProjectClick: (project:Project) => void;
 }
 export const ProjectsGrid = ({ projects, onProjectClick }: Props) => {
-
-
   
   return (
     <section aria-label="project-section">

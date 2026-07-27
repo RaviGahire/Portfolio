@@ -10,7 +10,7 @@ export const Heading = ({ title, subTitle }: HeadingProps) => {
     <div className="max-w-xl space-y-4 text-center">
       {/* Heading */}
       <div className="space-y-2">
-        <h2 className="font-inter text-3xl font-bold uppercase tracking-[0.15em] text-white">
+        <h2 className="font-inter text-xl md:text-2xl lg:text-3xl font-bold uppercase tracking-[0.15em] text-white">
           {title}
         </h2>
         {/* glow line */}

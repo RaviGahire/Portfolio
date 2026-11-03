@@ -11,7 +11,7 @@ export const ProjectDetail = ({ project, onClose } : Props) => {
   return (
     <section
       aria-label="project-details"
-      className="absolute left-0 right-0 top-0 min-h-screen p-4"
+      className="fixed left-0 right-0 top-0 z-50 min-h-screen p-2"
     >
       <div className="flex flex-col gap-y-3 md:gap-y-0 md:flex-row justify-center items-start bg-bg-dark p-3 md:p-4 rounded-md border border-dark-borders">
         {/* Image side  */}

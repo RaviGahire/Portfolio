@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -15,7 +15,11 @@
     #f4563a,
     #fa7444
   );
-  --radial-purple-glow: radial-gradient(circle, oklch(0.541 0.281 293.009 / 0.28), transparent 70%);
+  --radial-purple-glow: radial-gradient(
+    circle,
+    oklch(0.541 0.281 293.009 / 0.28),
+    transparent 70%
+  );
 
   --secondary-gradient: linear-gradient(135deg, #a200ff, #fa7444);
 
@@ -25,6 +29,28 @@
     #646cff 50%,
     #bd34fe 100%
   );
+
+  /* Future Colors */
+  /* bg-color */
+  --muted-sage-grey: #a5a79b;
+  /* both for text */
+  --warm-cream-beige: #e8d2b5;
+  /* card bg */
+  --deep-burgundy: #590907;
+  /* ================ */
+  /* bg */
+  --pastel-orchid-pink: #E7B0DE;
+  /* text- */
+  --eggplant-violet:#400849;
+  /* Shadow-and text */
+  --signal-orange: #FF5A0A;
+/* ===================== */
+/* bg */
+--midnight-black: #030407;
+/* both for text */
+--cobalt-blue:#1558C0;
+--acid-lime:#D4FF24;
+
 }
 
 @theme {

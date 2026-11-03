@@ -9,7 +9,7 @@ export const ProjectsGrid = ({ projects, onProjectClick }: Props) => {
   return (
     <section aria-label="project-section">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 p-4 w-full mx-auto">
-        {projects.map((project: any, index: number) => (
+        {projects.map((project, index) => (
           // cards
           <div
             onClick={() => onProjectClick(project)}

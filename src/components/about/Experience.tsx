@@ -8,7 +8,7 @@ interface ExperienceItem {
 }
 
 type ExperienceProps = {
-  expData: ExperienceItem[];
+  expData: ExperienceItem[] ;
 };
 export const Experience = ({ expData }:ExperienceProps) => {
   return (
@@ -41,7 +41,7 @@ export const Experience = ({ expData }:ExperienceProps) => {
       {/* EXPERIENCE */}
       <div className="md:col-span-7 flex flex-col justify-center mt-8 md:mt-0">
         <div className="space-y-3 md:space-y-8">
-          {expData.map((item: any, index: number) => (
+          {expData.map((item, index) => (
             <motion.div
               key={item.role}
               initial={{ opacity: 0, x: 20 }}

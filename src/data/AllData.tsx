@@ -22,8 +22,7 @@ export const projectData: Project[] = [
     desc: 'A modern portfolio website featuring smooth animations, responsive layouts, and a clean user experience.',
     url: 'https://master-track-lms-app.vercel.app/', //https://harryjatkins.com/
     category: 'Learning platfrom website',
-    image:
-      'https://images.unsplash.com/photo-1783321284120-61d9a47c92a1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwzfHx8ZW58MHx8fHx8',
+    image:"/master-track.png",
   },
   {
     id: 2,
@@ -35,8 +34,7 @@ export const projectData: Project[] = [
     desc: 'A creative agency website with immersive scrolling effects, elegant typography, and interactive sections.',
     url: 'https://botleague.in/', //
     category: 'Studio Website',
-    image:
-      'https://images.unsplash.com/photo-1783429742967-dad146c20897?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw5fHx8ZW58MHx8fHx8',
+    image:"/botleauge.png",
   },
 ];
 

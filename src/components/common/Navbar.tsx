@@ -1,7 +1,7 @@
-import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
-import { IconMenu, IconX } from "@tabler/icons-react";
-import { Logo } from "./Logo";
+import { AnimatePresence, motion } from 'motion/react';
+import { useState } from 'react';
+import { IconMenu, IconX } from '@tabler/icons-react';
+import { Logo } from './Logo';
 
 export const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -14,24 +14,24 @@ export const Navbar = () => {
 
   const NavItems: NavTab[] = [
     {
-      id: "home",
-      label: "Home",
-      path: "/",
+      id: 'home',
+      label: 'Home',
+      path: '/',
     },
     {
-      id: "work",
-      label: "Work",
-      path: "/#work",
+      id: 'work',
+      label: 'Work',
+      path: '/#work',
     },
     {
-      id: "about",
-      label: "About",
-      path: "/#about",
+      id: 'about',
+      label: 'About',
+      path: '/#about',
     },
     {
-      id: "contact",
-      label: "Contact",
-      path: "/#contact",
+      id: 'contact',
+      label: 'Contact',
+      path: '/#contact',
     },
   ];
 
@@ -72,7 +72,7 @@ export const Navbar = () => {
                   <span>[</span>
                   <span
                     className="transition-transform duration-300 group-hover:translate-x-(--x)"
-                    style={{ "--x": `${xVal}px` } as React.CSSProperties}
+                    style={{ '--x': `${xVal}px` } as React.CSSProperties}
                   >
                     ]
                   </span>
@@ -93,9 +93,7 @@ export const Navbar = () => {
           className="flex h-10 w-10 items-center justify-center rounded-md border border-white/20 text-primary-text"
           aria-label="Toggle menu"
         >
-          <span className="text-xl">
-            {open ? <IconX stroke={2} /> : <IconMenu />}
-          </span>
+          <span className="text-xl">{open ? <IconX stroke={2} /> : <IconMenu />}</span>
         </button>
       </div>
 
@@ -103,9 +101,9 @@ export const Navbar = () => {
         {open && (
           <motion.div
             initial={{ opacity: 0, y: -10, height: 0 }}
-            animate={{ opacity: 1, y: 0, height: "auto" }}
+            animate={{ opacity: 1, y: 0, height: 'auto' }}
             exit={{ opacity: 0, y: -10, height: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             className="absolute left-0 top-full z-50 w-full overflow-hidden border-t border-white/10 bg-bg-dark md:hidden"
           >
             <div className="flex flex-col gap-2 px-4 py-4">

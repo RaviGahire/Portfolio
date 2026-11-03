@@ -1,5 +1,5 @@
-import type { ReactNode } from "react";
-import { motion } from "../../utils/motion";
+import type { ReactNode } from 'react';
+import { motion } from '../../utils/motion';
 
 type Badgeprops = {
   title: string;
@@ -14,16 +14,16 @@ export const Badge = ({ title, icon, duration }: Badgeprops) => {
         opacity: 0,
         scale: 0.9,
         y: 8, // Adds a subtle slide-up effect
-        filter: "blur(4px)",
+        filter: 'blur(4px)',
       }}
       whileInView={{
         opacity: 1,
         scale: 1,
         y: 0,
-        filter: "blur(0px)",
+        filter: 'blur(0px)',
       }}
       // Prevents the animation from re-triggering constantly when scrolling up and down
-      viewport={{ once: true, margin: "-20px" }}
+      viewport={{ once: true, margin: '-20px' }}
       whileHover={{
         scale: 1.05,
         y: -1,
@@ -32,8 +32,8 @@ export const Badge = ({ title, icon, duration }: Badgeprops) => {
         scale: 0.95,
       }}
       transition={{
-      duration:duration,
-      ease:"linear"
+        duration: duration,
+        ease: 'linear',
       }}
       className="inline-flex rounded-full bg-(image:--radial-purple-glow) border border-solid border-dark-borders/40 px-4 py-1.5 items-center gap-2 cursor-default"
     >

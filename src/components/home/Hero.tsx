@@ -1,12 +1,8 @@
-import {
-  IconChevronDown,
-  IconLayoutGrid,
-  IconPhoneCall,
-} from "@tabler/icons-react";
-import { Badge } from "../common/Badge";
-import { IconVignette } from "../svgs/IconVignette";
-import { Underline } from "../common/Underline";
-import { motion } from "../../utils/motion.ts";
+import { IconChevronDown, IconLayoutGrid, IconPhoneCall } from '@tabler/icons-react';
+import { Badge } from '../common/Badge';
+import { IconVignette } from '../svgs/IconVignette';
+import { Underline } from '../common/Underline';
+import { motion } from '../../utils/motion.ts';
 
 export const Hero = () => {
   return (
@@ -28,16 +24,16 @@ export const Hero = () => {
             initial={{
               opacity: 0,
               scale: 0.98,
-              filter: "blur(10px)",
+              filter: 'blur(10px)',
             }}
             whileInView={{
               opacity: 1,
               scale: 1.05,
-              filter: "blur(0px)",
+              filter: 'blur(0px)',
             }}
             transition={{
               duration: 0.9,
-              ease: "easeIn",
+              ease: 'easeIn',
             }}
             className="text-[40px] md:text-[80px] font-inter 
               text-primary-text font-normal uppercase lg:leading-24"
@@ -52,8 +48,8 @@ export const Hero = () => {
           className="max-w-xl text-[18px] md:text-[20px] text-secondary-text font-inter font-normal tracking-tight leading-7 px-3 
               md:px-0 text-pretty antialiased "
         >
-          Full-Stack Developer & Creative Technologist building polished, modern
-          digital experiences.
+          Full-Stack Developer & Creative Technologist building polished, modern digital
+          experiences.
         </p>
         {/* buttons */}
         <div className="flex flex-col md:flex-row mt-2 items-center gap-4 font-inter font-medium">

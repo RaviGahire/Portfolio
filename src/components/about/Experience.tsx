@@ -1,5 +1,5 @@
-import { motion } from "motion/react";
-import { MyStack } from "../common/MyStack";
+import { motion } from 'motion/react';
+import { MyStack } from '../common/MyStack';
 
 interface ExperienceItem {
   org: string;
@@ -8,9 +8,9 @@ interface ExperienceItem {
 }
 
 type ExperienceProps = {
-  expData: ExperienceItem[] ;
+  expData: ExperienceItem[];
 };
-export const Experience = ({ expData }:ExperienceProps) => {
+export const Experience = ({ expData }: ExperienceProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-16 items-center px-4">
       {/* Image */}

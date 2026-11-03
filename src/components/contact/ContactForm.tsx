@@ -1,10 +1,7 @@
 export const ContactForm = () => {
   return (
     <div className="flex justify-center items-center  bg-neutral-950 font-inter font-medium text-gray-300 mt-6 p-4">
-      <form
-        action="submit"
-        className=" w-full max-w-200 flex flex-col gap-6 h-100"
-      >
+      <form action="submit" className=" w-full max-w-200 flex flex-col gap-6 h-100">
         {/* Top Inputs */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <input

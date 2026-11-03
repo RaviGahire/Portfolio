@@ -1,11 +1,10 @@
-import { type Project } from "../../data/AllData";
+import { type Project } from '../../data/AllData';
 
 interface Props {
   projects: Project[];
- onProjectClick: (project:Project) => void;
+  onProjectClick: (project: Project) => void;
 }
 export const ProjectsGrid = ({ projects, onProjectClick }: Props) => {
-  
   return (
     <section aria-label="project-section">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4 p-4 w-full mx-auto">
@@ -29,9 +28,7 @@ export const ProjectsGrid = ({ projects, onProjectClick }: Props) => {
               </div>
               {/* Numbers */}
               <div>
-                <span className="text-lavender font-inter font-bold">
-                  0{index + 1}
-                </span>
+                <span className="text-lavender font-inter font-bold">0{index + 1}</span>
               </div>
             </div>
 

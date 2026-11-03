@@ -1,4 +1,4 @@
-import { Underline } from "./Underline";
+import { Underline } from './Underline';
 
 type HeadingProps = {
   title: string;
@@ -15,7 +15,7 @@ export const Heading = ({ title, subTitle }: HeadingProps) => {
         </h2>
         {/* glow line */}
         <div className="flex justify-center items-center mt-3">
-          <Underline/>
+          <Underline />
         </div>
       </div>
 

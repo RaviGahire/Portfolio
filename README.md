@@ -1,6 +1,7 @@
 # Color Schema
 
 ## Base Background
+
 #16171d — Main dark fa7444background
 
 # Text Colors
@@ -16,11 +17,13 @@
 #140033 — Deep wine purple (subtle dark backgrounds, code blocks)
 
 # Gradient Signature
+
 Purple-to-orange glow gradient used sparingly for primary buttons, CTAs, and banners:
 Core: #6c3bff → #ba189a → #f4563a → #fa7444
 Radial accents: #a200ff and #
 
 # Secondary Accents (optional)
+
 #32f3e9 — Cyan/teal
 #22ff73 — Bright green
 

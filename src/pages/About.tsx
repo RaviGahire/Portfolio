@@ -1,9 +1,7 @@
-import { Experience } from "../components/about/Experience";
-import { ExperienceData } from "../data/AllData";
-import { Heading } from "../components/common/Heading";
-import { Badge } from "../components/common/Badge";
-
-
+import { Experience } from '../components/about/Experience';
+import { ExperienceData } from '../data/AllData';
+import { Heading } from '../components/common/Heading';
+import { Badge } from '../components/common/Badge';
 
 export const About = () => {
   return (

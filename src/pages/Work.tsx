@@ -1,11 +1,11 @@
-import { IconLayoutGrid } from "@tabler/icons-react";
-import { Badge } from "../components/common/Badge";
-import { Heading } from "../components/common/Heading";
-import { ProjectsGrid } from "../components/work/ProjectsGrid";
-import { projectData } from "../data/AllData";
-import { useState } from "react";
-import { ProjectDetail } from "../components/work/ProjectDetail";
-import { type Project } from "../data/AllData";
+import { IconLayoutGrid } from '@tabler/icons-react';
+import { Badge } from '../components/common/Badge';
+import { Heading } from '../components/common/Heading';
+import { ProjectsGrid } from '../components/work/ProjectsGrid';
+import { projectData } from '../data/AllData';
+import { useState } from 'react';
+import { ProjectDetail } from '../components/work/ProjectDetail';
+import { type Project } from '../data/AllData';
 
 export const Work = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
@@ -21,9 +21,7 @@ export const Work = () => {
         <div className="my-4">
           <Badge
             title="My work"
-            icon={
-              <IconLayoutGrid className="text-white" stroke={2} size={18} />
-            }
+            icon={<IconLayoutGrid className="text-white" stroke={2} size={18} />}
           />
         </div>
         {/* Heading */}
@@ -36,17 +34,11 @@ export const Work = () => {
       </div>
 
       {/* Project card grid */}
-      <ProjectsGrid
-        projects={projectData}
-        onProjectClick={setSelectedProject}
-      />
+      <ProjectsGrid projects={projectData} onProjectClick={setSelectedProject} />
 
       {/* Project details */}
       {selectedProject && (
-        <ProjectDetail
-          project={selectedProject}
-          onClose={() => setSelectedProject(null)}
-        />
+        <ProjectDetail project={selectedProject} onClose={() => setSelectedProject(null)} />
       )}
     </section>
   );

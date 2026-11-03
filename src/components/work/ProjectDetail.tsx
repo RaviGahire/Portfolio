@@ -1,13 +1,13 @@
-import { IconMinus } from "@tabler/icons-react";
-import { Link } from "react-router-dom";
-import { type Project } from "../../data/AllData";
+import { IconMinus } from '@tabler/icons-react';
+import { Link } from 'react-router-dom';
+import { type Project } from '../../data/AllData';
 
 type Props = {
-  project : Project;
-  onClose : () => void ;
-}
+  project: Project;
+  onClose: () => void;
+};
 
-export const ProjectDetail = ({ project, onClose } : Props) => {
+export const ProjectDetail = ({ project, onClose }: Props) => {
   return (
     <section
       aria-label="project-details"
@@ -17,7 +17,7 @@ export const ProjectDetail = ({ project, onClose } : Props) => {
         {/* Image side  */}
         <div className=" w-full md:w-1/2 overflow-hidden">
           {/* project image  */}
-          <Link to={project.url} target="_blank" >
+          <Link to={project.url} target="_blank">
             <img
               className="size-full aspect-square object-cover bg-cover rounded-sm"
               src={project.image}
@@ -56,28 +56,36 @@ export const ProjectDetail = ({ project, onClose } : Props) => {
           </div>
 
           <div className="flex  gap-3 md:gap-0 border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1.5 font-inter">
-            <span className="w-auto md:w-1/2 font-medium capitalize text-sm md:text-base">Year</span>
+            <span className="w-auto md:w-1/2 font-medium capitalize text-sm md:text-base">
+              Year
+            </span>
             <span className="font-normal text-secondary-text text-sm md:text-base">
               {project.year}
             </span>
           </div>
 
           <div className="flex  gap-3 md:gap-0 border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1.5 font-inter">
-            <span className="w-auto md:w-1/2 font-medium capitalize text-sm md:text-base">Design</span>
+            <span className="w-auto md:w-1/2 font-medium capitalize text-sm md:text-base">
+              Design
+            </span>
             <span className="font-normal text-secondary-text text-sm md:text-base">
               {project.design}
             </span>
           </div>
 
           <div className="flex  gap-3 md:gap-0 border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1.5 font-inter">
-            <span className="w-auto md:w-1/2 font-medium capitalize text-sm md:text-base">Role</span>
+            <span className="w-auto md:w-1/2 font-medium capitalize text-sm md:text-base">
+              Role
+            </span>
             <span className="font-normal text-secondary-text text-sm md:text-base">
               {project.role}
             </span>
           </div>
 
           <div className="flex  gap-3 md:gap-0 border-t border-light-borders/10 hover:border-light-borders/40 transition-colors duration-300 ease-linear w-full py-1.5 font-inter">
-            <span className="w-auto md:w-1/2 font-medium capitalize text-sm md:text-base">Stack</span>
+            <span className="w-auto md:w-1/2 font-medium capitalize text-sm md:text-base">
+              Stack
+            </span>
             <div className="font-normal text-secondary-text text-sm md:text-base text-wrap">
               {project.stack}
             </div>
@@ -98,7 +106,7 @@ export const ProjectDetail = ({ project, onClose } : Props) => {
               <p className="w-full text-primary-text/50 leading-5 text-sm md:text-base font-inter font-normal text-pretty">
                 <span className="text-lavender underline underline-green-500  underline-offset-3">
                   Description
-                </span>{" "}
+                </span>{' '}
                 {project.desc}
               </p>
             ) : (

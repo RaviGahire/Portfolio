@@ -1,34 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
 
 @font-face {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
-  src: url("./assets/fonts/Poppins-Regular.ttf") format("truetype");
+  src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
 }
 
 :root {
-  --primary-gradient: linear-gradient(
-    135deg,
-    #6c3bff,
-    #ba189a,
-    #f4563a,
-    #fa7444
-  );
-  --radial-purple-glow: radial-gradient(
-    circle,
-    oklch(0.541 0.281 293.009 / 0.28),
-    transparent 70%
-  );
+  --primary-gradient: linear-gradient(135deg, #6c3bff, #ba189a, #f4563a, #fa7444);
+  --radial-purple-glow: radial-gradient(circle, oklch(0.541 0.281 293.009 / 0.28), transparent 70%);
 
   --secondary-gradient: linear-gradient(135deg, #a200ff, #fa7444);
 
-  --vite-gradient: linear-gradient(
-    135deg,
-    #41d1ff 0%,
-    #646cff 50%,
-    #bd34fe 100%
-  );
+  --vite-gradient: linear-gradient(135deg, #41d1ff 0%, #646cff 50%, #bd34fe 100%);
 
   /* Future Colors */
   /* bg-color */
@@ -39,18 +24,17 @@
   --deep-burgundy: #590907;
   /* ================ */
   /* bg */
-  --pastel-orchid-pink: #E7B0DE;
+  --pastel-orchid-pink: #e7b0de;
   /* text- */
-  --eggplant-violet:#400849;
+  --eggplant-violet: #400849;
   /* Shadow-and text */
-  --signal-orange: #FF5A0A;
-/* ===================== */
-/* bg */
---midnight-black: #030407;
-/* both for text */
---cobalt-blue:#1558C0;
---acid-lime:#D4FF24;
-
+  --signal-orange: #ff5a0a;
+  /* ===================== */
+  /* bg */
+  --midnight-black: #030407;
+  /* both for text */
+  --cobalt-blue: #1558c0;
+  --acid-lime: #d4ff24;
 }
 
 @theme {
@@ -70,8 +54,8 @@
   --color-hover-nickel: #4f4557d7;
 
   /* Fonts */
-  --font-inter: "Inter", sans-serif;
-  --font-poppins: "Poppins";
+  --font-inter: 'Inter', sans-serif;
+  --font-poppins: 'Poppins';
 }
 
 @keyframes scroll {

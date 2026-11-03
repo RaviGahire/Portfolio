@@ -104,14 +104,15 @@ export const ExperienceData = [
     {
     org: "Botmakers",
     role: "Full stack intern",
-    fromTo: "Jun 2026 - Present",
+    fromTo: "Jun 2026 Sept-2026",
   },
-  // { org: "Self-Directed learning", role: "Mern stack", fromTo: "Ongoing" },
+  
   {
     org: "Rego Digital Solution",
     role: "React Js intern",
-    fromTo: "May 2025 - May 2026",
+    fromTo: "Oct 2025 - Apr 2026",
   },
+  { org: "Self-Directed learning", role: "", fromTo: "May 2025 Oct 2025" },
   {
     org: "Mphasis Ltd",
     role: "Trn Processing Officer",

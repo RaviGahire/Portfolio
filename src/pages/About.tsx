@@ -14,7 +14,7 @@ export const About = () => {
         {/* Heading */}
         <div className=" flex flex-col justify-center items-center">
           <div className="mb-4">
-            <Badge title="A bit about me " />
+            <Badge title="A bit about me " duration={0} />
           </div>
           <div className="mb-4">
             <Heading title="About me" />

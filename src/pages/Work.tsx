@@ -21,6 +21,7 @@ export const Work = () => {
         <div className="my-4">
           <Badge
             title="My work"
+            duration={0}
             icon={<IconLayoutGrid className="text-white" stroke={2} size={18} />}
           />
         </div>

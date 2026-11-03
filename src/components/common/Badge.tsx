@@ -4,7 +4,7 @@ import { motion } from '../../utils/motion';
 type Badgeprops = {
   title: string;
   icon?: ReactNode;
-  duration: number;
+  duration?: number;
 };
 
 export const Badge = ({ title, icon, duration }: Badgeprops) => {

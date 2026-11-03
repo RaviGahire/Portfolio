@@ -11,7 +11,7 @@ export const Contact = () => {
     >
       {/* heading */}
       <div className="flex justify-center items-center">
-        <Badge title="Drop a message and I'll get back to you." />
+        <Badge title="Drop a message and I'll get back to you." duration={0} />
       </div>
       {/* Heading */}
       <div className="flex justify-center items-center mt-4">
